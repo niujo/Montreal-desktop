@@ -1,8 +1,9 @@
-c:\users\claudio cardenas\source\repos\sMontreal\biMontreal\bin\Debug\netstandard2.0\biMontreal.deps.json
-c:\users\claudio cardenas\source\repos\sMontreal\biMontreal\bin\Debug\netstandard2.0\biMontreal.dll
-c:\users\claudio cardenas\source\repos\sMontreal\biMontreal\bin\Debug\netstandard2.0\biMontreal.pdb
-c:\users\claudio cardenas\source\repos\sMontreal\biMontreal\obj\Debug\netstandard2.0\biMontreal.csproj.CoreCompileInputs.cache
-c:\users\claudio cardenas\source\repos\sMontreal\biMontreal\obj\Debug\netstandard2.0\biMontreal.AssemblyInfoInputs.cache
-c:\users\claudio cardenas\source\repos\sMontreal\biMontreal\obj\Debug\netstandard2.0\biMontreal.AssemblyInfo.cs
-c:\users\claudio cardenas\source\repos\sMontreal\biMontreal\obj\Debug\netstandard2.0\biMontreal.dll
-c:\users\claudio cardenas\source\repos\sMontreal\biMontreal\obj\Debug\netstandard2.0\biMontreal.pdb
+C:\Users\Claudio Cardenas\source\repos\sMontreal\biMontreal\bin\Debug\netstandard2.0\biMontreal.deps.json
+C:\Users\Claudio Cardenas\source\repos\sMontreal\biMontreal\bin\Debug\netstandard2.0\biMontreal.dll
+C:\Users\Claudio Cardenas\source\repos\sMontreal\biMontreal\bin\Debug\netstandard2.0\biMontreal.pdb
+C:\Users\Claudio Cardenas\source\repos\sMontreal\biMontreal\obj\Debug\netstandard2.0\biMontreal.csproj.CoreCompileInputs.cache
+C:\Users\Claudio Cardenas\source\repos\sMontreal\biMontreal\obj\Debug\netstandard2.0\biMontreal.AssemblyInfoInputs.cache
+C:\Users\Claudio Cardenas\source\repos\sMontreal\biMontreal\obj\Debug\netstandard2.0\biMontreal.AssemblyInfo.cs
+C:\Users\Claudio Cardenas\source\repos\sMontreal\biMontreal\obj\Debug\netstandard2.0\biMontreal.dll
+C:\Users\Claudio Cardenas\source\repos\sMontreal\biMontreal\obj\Debug\netstandard2.0\biMontreal.pdb
+C:\Users\Claudio Cardenas\source\repos\sMontreal\biMontreal\obj\Debug\netstandard2.0\biMontreal.csprojAssemblyReference.cache

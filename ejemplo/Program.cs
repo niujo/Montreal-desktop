@@ -19,20 +19,22 @@ namespace ConsoleApp1
 
         public static void Main(string[] args)
         {
-            String url = "http://192.168.85.131:3000";
             Program pg = new Program();
+            
+            String url = "http://192.168.85.131:3000";
+            
 
             // Autenticar y recibir token de autenticacion
             Usuario u = new Usuario();
             u.usuario = "admin";
             u.contrasena = "admin";
+            UTILS ut = new UTILS();
             String token = pg.Autenticar(url, u);
-            AuthUser a = pg.decodeToken(token);
-
 
             // Obtener direcciones
-            IList<Direccion> lstDireccion = pg.getDIRECCIONES(url, "private/direccion", token);
-            foreach (Direccion d in lstDireccion)
+            Usuario usr = new Usuario();
+            IList<Object> lstDireccion = pg.GET(url, "private/usuario", "usuario", token, usr.GetType());
+            foreach (Usuario d in lstDireccion)
             {
                 Console.WriteLine(d.ToString());
             }
@@ -41,18 +43,27 @@ namespace ConsoleApp1
             Console.ReadKey();
         }
 
-        public AuthUser decodeToken(String token)
+        public bool decodeToken(String token)
         {
-            var handler = new JwtSecurityTokenHandler();
-            var tokenS = handler.ReadToken(token) as JwtSecurityToken;
-            String t = tokenS.ToString();
-            JObject obj = JObject.Parse(t.Split('.')[1]);
+            try
+            {
+                var handler = new JwtSecurityTokenHandler();
+                var tokenS = handler.ReadToken(token) as JwtSecurityToken;
+                String t = tokenS.ToString();
+                JObject obj = JObject.Parse(t.Split('.')[1]);
 
-            AuthUser aU = new AuthUser();
+                UserDTO u = obj.ToObject<UserDTO>();
 
-            aU = obj.ToObject<AuthUser>();
+                AuthUser.id = u.id;
+                AuthUser.rol = u.rol;
+                AuthUser.nombre = u.nombre;
 
-            return aU;
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
         }
 
         public String Autenticar(String url, Usuario usr)
@@ -79,16 +90,23 @@ namespace ConsoleApp1
             JObject content = JObject.Parse(jsonString);
 
             // Del objeto JSON navegamoso al objeto data y luego al array direccion
-            String result = content["data"]["token"].ToString();
-
+            String result = null;
+            try
+            {
+                result = content["data"]["token"].ToString();
+            } catch(Exception e)
+            {
+                
+            }
+            
             return result;
         }
 
-        public IList<Direccion> getDIRECCIONES(String url, String req, String token)
+        public IList<Object> GET(String url, String req, String objeto, String token, Type objType) 
         {
             var client = new RestClient(url);
             var request = new RestRequest(req, Method.GET);
-
+            
             // HTTP Headers
             request.AddHeader("Content-Type", "application/json; charset=utf-8");
             request.AddHeader("Authorization", "Bearer " + token);
@@ -100,23 +118,23 @@ namespace ConsoleApp1
             // Se consigue el json del request
             var jsonString = response.Content;
 
-            IList<Direccion> lstDireccion = new List<Direccion>();
+            IList<Object> list = new List<Object>();
 
             // Se convierte el string json a un objeto json
             JObject content = JObject.Parse(jsonString);
 
             // Del objeto JSON navegamoso al objeto data y luego al array direccion
-            IList<JToken> results = content["data"]["direccion"].ToList();
-
+            IList<JToken> results = content["data"][objeto].ToList();
+            Object obj = Activator.CreateInstance(objType);
             // Se crea una lista del objeto
             foreach (JToken result in results)
             {
                 // Se deserializa el objeto, se instancia y se agrega a la lista.
-                Direccion dir = result.ToObject<Direccion>();
-                lstDireccion.Add(dir);
+                obj = result.ToObject(objType);
+                list.Add(obj);
             }
 
-            return lstDireccion;
+            return list;
         }
     }
 }
