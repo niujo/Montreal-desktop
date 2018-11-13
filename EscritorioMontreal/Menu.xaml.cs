@@ -45,5 +45,13 @@ namespace EscritorioMontreal
         {
             Application.Current.Shutdown();
         }
+
+        private void btn_postulaciones_Click(object sender, RoutedEventArgs e)
+        {
+            VerPostulaciones verp = new VerPostulaciones();
+            verp.Show();
+            this.Close();
+
+        }
     }
 }
