@@ -29,12 +29,16 @@ namespace EscritorioMontreal
 
         private void btn_usuarios_Click(object sender, RoutedEventArgs e)
         {
-
+            VerUsuarios veru = new VerUsuarios();
+            veru.Show();
+            this.Close();
         }
 
         private void btn_cursos_Click(object sender, RoutedEventArgs e)
         {
-
+            VerCursos veru = new VerCursos();
+            veru.Show();
+            this.Close();
         }
 
         private void btn_salir_Click(object sender, RoutedEventArgs e)

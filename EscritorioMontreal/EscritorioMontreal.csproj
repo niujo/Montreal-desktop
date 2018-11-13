@@ -74,6 +74,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="VerCursos.xaml.cs">
+      <DependentUpon>VerCursos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VerPostulaciones.xaml.cs">
+      <DependentUpon>VerPostulaciones.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VerUsuarios.xaml.cs">
       <DependentUpon>VerUsuarios.xaml</DependentUpon>
     </Compile>
@@ -90,6 +96,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VerCursos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VerPostulaciones.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -133,6 +147,9 @@
       <Project>{f056ae97-7e3f-4d2b-8d07-15eae9e0bfad}</Project>
       <Name>biMontreal</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -131,3 +131,9 @@ C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\bin\Debug\Sy
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\Menu.g.cs
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\Menu.baml
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\VerUsuarios.g.cs
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\VerUsuarios.baml
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\VerCursos.g.cs
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\VerCursos.baml
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\VerPostulaciones.g.cs
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\VerPostulaciones.baml

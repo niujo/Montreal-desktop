@@ -25,11 +25,15 @@ namespace EscritorioMontreal
         public MainWindow()
         {
             InitializeComponent();
+            var brush = new SolidColorBrush(Color.FromRgb(92, 184, 92));
+            btnIngresar.Background = brush;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Usuario usuario = new Usuario();
+            
+
+             Usuario usuario = new Usuario();
 
             usuario.usuario = txtUser.Text;
             usuario.contrasena = txtPASS.Password;
@@ -44,12 +48,19 @@ namespace EscritorioMontreal
             else
             {
                 bool success = uti.decodeToken(token);
-
-                if (success)
+                
+                if (success && AuthUser.rol.Equals("Administrador"))
                 {
                     Menu menu = new Menu();
                     menu.Show();
                     this.Close();
+                }
+                else
+                {
+                    lblError.Content = "Acceso denegado.";
+                    AuthUser.id = null;
+                    AuthUser.nombre = null;
+                    AuthUser.rol = null;
                 }
             }
         }
