@@ -64,5 +64,10 @@ namespace EscritorioMontreal
                 }
             }
         }
+
+        private void btn_salir_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

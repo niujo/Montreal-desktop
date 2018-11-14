@@ -74,6 +74,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Antecedentes.xaml.cs">
+      <DependentUpon>Antecedentes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Certificados.xaml.cs">
+      <DependentUpon>Certificados.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RegCel.xaml.cs">
+      <DependentUpon>RegCel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RegCem.xaml.cs">
+      <DependentUpon>RegCem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VerCursos.xaml.cs">
       <DependentUpon>VerCursos.xaml</DependentUpon>
     </Compile>
@@ -83,6 +95,14 @@
     <Compile Include="VerUsuarios.xaml.cs">
       <DependentUpon>VerUsuarios.xaml</DependentUpon>
     </Compile>
+    <Page Include="Antecedentes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Certificados.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -96,6 +116,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RegCel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RegCem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

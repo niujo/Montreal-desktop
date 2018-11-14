@@ -137,3 +137,11 @@ C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\Ve
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\VerCursos.baml
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\VerPostulaciones.g.cs
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\VerPostulaciones.baml
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\Antecedentes.g.cs
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\Certificados.g.cs
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\RegCel.g.cs
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\RegCem.g.cs
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\Antecedentes.baml
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\Certificados.baml
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\RegCel.baml
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\RegCem.baml

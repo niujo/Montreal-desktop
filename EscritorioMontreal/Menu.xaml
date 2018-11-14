@@ -10,12 +10,12 @@
         <Button x:Name="btn_usuarios" Content="Ver Usuarios" HorizontalAlignment="Left" Margin="30,60,0,0" VerticalAlignment="Top" Width="115" Click="btn_usuarios_Click"/>
         <Button x:Name="btn_cursos" Content="Ver Cursos" HorizontalAlignment="Left" Margin="30,91,0,0" VerticalAlignment="Top" Width="115" Click="btn_cursos_Click"/>
         <Button x:Name="btn_postulaciones" Content="Ver Postulaciones" HorizontalAlignment="Left" Margin="30,125,0,0" VerticalAlignment="Top" Width="115" Click="btn_postulaciones_Click"/>
-        <Button x:Name="btn_reg_cel" Content="Registrar CEL" HorizontalAlignment="Left" Margin="30,161,0,0" VerticalAlignment="Top" Width="115"/>
-        <Button x:Name="btn_reg_cem" Content="Registrar CEM" HorizontalAlignment="Left" Margin="30,191,0,0" VerticalAlignment="Top" Width="115"/>
-        <Button x:Name="btn_antecedentes" Content="Antecedentes" HorizontalAlignment="Left" Margin="30,225,0,0" VerticalAlignment="Top" Width="115"/>
-        <Button x:Name="btn_certificados" Content="Certificados" HorizontalAlignment="Left" Margin="30,261,0,0" VerticalAlignment="Top" Width="115"/>
+        <Button x:Name="btn_reg_cel" Content="Registrar CEL" HorizontalAlignment="Left" Margin="30,156,0,0" VerticalAlignment="Top" Width="115" Click="btn_reg_cel_Click"/>
+        <Button x:Name="btn_reg_cem" Content="Registrar CEM" HorizontalAlignment="Left" Margin="30,186,0,0" VerticalAlignment="Top" Width="115" Click="btn_reg_cem_Click"/>
+        <Button x:Name="btn_antecedentes" Content="Antecedentes" HorizontalAlignment="Left" Margin="30,216,0,0" VerticalAlignment="Top" Width="115" Click="btn_antecedentes_Click"/>
+        <Button x:Name="btn_certificados" Content="Certificados" HorizontalAlignment="Left" Margin="30,246,0,0" VerticalAlignment="Top" Width="115" Click="btn_certificados_Click"/>
         <Label x:Name="lblNombre" Content="" HorizontalAlignment="Left" Margin="245,19,0,0" VerticalAlignment="Top" Width="200"/>
         <Button x:Name="btn_salir" Content="Salir" HorizontalAlignment="Left" Margin="465,25,0,0" VerticalAlignment="Top" Width="75" Click="btn_salir_Click"/>
-        <Image HorizontalAlignment="Left" Height="135" Margin="245,60,0,0" VerticalAlignment="Top" Width="200" Source="Img/logo.png"/>
+        <Image HorizontalAlignment="Left" Height="135" Margin="245,45,0,0" VerticalAlignment="Top" Width="200" Source="Img/logo.png"/>
     </Grid>
 </Window>

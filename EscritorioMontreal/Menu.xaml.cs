@@ -53,5 +53,33 @@ namespace EscritorioMontreal
             this.Close();
 
         }
+
+        private void btn_reg_cel_Click(object sender, RoutedEventArgs e)
+        {
+            RegCel verCel = new RegCel();
+            verCel.Show();
+            this.Close();
+        }
+
+        private void btn_reg_cem_Click(object sender, RoutedEventArgs e)
+        {
+            RegCem verCem = new RegCem();
+            verCem.Show();
+            this.Close();
+        }
+
+        private void btn_antecedentes_Click(object sender, RoutedEventArgs e)
+        {
+            Antecedentes verAnt = new Antecedentes();
+            verAnt.Show();
+            this.Close();
+        }
+
+        private void btn_certificados_Click(object sender, RoutedEventArgs e)
+        {
+            Certificados verCer = new Certificados();
+            verCer.Show();
+            this.Close();
+        }
     }
 }
