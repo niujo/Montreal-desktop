@@ -26,6 +26,17 @@ namespace EscritorioMontreal
 
             lblNombre.Content = AuthUser.nombre;
 
+            Usuario u = new Usuario();
+            List<Object> lstUsuarios = u.getUsuarios();
+            // aca se  recibe
+            if (lstUsuarios == null)
+            {
+                lstUsuarios = new List<Object>();
+            }
+
+            foreach(Usuario us in lstUsuarios) {
+                lstUsuario.Items.Add(us);
+            }
         }
 
         
@@ -56,5 +67,7 @@ namespace EscritorioMontreal
             menu.Show();
             this.Close();
         }
+
+        
     }
 }

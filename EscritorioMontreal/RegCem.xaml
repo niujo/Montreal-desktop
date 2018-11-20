@@ -7,8 +7,37 @@
         mc:Ignorable="d"
         Title="RegCem" Height="450" Width="800">
     <Grid>
-        <Button x:Name="btn_salir" Content="Salir" HorizontalAlignment="Left" Margin="580,361,0,0" VerticalAlignment="Top" Width="75" Click="btn_salir_Click"/>
-        <Button x:Name="btn_volver" Content="Volver a menú" HorizontalAlignment="Left" Margin="465,361,0,0" VerticalAlignment="Top" Width="90" Click="btn_volver_Click"/>
+        <Button x:Name="btn_salir" Content="Salir" HorizontalAlignment="Left" Margin="680,376,0,0" VerticalAlignment="Top" Width="75" Click="btn_salir_Click"/>
+        <Button x:Name="btn_volver" Content="Volver a menú" HorizontalAlignment="Left" Margin="560,376,0,0" VerticalAlignment="Top" Width="90" Click="btn_volver_Click"/>
+        <Label Content="Refistrar  CEM" HorizontalAlignment="Left" Margin="35,26,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Usuario" HorizontalAlignment="Left" Margin="45,57,0,0" VerticalAlignment="Top"/>
+        <Label Content="Contraseña" HorizontalAlignment="Left" Margin="45,88,0,0" VerticalAlignment="Top"/>
+        <Label Content="Confirmar contraseña" HorizontalAlignment="Left" Margin="45,119,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtUsuario" HorizontalAlignment="Left" Height="23" Margin="185,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtPsw" HorizontalAlignment="Left" Height="23" Margin="185,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Administrador del Centro" HorizontalAlignment="Left" Margin="35,154,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.526,0.398" FontWeight="Bold"/>
+        <Label Content="Nombre(s)" HorizontalAlignment="Left" Margin="45,180,0,0" VerticalAlignment="Top"/>
+        <Label Content="Apellido paterno" HorizontalAlignment="Left" Margin="45,211,0,0" VerticalAlignment="Top"/>
+        <Label Content="Apellido Materno" HorizontalAlignment="Left" Margin="45,241,0,0" VerticalAlignment="Top"/>
+        <Label Content="Rut" HorizontalAlignment="Left" Margin="45,267,0,0" VerticalAlignment="Top"/>
+        <Label Content="Fecha de Nacimiento" HorizontalAlignment="Left" Margin="45,297,0,0" VerticalAlignment="Top"/>
+        <Label Content="Correo electronico" HorizontalAlignment="Left" Margin="45,330,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="23" Margin="185,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtApePa" HorizontalAlignment="Left" Height="23" Margin="185,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtApeMa" HorizontalAlignment="Left" Height="23" Margin="185,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="txtRut" HorizontalAlignment="Left" Height="23" Margin="185,271,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtFecNa" HorizontalAlignment="Left" Height="23" Margin="185,331,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="txtRepPsw" HorizontalAlignment="Left" Height="23" Margin="185,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <DatePicker HorizontalAlignment="Left" Margin="185,302,0,0" VerticalAlignment="Top"/>
+        <Label Content="Datosdel Centro" HorizontalAlignment="Left" Margin="401,27,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.526,0.398" FontWeight="Bold"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="401,61,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ciudad" HorizontalAlignment="Left" Margin="401,89,0,0" VerticalAlignment="Top"/>
+        <Label Content="Calle" HorizontalAlignment="Left" Margin="401,119,0,0" VerticalAlignment="Top"/>
+        <Label Content="Numeración" HorizontalAlignment="Left" Margin="401,154,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="510,93,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtUsuario_Copy" HorizontalAlignment="Left" Height="23" Margin="510,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtUsuario_Copy1" HorizontalAlignment="Left" Height="23" Margin="510,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtPsw_Copy" HorizontalAlignment="Left" Height="23" Margin="510,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

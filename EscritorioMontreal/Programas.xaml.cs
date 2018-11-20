@@ -15,25 +15,13 @@ using System.Windows.Shapes;
 namespace EscritorioMontreal
 {
     /// <summary>
-    /// Lógica de interacción para Certificados.xaml
+    /// Lógica de interacción para Programas.xaml
     /// </summary>
-    public partial class Certificados : Window
+    public partial class Programas : Window
     {
-        public Certificados()
+        public Programas()
         {
             InitializeComponent();
-        }
-
-        private void btn_volver_Click(object sender, RoutedEventArgs e)
-        {
-            Menu menu = new Menu();
-            menu.Show();
-            this.Close();
-        }
-
-        private void btn_salir_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
         }
     }
 }

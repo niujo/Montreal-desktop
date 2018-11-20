@@ -12,10 +12,10 @@ using System.Linq;
 
 namespace biMontreal
 {
-    public class UTILS
+    public static class UTILS
     {
         private static readonly String url = "http://192.168.85.131:3000";
-        public bool decodeToken(String token)
+        public static bool decodeToken(String token)
         {
             try
             {
@@ -38,14 +38,14 @@ namespace biMontreal
             }
         }
 
-        public String Autenticar(Usuario usr)
+        public static String Autenticar(Usuario usr)
         {
             var client = new RestClient(url);
             var request = new RestRequest("auth", Method.POST);
             request.RequestFormat = RestSharp.DataFormat.Json;
 
             request.AddBody(new { USUARIO = usr.usuario, CONTRASENA = usr.contrasena });
-
+            
             // HTTP Headers
             request.AddHeader("Content-Type", "application/json; charset=utf-8");
 
@@ -83,7 +83,7 @@ namespace biMontreal
          * param objType -> Objeto de tipo Type de la clase a deserealizar, Ej; Direccion dir = new Direccion(); dir.GetType();
          * returns IList<Object> con los datos recuperados. Null en caso de error.
          */
-        public IList<Object> GET(String ruta, String objeto, String token, Type objType)
+        public static List<Object> GET(String ruta, String objeto, String token, Type objType)
         {
             try
             {
@@ -101,7 +101,7 @@ namespace biMontreal
                 // Se consigue el json del request
                 var jsonString = response.Content;
 
-                IList<Object> list = new List<Object>();
+                List<Object> list = new List<Object>();
 
                 // Se convierte el string json a un objeto json
                 JObject content = JObject.Parse(jsonString);

@@ -10,10 +10,10 @@
         <Button x:Name="btn_agregar" Content="Agregar" HorizontalAlignment="Left" Margin="475,80,0,0" VerticalAlignment="Top" Width="75" Click="btn_agregar_Click"/>
         <Button x:Name="brn_borrar" Content="Borrar" HorizontalAlignment="Left" Margin="475,115,0,0" VerticalAlignment="Top" Width="75" Click="brn_borrar_Click"/>
         <Button x:Name="btn_actualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="475,151,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <ListBox HorizontalAlignment="Left" Height="100" Margin="60,70,0,0" VerticalAlignment="Top" Width="395"/>
         <Label Content="Lista de usuarios" HorizontalAlignment="Left" Margin="60,44,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btn_salir" Content="Salir" HorizontalAlignment="Left" Margin="475,290,0,0" VerticalAlignment="Top" Width="75" Click="btn_salir_Click"/>
         <Label x:Name="lblNombre" Content="" HorizontalAlignment="Left" Margin="275,10,0,0" VerticalAlignment="Top" Width="200"/>
         <Button x:Name="btn_volver" Content="Volver a menú" HorizontalAlignment="Left" Margin="320,290,0,0" VerticalAlignment="Top" Width="90" Click="btn_volver_Click"/>
+        <ListBox x:Name="lstUsuario" HorizontalAlignment="Left" Height="100" Margin="60,70,0,0" VerticalAlignment="Top" Width="395"/>
     </Grid>
 </Window>

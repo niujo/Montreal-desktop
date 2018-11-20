@@ -52,5 +52,10 @@ namespace EscritorioMontreal
         {
 
         }
+
+        private void listCursos_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Cursos listCursos = new Cursos();
+        }
     }
 }

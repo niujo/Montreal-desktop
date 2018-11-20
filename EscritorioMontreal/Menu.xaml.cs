@@ -68,18 +68,9 @@ namespace EscritorioMontreal
             this.Close();
         }
 
-        private void btn_antecedentes_Click(object sender, RoutedEventArgs e)
+        private void btn_Programas_Click(object sender, RoutedEventArgs e)
         {
-            Antecedentes verAnt = new Antecedentes();
-            verAnt.Show();
-            this.Close();
-        }
 
-        private void btn_certificados_Click(object sender, RoutedEventArgs e)
-        {
-            Certificados verCer = new Certificados();
-            verCer.Show();
-            this.Close();
         }
     }
 }

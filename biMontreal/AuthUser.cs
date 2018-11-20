@@ -9,5 +9,6 @@ namespace biMontreal
         public static int? id { get; set; }
         public static String nombre { get; set; }
         public static String rol { get; set; }
+        public static String token { get; set; }
     }
 }

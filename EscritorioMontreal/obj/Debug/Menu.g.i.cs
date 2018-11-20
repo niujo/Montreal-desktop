@@ -83,7 +83,7 @@ namespace EscritorioMontreal {
         
         #line 15 "..\..\Menu.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button btn_antecedentes;
+        internal System.Windows.Controls.Label lblNombre;
         
         #line default
         #line hidden
@@ -91,15 +91,7 @@ namespace EscritorioMontreal {
         
         #line 16 "..\..\Menu.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button btn_certificados;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 17 "..\..\Menu.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Label lblNombre;
+        internal System.Windows.Controls.Button btn_salir;
         
         #line default
         #line hidden
@@ -107,7 +99,7 @@ namespace EscritorioMontreal {
         
         #line 18 "..\..\Menu.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button btn_salir;
+        internal System.Windows.Controls.Button btn_Programas;
         
         #line default
         #line hidden
@@ -188,31 +180,22 @@ namespace EscritorioMontreal {
             #line hidden
             return;
             case 6:
-            this.btn_antecedentes = ((System.Windows.Controls.Button)(target));
-            
-            #line 15 "..\..\Menu.xaml"
-            this.btn_antecedentes.Click += new System.Windows.RoutedEventHandler(this.btn_antecedentes_Click);
-            
-            #line default
-            #line hidden
+            this.lblNombre = ((System.Windows.Controls.Label)(target));
             return;
             case 7:
-            this.btn_certificados = ((System.Windows.Controls.Button)(target));
+            this.btn_salir = ((System.Windows.Controls.Button)(target));
             
             #line 16 "..\..\Menu.xaml"
-            this.btn_certificados.Click += new System.Windows.RoutedEventHandler(this.btn_certificados_Click);
+            this.btn_salir.Click += new System.Windows.RoutedEventHandler(this.btn_salir_Click);
             
             #line default
             #line hidden
             return;
             case 8:
-            this.lblNombre = ((System.Windows.Controls.Label)(target));
-            return;
-            case 9:
-            this.btn_salir = ((System.Windows.Controls.Button)(target));
+            this.btn_Programas = ((System.Windows.Controls.Button)(target));
             
             #line 18 "..\..\Menu.xaml"
-            this.btn_salir.Click += new System.Windows.RoutedEventHandler(this.btn_salir_Click);
+            this.btn_Programas.Click += new System.Windows.RoutedEventHandler(this.btn_Programas_Click);
             
             #line default
             #line hidden

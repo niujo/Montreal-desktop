@@ -28,12 +28,12 @@ namespace ConsoleApp1
             Usuario u = new Usuario();
             u.usuario = "admin";
             u.contrasena = "admin";
-            UTILS ut = new UTILS();
+           // UTILS ut = new UTILS();
             String token = pg.Autenticar(url, u);
 
             // Obtener direcciones
             Usuario usr = new Usuario();
-            IList<Object> lstDireccion = pg.GET(url, "private/usuario", "usuario", token, usr.GetType());
+            List<Usuario> lstDireccion = pg.GET(url, "private/usuario", "usuario", token, usr.GetType()).Cast<Usuario>().ToList();
             foreach (Usuario d in lstDireccion)
             {
                 Console.WriteLine(d.ToString());
@@ -102,7 +102,7 @@ namespace ConsoleApp1
             return result;
         }
 
-        public IList<Object> GET(String url, String req, String objeto, String token, Type objType) 
+        public List<Object> GET(String url, String req, String objeto, String token, Type objType) 
         {
             var client = new RestClient(url);
             var request = new RestRequest(req, Method.GET);
@@ -118,7 +118,7 @@ namespace ConsoleApp1
             // Se consigue el json del request
             var jsonString = response.Content;
 
-            IList<Object> list = new List<Object>();
+            List<Object> list = new List<Object>();
 
             // Se convierte el string json a un objeto json
             JObject content = JObject.Parse(jsonString);
@@ -133,7 +133,7 @@ namespace ConsoleApp1
                 obj = result.ToObject(objType);
                 list.Add(obj);
             }
-
+            
             return list;
         }
     }

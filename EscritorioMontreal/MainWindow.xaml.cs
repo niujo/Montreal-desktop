@@ -38,19 +38,19 @@ namespace EscritorioMontreal
             usuario.usuario = txtUser.Text;
             usuario.contrasena = txtPASS.Password;
 
-            UTILS uti = new UTILS();
-            string token = uti.Autenticar(usuario);
-            Console.WriteLine(token);
+            //UTILS uti = new UTILS();
+            string token = UTILS.Autenticar(usuario);
             if (token == null)
             {
                 lblError.Content = " Usuario y/o contraseña incorrecta";
             }
             else
             {
-                bool success = uti.decodeToken(token);
+                bool success = UTILS.decodeToken(token);
                 
                 if (success && AuthUser.rol.Equals("Administrador"))
                 {
+                    AuthUser.token = token;
                     Menu menu = new Menu();
                     menu.Show();
                     this.Close();
@@ -61,6 +61,7 @@ namespace EscritorioMontreal
                     AuthUser.id = null;
                     AuthUser.nombre = null;
                     AuthUser.rol = null;
+                    AuthUser.token = null;
                 }
             }
         }
