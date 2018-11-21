@@ -68,9 +68,13 @@ namespace EscritorioMontreal
             this.Close();
         }
 
-        private void btn_Programas_Click(object sender, RoutedEventArgs e)
-        {
+       
 
+        private void btn_Programas_Click_1(object sender, RoutedEventArgs e)
+        {
+            Programas_estudio verPro = new Programas_estudio();
+            verPro.Show();
+            this.Close();
         }
     }
 }

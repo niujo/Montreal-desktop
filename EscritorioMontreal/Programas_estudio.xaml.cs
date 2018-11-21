@@ -16,32 +16,27 @@ using System.Windows.Shapes;
 namespace EscritorioMontreal
 {
     /// <summary>
-    /// Lógica de interacción para VerCursos.xaml
+    /// Lógica de interacción para Programas_estudio.xaml
     /// </summary>
-    public partial class VerCursos : Window
+    public partial class Programas_estudio : Window
     {
-        public VerCursos()
+        public Programas_estudio()
         {
             InitializeComponent();
             lblNombre.Content = AuthUser.nombre;
 
-            Cursos c = new Cursos();
-            List<Object> lstCursoss = c.getCursos();
+            ProgramaEstudio p = new ProgramaEstudio();
+            List<Object> lstProgramas = p.GetProgramasEstudiosCEL();
             // aca se  recibe
-            if (lstCursoss == null)
+            if (lstProgramas == null)
             {
-                lstCursoss = new List<Object>();
+                lstProgramas = new List<Object>();
             }
 
-            foreach (Cursos pe in lstCursoss)
+            foreach (ProgramaEstudio pe in lstProgramas)
             {
-                listCursos.Items.Add(pe);
+                lstPendientes.Items.Add(pe);
             }
-        }
-        
-        private void btn_salir_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
         }
 
         private void btn_volver_Click(object sender, RoutedEventArgs e)
@@ -49,6 +44,11 @@ namespace EscritorioMontreal
             Menu menu = new Menu();
             menu.Show();
             this.Close();
+        }
+
+        private void btn_salir_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
 
         private void btn_Agregar_Click(object sender, RoutedEventArgs e)
@@ -64,11 +64,6 @@ namespace EscritorioMontreal
         private void btn_actualizar_Click(object sender, RoutedEventArgs e)
         {
 
-        }
-
-        private void listCursos_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            Cursos listCursos = new Cursos();
         }
     }
 }

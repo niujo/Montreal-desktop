@@ -74,11 +74,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Antecedentes.xaml.cs">
-      <DependentUpon>Antecedentes.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Certificados.xaml.cs">
-      <DependentUpon>Certificados.xaml</DependentUpon>
+    <Compile Include="Programas_estudio.xaml.cs">
+      <DependentUpon>Programas_estudio.xaml</DependentUpon>
     </Compile>
     <Compile Include="RegCel.xaml.cs">
       <DependentUpon>RegCel.xaml</DependentUpon>
@@ -95,14 +92,6 @@
     <Compile Include="VerUsuarios.xaml.cs">
       <DependentUpon>VerUsuarios.xaml</DependentUpon>
     </Compile>
-    <Page Include="Antecedentes.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Certificados.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -116,6 +105,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Programas_estudio.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
