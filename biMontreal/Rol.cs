@@ -7,8 +7,7 @@ namespace biMontreal
     public class Rol
     {
         /*
-          private Integer id_rol;
-        private String desc_rol;
+         
         */
 
         public int? id_rol { get; set; }

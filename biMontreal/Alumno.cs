@@ -13,5 +13,18 @@ namespace biMontreal
         {
             return "id Alumno: " + id_Alumno + " id_ciudad: " + id_usuario;
         }
+
+
+        public List<Object> GetAlumnos()
+        {
+            Alumno alu = new Alumno();
+
+            List<Object> lstAlumnos = UTILS.GET("private/alumno", "alumno", AuthUser.token, alu.GetType());
+            if (lstAlumnos == null || lstAlumnos.Count == 0)
+            {
+                return null;
+            }
+            return lstAlumnos;
+        }
     }
 }

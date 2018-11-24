@@ -36,13 +36,15 @@ namespace biMontreal
 
         public Alumno alumno
         {
-            get {
+            get
+            {
                 if (_alumno == null)
                 {
                     _alumno = new Alumno();
                 }
 
-                return _alumno; }
+                return _alumno;
+            }
             set { _alumno = value; }
         }
 
@@ -50,13 +52,15 @@ namespace biMontreal
 
         public Seguro seguro
         {
-            get {
-                if (_seguro==null)
+            get
+            {
+                if (_seguro == null)
                 {
                     _seguro = new Seguro();
                 }
-                    
-                return _seguro; }
+
+                return _seguro;
+            }
             set { _seguro = value; }
         }
 
@@ -64,17 +68,45 @@ namespace biMontreal
 
         public Familia familia
         {
-            get {
-                if (_familia==null)
+            get
+            {
+                if (_familia == null)
                 {
                     _familia = new Familia();
                 }
-                return _familia; }
+                return _familia;
+            }
             set { _familia = value; }
         }
 
+        public List<Object> GetPostulaciones()
+        {
+            Postulaciones post = new Postulaciones();
+
+            List<object> lstPostulaciones = UTILS.GET("private/postulacion", "postulacion", AuthUser.token, post.GetType());
+            if (lstPostulaciones == null || lstPostulaciones.Count == 0)
+            {
+                return null;
+            }
+            /**/
+            ProgramaEstudio proest = new ProgramaEstudio();
+            List<object> lstproest = proest.GetProgramasEstudios();
+            if (proest == null)
+            {
+                lstproest = new List<object>();
+            }
+            /**/
+            Alumno al = new Alumno();
+            List<object> lstAlu = al.GetAlumnos();
+            if (lstAlu == null)
+            {
+                return null;
+            }
 
 
-
+            /*
+             */
+            return null;
+        }
     }
 }

@@ -7,9 +7,7 @@ namespace biMontreal
     public class Seguro
     {
         /*
-         *  private Integer id_seguro;
-    private String desc_seguro;
-    private boolean vigente;
+         *
          */
          public int? id_seguro { get; set; }
         public string desc_seguro { get; set; }

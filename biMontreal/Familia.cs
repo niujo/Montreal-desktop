@@ -7,12 +7,7 @@ namespace biMontreal
     public class Familia
     {
         /*
-         * private Integer id_familia;
-    private Integer id_usuario;
-    private Integer num_integrantes;
-    private String estado;
-    private Persona persona;
-    private Usuario usuario;
+         
          */
 
         public int? id_familia { get; set; }

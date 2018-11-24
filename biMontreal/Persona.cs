@@ -7,17 +7,9 @@ namespace biMontreal
     public class Persona
     {
         /*
-         id_persona;
-    private Integer id_direccion;
-    private Integer id_usuario;
-    private String rut;
-    private String nombre;
-    private String app_paterno;
-    private String app_materno;
-    private Date fech_nacimiento;
-    private Direccion direccion;
-    private Contacto contacto;
-             */
+        
+
+        */
         public int? id_persona { get; set; }
         public int? id_direccion { get; set; }
         public int? id_usuario { get; set; }

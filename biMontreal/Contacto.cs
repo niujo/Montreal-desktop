@@ -6,10 +6,9 @@ namespace biMontreal
 {
     public class Contacto
     {
-        /*Integer id_contacto;
-    private Integer id_persona;
-    private String desc_contacto;
-    private String tipo_contacto;*/
+        /*
+         
+             */
 
         public int? id_contacto { get; set; }
         public int? id_persona { get; set; }
