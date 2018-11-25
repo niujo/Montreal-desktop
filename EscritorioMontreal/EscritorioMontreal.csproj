@@ -74,11 +74,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CursoActualizar.xaml.cs">
+      <DependentUpon>CursoActualizar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CursoAgregar.xaml.cs">
       <DependentUpon>CursoAgregar.xaml</DependentUpon>
     </Compile>
     <Compile Include="CursoBorrar.xaml.cs">
       <DependentUpon>CursoBorrar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramasActualizar.xaml.cs">
+      <DependentUpon>ProgramasActualizar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramasAgregar.xaml.cs">
+      <DependentUpon>ProgramasAgregar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramasBorrar.xaml.cs">
+      <DependentUpon>ProgramasBorrar.xaml</DependentUpon>
     </Compile>
     <Compile Include="Programas_estudio.xaml.cs">
       <DependentUpon>Programas_estudio.xaml</DependentUpon>
@@ -89,6 +101,15 @@
     <Compile Include="RegCem.xaml.cs">
       <DependentUpon>RegCem.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UsuariosActualizar.xaml.cs">
+      <DependentUpon>UsuariosActualizar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UsuariosAgregar.xaml.cs">
+      <DependentUpon>UsuariosAgregar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UsuariosBorrar.xaml.cs">
+      <DependentUpon>UsuariosBorrar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VerCursos.xaml.cs">
       <DependentUpon>VerCursos.xaml</DependentUpon>
     </Compile>
@@ -98,6 +119,10 @@
     <Compile Include="VerUsuarios.xaml.cs">
       <DependentUpon>VerUsuarios.xaml</DependentUpon>
     </Compile>
+    <Page Include="CursoActualizar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CursoAgregar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -122,6 +147,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ProgramasActualizar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProgramasAgregar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProgramasBorrar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Programas_estudio.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -131,6 +168,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RegCem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UsuariosActualizar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UsuariosAgregar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UsuariosBorrar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -53,17 +53,23 @@ namespace EscritorioMontreal
 
         private void btn_Agregar_Click(object sender, RoutedEventArgs e)
         {
-
+            ProgramasAgregar proAgr = new ProgramasAgregar();
+            proAgr.Show();
+            this.Close();
         }
 
         private void btn_borrar_Click(object sender, RoutedEventArgs e)
         {
-
+            ProgramasBorrar proB = new ProgramasBorrar();
+            proB.Show();
+            this.Close();
         }
 
         private void btn_actualizar_Click(object sender, RoutedEventArgs e)
         {
-
+            ProgramasActualizar proAc = new ProgramasActualizar();
+            proAc.Show();
+            this.Close();
         }
     }
 }

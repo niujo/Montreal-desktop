@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\App.xaml
-101079935634
+171437163572
 
-18173253430
+251166911295
 128-681252084
-CursoAgregar.xaml;CursoBorrar.xaml;MainWindow.xaml;Menu.xaml;Programas_estudio.xaml;RegCel.xaml;RegCem.xaml;VerCursos.xaml;VerPostulaciones.xaml;VerUsuarios.xaml;
+CursoActualizar.xaml;CursoAgregar.xaml;CursoBorrar.xaml;MainWindow.xaml;Menu.xaml;ProgramasActualizar.xaml;ProgramasAgregar.xaml;ProgramasBorrar.xaml;Programas_estudio.xaml;RegCel.xaml;RegCem.xaml;UsuariosActualizar.xaml;UsuariosAgregar.xaml;UsuariosBorrar.xaml;VerCursos.xaml;VerPostulaciones.xaml;VerUsuarios.xaml;
 
 True
 

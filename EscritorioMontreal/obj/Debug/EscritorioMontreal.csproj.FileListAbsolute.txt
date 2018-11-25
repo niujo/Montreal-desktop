@@ -147,3 +147,17 @@ C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\Es
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\EscritorioMontreal.csproj.CopyComplete
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\EscritorioMontreal.exe
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\EscritorioMontreal.pdb
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\CursoActualizar.g.cs
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\CursoActualizar.baml
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\ProgramasActualizar.g.cs
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\ProgramasAgregar.g.cs
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\ProgramasBorrar.g.cs
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\ProgramasActualizar.baml
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\ProgramasAgregar.baml
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\ProgramasBorrar.baml
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\UsuariosActualizar.g.cs
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\UsuariosAgregar.g.cs
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\UsuariosBorrar.g.cs
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\UsuariosActualizar.baml
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\UsuariosAgregar.baml
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\UsuariosBorrar.baml

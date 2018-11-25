@@ -48,18 +48,24 @@ namespace EscritorioMontreal
 
         private void btn_agregar_Click(object sender, RoutedEventArgs e)
         {
-
+            UsuariosAgregar Agr = new UsuariosAgregar();
+            Agr.Show();
+            this.Close();
         }
 
         private void brn_borrar_Click(object sender, RoutedEventArgs e)
         {
-
+            UsuariosBorrar brr = new UsuariosBorrar();
+            brr.Show();
+            this.Close();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btn_actualizar_Click(object sender, RoutedEventArgs e)
         {
-
-        }        
+            UsuariosActualizar uaC = new UsuariosActualizar();
+            uaC.Show();
+            this.Close();
+        }
 
         private void btn_volver_Click(object sender, RoutedEventArgs e)
         {
