@@ -74,6 +74,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CursoAgregar.xaml.cs">
+      <DependentUpon>CursoAgregar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CursoBorrar.xaml.cs">
+      <DependentUpon>CursoBorrar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Programas_estudio.xaml.cs">
       <DependentUpon>Programas_estudio.xaml</DependentUpon>
     </Compile>
@@ -92,6 +98,14 @@
     <Compile Include="VerUsuarios.xaml.cs">
       <DependentUpon>VerUsuarios.xaml</DependentUpon>
     </Compile>
+    <Page Include="CursoAgregar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CursoBorrar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -170,7 +184,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Img\logo.png" />
+    <Resource Include="Img\Logo Montreal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\montreal.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="336.4" Width="438.05" WindowStyle="ToolWindow">
     <Grid Margin="0,0,4,5.2">
-        <Image HorizontalAlignment="Left" Height="115" Margin="140,21,0,0" VerticalAlignment="Top" Width="140" Source="Img/logo.png"/>
+        <Image HorizontalAlignment="Left" Height="143" Margin="111,38,0,0" VerticalAlignment="Top" Width="200" Source="Img/Logo Montreal.png"/>
 
         <TextBox x:Name="txtUser" HorizontalAlignment="Left" Height="23" Margin="140,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Usuario" HorizontalAlignment="Left" Margin="140,105,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
@@ -15,7 +15,7 @@
         <PasswordBox x:Name="txtPASS" HorizontalAlignment="Left" Margin="140,195,0,0" VerticalAlignment="Top" Width="120" Height="25"/>
         <Button x:Name="btnIngresar" Content="Ingresar" HorizontalAlignment="Left" Margin="140,225,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click" Height="35" FontWeight="Bold"/>
         <Label x:Name="lblError" Content="" HorizontalAlignment="Left" Margin="140,266,0,0" VerticalAlignment="Top"/>
-        
+
         <Button x:Name="btn_salir" Content="Salir" HorizontalAlignment="Left" Margin="343,276,0,0" VerticalAlignment="Top" Width="75" Click="btn_salir_Click"/>
 
     </Grid>

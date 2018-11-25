@@ -14,7 +14,8 @@
         <Button x:Name="btn_reg_cem" Content="Registrar CEM" HorizontalAlignment="Left" Margin="39,280,0,0" VerticalAlignment="Top" Width="115" Click="btn_reg_cem_Click"/>
         <Label x:Name="lblNombre" Content="" HorizontalAlignment="Left" Margin="245,19,0,0" VerticalAlignment="Top" Width="200"/>
         <Button x:Name="btn_salir" Content="Salir" HorizontalAlignment="Left" Margin="465,25,0,0" VerticalAlignment="Top" Width="75" Click="btn_salir_Click"/>
-        <Image HorizontalAlignment="Left" Height="135" Margin="245,45,0,0" VerticalAlignment="Top" Width="200" Source="Img/logo.png"/>
+        <Image HorizontalAlignment="Left" Height="55" Margin="199,68,0,0" VerticalAlignment="Top" Width="200" Source="Img/Logo Montreal.png"/>
         <Button x:Name="btn_Programas" Content="Ver Programas" HorizontalAlignment="Left" Margin="39,81,0,0" VerticalAlignment="Top" Width="115" Click="btn_Programas_Click_1" />
+        <Image HorizontalAlignment="Left" Height="191" Margin="199,112,0,0" VerticalAlignment="Top" Width="328" Source="Img/montreal.jpg"/>
     </Grid>
 </Window>

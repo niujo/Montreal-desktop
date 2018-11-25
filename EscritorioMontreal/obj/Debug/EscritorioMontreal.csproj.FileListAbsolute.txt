@@ -1,7 +1,10 @@
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\EscritorioMontreal.csprojAssemblyReference.cache
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\EscritorioMontreal.exe.config
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\CursoAgregar.g.cs
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\CursoBorrar.g.cs
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\MainWindow.g.cs
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\Menu.g.cs
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\Programas_estudio.g.cs
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\RegCel.g.cs
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\RegCem.g.cs
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\VerCursos.g.cs
@@ -127,8 +130,11 @@ C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\bin\Debug\Ne
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\bin\Debug\RestSharp.xml
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\bin\Debug\System.IdentityModel.Tokens.Jwt.pdb
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\CursoAgregar.baml
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\CursoBorrar.baml
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\MainWindow.baml
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\Menu.baml
+C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\Programas_estudio.baml
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\RegCel.baml
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\RegCem.baml
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\VerCursos.baml
@@ -141,5 +147,3 @@ C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\Es
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\EscritorioMontreal.csproj.CopyComplete
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\EscritorioMontreal.exe
 C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\EscritorioMontreal.pdb
-C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\Programas_estudio.g.cs
-C:\Users\Claudio Cardenas\source\repos\sMontreal\EscritorioMontreal\obj\Debug\Programas_estudio.baml

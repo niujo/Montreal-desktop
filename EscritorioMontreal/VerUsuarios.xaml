@@ -15,5 +15,6 @@
         <Label x:Name="lblNombre" Content="" HorizontalAlignment="Left" Margin="275,10,0,0" VerticalAlignment="Top" Width="200"/>
         <Button x:Name="btn_volver" Content="Volver a menú" HorizontalAlignment="Left" Margin="320,290,0,0" VerticalAlignment="Top" Width="90" Click="btn_volver_Click"/>
         <ListBox x:Name="lstUsuario" HorizontalAlignment="Left" Height="100" Margin="60,70,0,0" VerticalAlignment="Top" Width="395"/>
+        <Image HorizontalAlignment="Left" Height="29" Margin="10,0,0,0" VerticalAlignment="Top" Width="104" Source="Img/Logo Montreal.png"/>
     </Grid>
 </Window>

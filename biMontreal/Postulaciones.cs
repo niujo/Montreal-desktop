@@ -89,11 +89,11 @@ namespace biMontreal
                 return null;
             }
             /**/
-            ProgramaEstudio proest = new ProgramaEstudio();
-            List<object> lstproest = proest.GetProgramasEstudios();
-            if (proest == null)
+            Familia fam = new Familia();
+            List<object> lstFamilias = fam.GetFamilias();
+            if (fam == null)
             {
-                lstproest = new List<object>();
+                lstFamilias = new List<object>();
             }
             /**/
             Alumno al = new Alumno();
@@ -103,9 +103,32 @@ namespace biMontreal
                 return null;
             }
 
-
+            /* uniendo familia con  alumno*/
+            for (int i = 0; i < lstFamilias.Count; i++)
+            {
+                for (int j = 0; j < lstAlu.Count; j++)
+                {
+                    Alumno a = (Alumno)lstAlu[j];
+                    Familia fa = (Familia)lstFamilias[i];
+                    if (fa.id_familia.Equals(a.id_usuario))
+                    {
+                        fa.id_usuario = a.id_usuario;
+                        lstFamilias[i] = fa;
+                        break;
+                    }
+                }
+            }
+            /* llamando a seguro y asegurar que no sea nul o 0*/
+            Seguro se = new Seguro();
+            List<Object> lstSeguros = UTILS.GET("private/seguro", "seguro", AuthUser.token, se.GetType());
+            if (lstSeguros == null || lstSeguros.Count == 0)
+            {
+                return null;
+            }
             /*
              */
+
+
             return null;
         }
     }

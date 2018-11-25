@@ -1,0 +1,25 @@
+﻿<Window x:Class="EscritorioMontreal.CursoAgregar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EscritorioMontreal"
+        mc:Ignorable="d"
+        Title="CursoAgregar" Height="434" Width="590.4">
+    <Grid>
+        <Label Content="Id del Curso" HorizontalAlignment="Left" Margin="40,90,0,0" VerticalAlignment="Top"/>
+        <Label Content="Id del Programa" HorizontalAlignment="Left" Margin="40,131,0,0" VerticalAlignment="Top"/>
+        <Label Content="Descripcion del Curso" HorizontalAlignment="Left" Margin="40,171,0,0" VerticalAlignment="Top"/>
+        <Label Content="Cupos" HorizontalAlignment="Left" Margin="40,211,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtIDcur" HorizontalAlignment="Left" Height="23" Margin="215,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtIdPro" HorizontalAlignment="Left" Height="23" Margin="215,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtDesc" HorizontalAlignment="Left" Height="23" Margin="215,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtCupos" HorizontalAlignment="Left" Height="23" Margin="215,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btn_Agregar" Content="Agregar curso" HorizontalAlignment="Left" Margin="40,270,0,0" VerticalAlignment="Top" Width="86" Click="btn_Agregar_Click"/>
+        <Button x:Name="btn_salir" Content="Salir" HorizontalAlignment="Left" Margin="245,303,0,0" VerticalAlignment="Top" Width="90" Click="btn_salir_Click"/>
+        <Button x:Name="btn_volver" Content="Volver a menú" HorizontalAlignment="Left" Margin="245,270,0,0" VerticalAlignment="Top" Width="90" Click="btn_volver_Click"/>
+        <Label x:Name="lblNombre" Content="" HorizontalAlignment="Left" Margin="275,10,0,0" VerticalAlignment="Top" Width="200"/>
+        <Image HorizontalAlignment="Left" Height="26" Margin="10,0,0,0" VerticalAlignment="Top" Width="114" Source="Img/Logo Montreal.png"/>
+
+    </Grid>
+</Window>

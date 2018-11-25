@@ -7,7 +7,7 @@ namespace biMontreal
     public class Alumno
     {
         public int id_Alumno { get; set; }
-        public String id_usuario { get; set; }
+        public int? id_usuario { get; set; }
 
         public override string ToString()
         {
