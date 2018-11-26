@@ -44,5 +44,10 @@ namespace EscritorioMontreal
             menu.Show();
             this.Close();
         }
+
+        private void btn_actualizar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

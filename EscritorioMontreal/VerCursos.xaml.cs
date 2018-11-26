@@ -60,9 +60,7 @@ namespace EscritorioMontreal
 
         private void btn_borrar_Click(object sender, RoutedEventArgs e)
         {
-            CursoBorrar bor = new CursoBorrar();
-            bor.Show();
-            this.Close();
+           
         }
 
         private void btn_actualizar_Click(object sender, RoutedEventArgs e)

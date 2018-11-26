@@ -5,13 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EscritorioMontreal"
         mc:Ignorable="d"
-        Title="UsuariosActualizar" Height="450" Width="800">
+        Title="UsuariosActualizar" Height="392.927" Width="411.464">
     <Grid Background="#FFA6C3C5">
-        <Button x:Name="btn_salir" Content="Salir" HorizontalAlignment="Left" Margin="669,376,0,0" VerticalAlignment="Top" Width="75" Click="btn_salir_Click"/>
-        <Button x:Name="btn_volver" Content="Volver a menú" HorizontalAlignment="Left" Margin="30,376,0,0" VerticalAlignment="Top" Width="90" Click="btn_volver_Click"/>
-        <Label x:Name="lblNombre" Content="" HorizontalAlignment="Left" Margin="275,10,0,0" VerticalAlignment="Top" Width="200"/>
+        <Button x:Name="btn_salir" Content="Salir" HorizontalAlignment="Left" Margin="275,321,0,0" VerticalAlignment="Top" Width="90" Click="btn_salir_Click"/>
+        <Button x:Name="btn_volver" Content="Volver a menú" HorizontalAlignment="Left" Margin="30,321,0,0" VerticalAlignment="Top" Width="90" Click="btn_volver_Click"/>
+        <Label x:Name="lblNombre" Content="" HorizontalAlignment="Left" Margin="184,10,0,0" VerticalAlignment="Top" Width="200"/>
         <Image HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="140" Source="Img/Logo Montreal.png" Margin="10,4,0,0"/>
-        <Button x:Name="btn_Anterior" Content="Volver" HorizontalAlignment="Left" Margin="350,376,0,0" VerticalAlignment="Top" Width="90" Click="btn_Anterior_Click"/>
+        <Button x:Name="btn_Anterior" Content="Volver" HorizontalAlignment="Left" Margin="147,321,0,0" VerticalAlignment="Top" Width="90" Click="btn_Anterior_Click"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="45,78,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="RUT" HorizontalAlignment="Left" Margin="45,128,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Rol" HorizontalAlignment="Left" Margin="45,180,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="23" Margin="117,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtRut" HorizontalAlignment="Left" Height="23" Margin="117,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtRol" HorizontalAlignment="Left" Height="23" Margin="117,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btn_actualizar" Content="Actualizar usuario" HorizontalAlignment="Left" Margin="117,247,0,0" VerticalAlignment="Top" Width="120" Click="btn_actualizar_Click"/>
 
     </Grid>
 </Window>

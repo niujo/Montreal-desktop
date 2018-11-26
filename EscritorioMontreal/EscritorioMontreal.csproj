@@ -80,26 +80,11 @@
     <Compile Include="CursoAgregar.xaml.cs">
       <DependentUpon>CursoAgregar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CursoBorrar.xaml.cs">
-      <DependentUpon>CursoBorrar.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PostulacionActualizar.xaml.cs">
-      <DependentUpon>PostulacionActualizar.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PostulacionAgregar.xaml.cs">
-      <DependentUpon>PostulacionAgregar.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PostulacionBorrar.xaml.cs">
-      <DependentUpon>PostulacionBorrar.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ProgramasActualizar.xaml.cs">
       <DependentUpon>ProgramasActualizar.xaml</DependentUpon>
     </Compile>
     <Compile Include="ProgramasAgregar.xaml.cs">
       <DependentUpon>ProgramasAgregar.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ProgramasBorrar.xaml.cs">
-      <DependentUpon>ProgramasBorrar.xaml</DependentUpon>
     </Compile>
     <Compile Include="Programas_estudio.xaml.cs">
       <DependentUpon>Programas_estudio.xaml</DependentUpon>
@@ -116,9 +101,6 @@
     <Compile Include="UsuariosAgregar.xaml.cs">
       <DependentUpon>UsuariosAgregar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UsuariosBorrar.xaml.cs">
-      <DependentUpon>UsuariosBorrar.xaml</DependentUpon>
-    </Compile>
     <Compile Include="VerCursos.xaml.cs">
       <DependentUpon>VerCursos.xaml</DependentUpon>
     </Compile>
@@ -133,10 +115,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CursoAgregar.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="CursoBorrar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -156,27 +134,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PostulacionActualizar.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PostulacionAgregar.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PostulacionBorrar.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="ProgramasActualizar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ProgramasAgregar.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ProgramasBorrar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -197,10 +159,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UsuariosAgregar.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UsuariosBorrar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

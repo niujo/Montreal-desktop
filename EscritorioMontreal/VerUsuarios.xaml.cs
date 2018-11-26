@@ -55,9 +55,7 @@ namespace EscritorioMontreal
 
         private void brn_borrar_Click(object sender, RoutedEventArgs e)
         {
-            UsuariosBorrar brr = new UsuariosBorrar();
-            brr.Show();
-            this.Close();
+           
         }
 
         private void btn_actualizar_Click(object sender, RoutedEventArgs e)

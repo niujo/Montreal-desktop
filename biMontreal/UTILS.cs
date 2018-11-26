@@ -14,7 +14,8 @@ namespace biMontreal
 {
     public static class UTILS
     {
-        private static readonly String url = "http://localhost:3000";
+        /*private static readonly String url = "http://localhost:3000";*/
+         private static readonly String url = "http://192.168.43.52:3000/";
         public static bool decodeToken(String token)
         {
             try
@@ -123,5 +124,121 @@ namespace biMontreal
                 return null;
             }
         }
+        /*ELiminar*/
+        public static List<Object> DELETE(String ruta, String objeto, String token, Type objType)
+        {
+            try
+            {
+                var client = new RestClient(url);
+                var request = new RestRequest(ruta, Method.DELETE);
+
+                // HTTP Headers
+                request.AddHeader("Content-Type", "application/json; charset=utf-8");
+                request.AddHeader("Authorization", "Bearer " + token);
+
+                request.OnBeforeDeserialization = resp => { resp.ContentType = "application/json; charset=utf-8"; };
+
+                // Se ejecuta el request
+                IRestResponse response = client.Execute(request);
+                // Se consigue el json del request
+                var jsonString = response.Content;
+
+                List<Object> list = new List<Object>();
+
+                // Se convierte el string json a un objeto json
+                JObject content = JObject.Parse(jsonString);
+
+                // Del objeto JSON navegamoso al objeto data y luego al array direccion
+                JToken results = content["data"][objeto];
+                Object obj = Activator.CreateInstance(objType);
+                obj = results.ToObject(objType);
+                list.Add(obj);
+
+                return list;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+        /*CREAR*/
+        public static List<Object> POST(String ruta, String objeto, String token, Type objType, Object body)
+        {
+            try
+            {
+                var client = new RestClient(url);
+                var request = new RestRequest(ruta, Method.POST);
+                // HTTP Headers
+                request.AddHeader("Content-Type", "application/json; charset=utf-8");
+                request.AddHeader("Authorization", "Bearer " + token);
+
+                request.OnBeforeDeserialization = resp => { resp.ContentType = "application/json; charset=utf-8"; };
+
+                // Body del request
+                request.AddParameter("application/json", Newtonsoft.Json.JsonConvert.SerializeObject(body), ParameterType.RequestBody);
+
+                // Se ejecuta el request
+                IRestResponse response = client.Execute(request);
+                // Se consigue el json del request
+                var jsonString = response.Content;
+
+                List<Object> list = new List<Object>();
+
+                // Se convierte el string json a un objeto json
+                JObject content = JObject.Parse(jsonString);
+
+                // Del objeto JSON navegamoso al objeto data y luego al array direccion
+                JToken results = content["data"][objeto];
+                Object obj = Activator.CreateInstance(objType);
+                obj = results.ToObject(objType);
+                list.Add(obj);
+
+                return list;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+        /*ACTUALIZAR*/
+        public static List<Object> PUT(String ruta, String objeto, String token, Type objType, Object body)
+        {
+            try
+            {
+                var client = new RestClient(url);
+                var request = new RestRequest(ruta, Method.PUT);
+                // HTTP Headers
+                request.AddHeader("Content-Type", "application/json; charset=utf-8");
+                request.AddHeader("Authorization", "Bearer " + token);
+
+                request.OnBeforeDeserialization = resp => { resp.ContentType = "application/json; charset=utf-8"; };
+
+                // Body del request
+                request.AddParameter("application/json", Newtonsoft.Json.JsonConvert.SerializeObject(body), ParameterType.RequestBody);
+
+                // Se ejecuta el request
+                IRestResponse response = client.Execute(request);
+                // Se consigue el json del request
+                var jsonString = response.Content;
+
+                List<Object> list = new List<Object>();
+
+                // Se convierte el string json a un objeto json
+                JObject content = JObject.Parse(jsonString);
+
+                // Del objeto JSON navegamoso al objeto data y luego al array direccion
+                JToken results = content["data"][objeto];
+                Object obj = Activator.CreateInstance(objType);
+                obj = results.ToObject(objType);
+                list.Add(obj);
+
+                return list;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+        /*  */
     }
 }

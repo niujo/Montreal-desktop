@@ -164,6 +164,7 @@ namespace biMontreal
                     ProgramaEstudio pe = (ProgramaEstudio)lstProgramas[j];
                     if (p.id_programa.Equals(pe.id_programa))
                     {
+                        p.seguro = se;
                         p.programaEstudio = pe;
                         lstPostulaciones[i] = p;
                         break;

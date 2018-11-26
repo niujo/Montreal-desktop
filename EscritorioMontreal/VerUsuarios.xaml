@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:EscritorioMontreal"
         mc:Ignorable="d"
         Title="VerUsuarios" Height="324.062" Width="627.987">
-    <Grid Background="#FFA6C3C5" Margin="0,0,-4,1">
+    <Grid Background="#FFA6C3C5" Margin="0,0,-6.4,-4.6">
         <Button x:Name="btn_agregar" Content="Agregar" HorizontalAlignment="Left" Margin="45,197,0,0" VerticalAlignment="Top" Width="75" Click="btn_agregar_Click"/>
         <Button x:Name="brn_borrar" Content="Borrar" HorizontalAlignment="Left" Margin="275,197,0,0" VerticalAlignment="Top" Width="75" Click="brn_borrar_Click"/>
         <Label Content="Lista de usuarios" HorizontalAlignment="Left" Margin="45,44,0,0" VerticalAlignment="Top"/>
@@ -15,6 +15,6 @@
         <Button x:Name="btn_volver" Content="Volver a menú" HorizontalAlignment="Left" Margin="45,255,0,0" VerticalAlignment="Top" Width="90" Click="btn_volver_Click"/>
         <ListBox x:Name="lstUsuario" HorizontalAlignment="Left" Height="100" Margin="45,70,0,0" VerticalAlignment="Top" Width="557"/>
         <Image HorizontalAlignment="Left" Height="29" Margin="10,0,0,0" VerticalAlignment="Top" Width="104" Source="Img/Logo Montreal.png"/>
-        <Button x:Name="btn_actualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="527,197,0,0" VerticalAlignment="Top" Width="75" Click="btn_actualizar_Click" />
+        <Button x:Name="btn_actualizar" Content="Editar" HorizontalAlignment="Left" Margin="527,197,0,0" VerticalAlignment="Top" Width="75" Click="btn_actualizar_Click" />
     </Grid>
 </Window>

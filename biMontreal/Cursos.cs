@@ -7,11 +7,11 @@ namespace biMontreal
     public class Cursos
     {
 
-        public int? id_Curso { get; set; }
+        public int? id_curso { get; set; }
         public int? id_programa { get; set; }
         public String desc_curso { get; set; }
     
-        public String cupos { get; set; }
+        public int? cupos { get; set; }
 
 
         private ProgramaEstudio _programaEstudio;

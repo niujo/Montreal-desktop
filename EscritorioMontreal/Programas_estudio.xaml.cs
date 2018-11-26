@@ -60,10 +60,7 @@ namespace EscritorioMontreal
 
         private void btn_borrar_Click(object sender, RoutedEventArgs e)
         {
-            ProgramasBorrar proB = new ProgramasBorrar();
-            proB.Show();
-            this.Close();
-        }
+                    }
 
         private void btn_actualizar_Click(object sender, RoutedEventArgs e)
         {
