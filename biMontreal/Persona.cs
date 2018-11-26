@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,18 +7,30 @@ namespace biMontreal
 {
     public class Persona
     {
-        /*
-        
-
-        */
+        [JsonProperty("ID_PERSONA")]
         public int? id_persona { get; set; }
+
+        [JsonProperty("ID_DIRECCION")]
         public int? id_direccion { get; set; }
+
+        [JsonProperty("ID_USUARIO")]
         public int? id_usuario { get; set; }
+
+        [JsonProperty("RUT")]
         public String rut { get; set; }
+
+        [JsonProperty("NOMBRE")]
         public String nombre { get; set; }
+
+        [JsonProperty("APP_PATERNO")]
         public String app_paterno { get; set; }
+
+        [JsonProperty("APP_MATERNO")]
         public String app_materno { get; set; }
-        public DateTime fecha_nacimiento { get; set; }
+
+        [JsonProperty("FECH_NACIMIENTO")]
+        public DateTime fech_nacimiento { get; set; }
+        
         public Direccion direccion { get; set; }
         public Contacto contacto { get; set; }
 

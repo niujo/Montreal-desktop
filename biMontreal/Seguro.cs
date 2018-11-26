@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,11 +7,13 @@ namespace biMontreal
 {
     public class Seguro
     {
-        /*
-         *
-         */
-         public int? id_seguro { get; set; }
+        [JsonProperty("ID_SEGURO")]
+        public int? id_seguro { get; set; }
+
+        [JsonProperty("DESC_SEGURO")]
         public string desc_seguro { get; set; }
+
+        [JsonProperty("VIGENTE")]
         public bool vigente { get; set; }
 
 

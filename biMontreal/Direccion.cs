@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,14 +7,19 @@ namespace biMontreal
 {
     public class Direccion
     {
-        /*
-         * Los atributos de las clases deben estar escritos igual que aquí (mismo formato public atributo nombre { get; set; })
-         * y deben llamarse exactamente igual que como estan en el json que devuelve la API
-         */
+        [JsonProperty("DEPARTAMENTO")]
         public String departamento { get; set; }
+
+        [JsonProperty("NUMERACION")]
         public String numeracion { get; set; }
+
+        [JsonProperty("CALLE")]
         public String calle { get; set; }
+
+        [JsonProperty("ID_DIRECCION")]
         public int? id_direccion { get; set; }
+
+        [JsonProperty("ID_CIUDAD")]
         public int? id_ciudad { get; set; }
         public Ciudad ciudad { get; set; }
 

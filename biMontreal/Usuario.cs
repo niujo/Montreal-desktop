@@ -1,13 +1,21 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace biMontreal
 {
     public class Usuario
     {
+        [JsonProperty("ID_USUARIO")]
         public int? id_usuario { get; set; }
+
+        [JsonProperty("ID_ROL")]
         public int? id_rol { get; set; }
+
+        [JsonProperty("USUARIO")]
         public String usuario { get; set; }
+
+        [JsonProperty("CONTRASENA")]
         public String contrasena { get; set; }
 
         private Persona _persona;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,17 +7,31 @@ namespace biMontreal
 {
     public class Postulaciones
     {
-        /*         
-         */
-
+        [JsonProperty("ID_POSTULACION")]
         public int? id_postulacion { get; set; }
+
+        [JsonProperty("ID_ALUMNO")]
         public int? id_alumno { get; set; }
+
+        [JsonProperty("ID_FAMILIA")]
         public int? id_familia { get; set; }
+
+        [JsonProperty("ID_SEGURO")]
         public int? id_seguro { get; set; }
+
+        [JsonProperty("ID_PROGRAMA")]
         public int? id_programa { get; set; }
+
+        [JsonProperty("FECH_POSTULACION")]
         public DateTime? fech_postulacion { get; set; }
+
+        [JsonProperty("FECH_RESPUESTA")]
         public DateTime? fech_respuesta { get; set; }
+
+        [JsonProperty("ESTADO")]
         public string estado { get; set; }
+
+        [JsonProperty("RESERVA_DINERO_PASAJES")]
         public int? reserva_dinero_pasajes { get; set; }
         private ProgramaEstudio _programaEstudio;
 
@@ -120,7 +135,7 @@ namespace biMontreal
                 {
                     Alumno a = (Alumno)lstAlu[j];
                     Postulaciones po= (Postulaciones)lstPostulaciones[i];
-                    if (po.id_alumno.Equals(a.id_Alumno))
+                    if (po.id_alumno.Equals(a.id_alumno))
                     {
                         po.alumno = a;
                         lstPostulaciones[i] = po;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,11 +7,10 @@ namespace biMontreal
 {
     public class Rol
     {
-        /*
-         
-        */
-
+        [JsonProperty("ID_ROL")]
         public int? id_rol { get; set; }
+
+        [JsonProperty("DESC_ROL")]
         public String desc_rol { get; set; }
 
         public List<Object> getRoles()

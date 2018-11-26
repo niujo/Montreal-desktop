@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,7 +7,10 @@ namespace biMontreal
 {
     public class Alumno
     {
-        public int id_Alumno { get; set; }
+        [JsonProperty("ID_ALUMNO")]
+        public int id_alumno { get; set; }
+
+        [JsonProperty("ID_USUARIO")]
         public int? id_usuario { get; set; }
 
         private Persona _persona;
@@ -25,7 +29,7 @@ namespace biMontreal
 
         public override string ToString()
         {
-            return "id Alumno: " + id_Alumno + " id_ciudad: " + id_usuario;
+            return "id Alumno: " + id_alumno + " id_ciudad: " + id_usuario;
         }
 
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,13 +7,16 @@ namespace biMontreal
 {
     public class Familia
     {
-        /*
-         
-         */
-
+        [JsonProperty("ID_FAMILIA")]
         public int? id_familia { get; set; }
+
+        [JsonProperty("ID_USUARIO")]
         public int? id_usuario { get; set; }
+
+        [JsonProperty("NUM_INTEGRANTES")]
         public int? num_integrantes { get; set; }
+
+        [JsonProperty("ESTADO")]
         public string estado { get; set; }
         private Persona _persona;
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,16 +7,32 @@ namespace biMontreal
 {
     public class ProgramaEstudio
     {
-        
 
+        [JsonProperty("ID_PROGRAMA")]
         public int? id_programa { get; set; }
+
+        [JsonProperty("ID_CEM")]
         public int? id_cem { get; set; }
+
+        [JsonProperty("ID_CEL")]
         public int? id_cel { get; set; }
+
+        [JsonProperty("NOMB_PROGRAMA")]
         public String nomb_programa { get; set; }
+
+        [JsonProperty("DESC_PROGRAMA")]
         public String desc_programa { get; set; }
+
+        [JsonProperty("FECH_INICIO")]
         public DateTime fech_inicio { get; set; }
+
+        [JsonProperty("FECH_TERMINO")]
         public DateTime fech_termino { get; set; }
+
+        [JsonProperty("CANT_MIN_ALUMNOS")]
         public int? cant_min_alumnos { get; set; }
+
+        [JsonProperty("CANT_MAX_ALUMNOS")]
         public int? cant_max_alumnos { get; set; }
         private CEL _cel;
 

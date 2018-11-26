@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,11 +7,13 @@ namespace biMontreal
 {
     public class CEL
     {
-        /*
-         
-         */
-         public int? id_cel { get; set; }
-        public int? id_usurio { get; set; }
+        [JsonProperty("ID_CEL")]
+        public int? id_cel { get; set; }
+
+        [JsonProperty("ID_USUARIO")]
+        public int? id_usuario { get; set; }
+
+        [JsonProperty("NOM_CENTRO")]
         public string nom_centro { get; set; }
         private Usuario _usuario;
 

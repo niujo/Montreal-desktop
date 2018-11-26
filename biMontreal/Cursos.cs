@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,11 +7,16 @@ namespace biMontreal
 {
     public class Cursos
     {
-
+        [JsonProperty("ID_CURSO")]
         public int? id_curso { get; set; }
+
+        [JsonProperty("ID_PROGRAMA")]
         public int? id_programa { get; set; }
+
+        [JsonProperty("DESC_CURSO")]
         public String desc_curso { get; set; }
-    
+
+        [JsonProperty("CUPOS")]
         public int? cupos { get; set; }
 
 
