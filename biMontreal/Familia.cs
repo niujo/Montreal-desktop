@@ -59,12 +59,12 @@ namespace biMontreal
             {
                 for (int j = 0; j < lstPersonas.Count; j++)
                 {
-                    Usuario usr = (Usuario)lstFamilias[i];
+                    Familia fa = (Familia)lstFamilias[i];
                     Persona per = (Persona)lstPersonas[j];
-                    if (usr.id_usuario.Equals(per.id_usuario))
+                    if (fa.id_usuario.Equals(per.id_usuario))
                     {
-                        usr.persona = per;
-                        lstFamilias[i] = usr;
+                        fa.persona = per;
+                        lstFamilias[i] = fa;
                         break;
                     }
                 }

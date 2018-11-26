@@ -14,7 +14,7 @@ namespace biMontreal
 {
     public static class UTILS
     {
-        private static readonly String url = "http://192.168.85.131:3000";
+        private static readonly String url = "http://localhost:3000";
         public static bool decodeToken(String token)
         {
             try

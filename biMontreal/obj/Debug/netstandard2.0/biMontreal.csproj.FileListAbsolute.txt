@@ -7,3 +7,12 @@ C:\Users\Claudio Cardenas\source\repos\sMontreal\biMontreal\obj\Debug\netstandar
 C:\Users\Claudio Cardenas\source\repos\sMontreal\biMontreal\obj\Debug\netstandard2.0\biMontreal.AssemblyInfo.cs
 C:\Users\Claudio Cardenas\source\repos\sMontreal\biMontreal\obj\Debug\netstandard2.0\biMontreal.dll
 C:\Users\Claudio Cardenas\source\repos\sMontreal\biMontreal\obj\Debug\netstandard2.0\biMontreal.pdb
+C:\Users\Felipe-2\Desktop\Montreal Desktop\biMontreal\bin\Debug\netstandard2.0\biMontreal.deps.json
+C:\Users\Felipe-2\Desktop\Montreal Desktop\biMontreal\bin\Debug\netstandard2.0\biMontreal.dll
+C:\Users\Felipe-2\Desktop\Montreal Desktop\biMontreal\bin\Debug\netstandard2.0\biMontreal.pdb
+C:\Users\Felipe-2\Desktop\Montreal Desktop\biMontreal\obj\Debug\netstandard2.0\biMontreal.csprojAssemblyReference.cache
+C:\Users\Felipe-2\Desktop\Montreal Desktop\biMontreal\obj\Debug\netstandard2.0\biMontreal.csproj.CoreCompileInputs.cache
+C:\Users\Felipe-2\Desktop\Montreal Desktop\biMontreal\obj\Debug\netstandard2.0\biMontreal.AssemblyInfoInputs.cache
+C:\Users\Felipe-2\Desktop\Montreal Desktop\biMontreal\obj\Debug\netstandard2.0\biMontreal.AssemblyInfo.cs
+C:\Users\Felipe-2\Desktop\Montreal Desktop\biMontreal\obj\Debug\netstandard2.0\biMontreal.dll
+C:\Users\Felipe-2\Desktop\Montreal Desktop\biMontreal\obj\Debug\netstandard2.0\biMontreal.pdb

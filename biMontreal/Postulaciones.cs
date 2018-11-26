@@ -14,8 +14,8 @@ namespace biMontreal
         public int? id_familia { get; set; }
         public int? id_seguro { get; set; }
         public int? id_programa { get; set; }
-        public DateTime feh_postulacion { get; set; }
-        public DateTime fech_respuesta { get; set; }
+        public DateTime? fech_postulacion { get; set; }
+        public DateTime? fech_respuesta { get; set; }
         public string estado { get; set; }
         public int? reserva_dinero_pasajes { get; set; }
         private ProgramaEstudio _programaEstudio;
@@ -79,6 +79,16 @@ namespace biMontreal
             set { _familia = value; }
         }
 
+        public override string ToString()
+        {
+            return "Alumno: " + alumno.persona.nombre + " " + alumno.persona.app_paterno + " " + alumno.persona.app_materno
+                + " Representante Familia: " + familia.persona.nombre + " " + familia.persona.app_paterno + " " + familia.persona.app_materno
+                + " Seguro: " + seguro.desc_seguro
+                + " Programa de Estudio: " + programaEstudio.nomb_programa
+                + " Fecha de Postulacion:" + fech_postulacion.Value.ToShortDateString()
+                + " Reserva de Dinero: " + reserva_dinero_pasajes;
+        }
+
         public List<Object> GetPostulaciones()
         {
             Postulaciones post = new Postulaciones();
@@ -110,11 +120,12 @@ namespace biMontreal
                 {
                     Alumno a = (Alumno)lstAlu[j];
                     Postulaciones po= (Postulaciones)lstPostulaciones[i];
-                    if (po.id_familia.Equals(a.id_usuario))
-                    
-                        po.id_alumno = a.id_Alumno;
+                    if (po.id_alumno.Equals(a.id_Alumno))
+                    {
+                        po.alumno = a;
                         lstPostulaciones[i] = po;
-                        break;                    
+                        break;
+                    }                   
                 }
 
                 for (int k = 0; k < lstFamilias.Count; i++)
@@ -123,8 +134,9 @@ namespace biMontreal
                     Postulaciones po = (Postulaciones)lstPostulaciones[i];
                     if (po.id_familia.Equals(fa.id_familia))
                     {
-                        po.id_familia = fa.id_familia;
-                        lstPostulaciones[i] = fa;
+                        po.familia = fa;
+                        lstPostulaciones[i] = po;
+                        break;
                     }
                 }
                 
@@ -132,16 +144,34 @@ namespace biMontreal
             /* llamando a seguro y asegurar que no sea nul o 0*/
             Seguro se = new Seguro();
             List<Object> lstSeguros = UTILS.GET("private/seguro", "seguro", AuthUser.token, se.GetType());
-            if (lstSeguros == null || lstSeguros.Count == 0)
+            if (lstSeguros != null & lstSeguros.Count > 0)
+            {
+                se = (Seguro)lstSeguros[0];
+            }
+
+            ProgramaEstudio prog = new ProgramaEstudio();
+            List<Object> lstProgramas = prog.GetProgramasEstudios();
+            if (lstProgramas == null || lstProgramas.Count == 0)
             {
                 return null;
             }
-            /*
-             * 
-             */
 
+            for(int i = 0; i < lstPostulaciones.Count; i++)
+            {
+                for(int j = 0; j < lstProgramas.Count; j++)
+                {
+                    Postulaciones p = (Postulaciones)lstPostulaciones[i];
+                    ProgramaEstudio pe = (ProgramaEstudio)lstProgramas[j];
+                    if (p.id_programa.Equals(pe.id_programa))
+                    {
+                        p.programaEstudio = pe;
+                        lstPostulaciones[i] = p;
+                        break;
+                    }
+                }
+            }
 
-            return null;
+            return lstPostulaciones;
         }
     }
 }

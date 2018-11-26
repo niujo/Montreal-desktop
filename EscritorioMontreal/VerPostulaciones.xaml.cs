@@ -24,6 +24,19 @@ namespace EscritorioMontreal
         {
             InitializeComponent();
             lblNombre.Content = AuthUser.nombre;
+
+            Postulaciones p = new Postulaciones();
+            List<Object> lstPostulaciones = p.GetPostulaciones();
+            // aca se  recibe
+            if (lstPostulaciones == null)
+            {
+                lstPostulaciones = new List<Object>();
+            }
+
+            foreach (Postulaciones po in lstPostulaciones)
+            {
+                postulacionesPendientes.Items.Add(po);
+            }
         }
 
         private void btn_salir_Click(object sender, RoutedEventArgs e)
