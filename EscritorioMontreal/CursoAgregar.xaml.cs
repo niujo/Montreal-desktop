@@ -42,5 +42,12 @@ namespace EscritorioMontreal
         {
 
         }
+
+        private void btn_Anterior_Click(object sender, RoutedEventArgs e)
+        {
+            VerCursos cursos = new VerCursos();
+            cursos.Show();
+            this.Close();
+        }
     }
 }

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:EscritorioMontreal"
         mc:Ignorable="d"
         Title="Menu" Height="396.4" Width="618.1">
-    <Grid>
+    <Grid Background="#FFA6C3C5">
         <Button x:Name="btn_usuarios" Content="Ver Usuarios" HorizontalAlignment="Left" Margin="39,112,0,0" VerticalAlignment="Top" Width="115" Click="btn_usuarios_Click"/>
         <Button x:Name="btn_cursos" Content="Ver Cursos" HorizontalAlignment="Left" Margin="39,143,0,0" VerticalAlignment="Top" Width="115" Click="btn_cursos_Click"/>
         <Button x:Name="btn_postulaciones" Content="Ver Postulaciones" HorizontalAlignment="Left" Margin="39,219,0,0" VerticalAlignment="Top" Width="115" Click="btn_postulaciones_Click"/>

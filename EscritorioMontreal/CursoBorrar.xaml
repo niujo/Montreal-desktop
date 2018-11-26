@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:EscritorioMontreal"
         mc:Ignorable="d"
         Title="CursoBorrar" Height="312.805" Width="494.878">
-    <Grid>
+    <Grid Background="#FFA6C3C5">
         <Button x:Name="btn_Borrar" Content="Borrar" HorizontalAlignment="Left" Margin="268,99,0,0" VerticalAlignment="Top" Width="75" Click="btn_Borrar_Click"/>
         <TextBox x:Name="txtIDborrar" HorizontalAlignment="Left" Height="23" Margin="98,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Introducir la id" HorizontalAlignment="Left" Margin="98,64,0,0" VerticalAlignment="Top"/>
@@ -14,6 +14,7 @@
         <Button x:Name="btn_salir" Content="Salir" HorizontalAlignment="Left" Margin="286,193,0,0" VerticalAlignment="Top" Width="90" Click="btn_salir_Click"/>
         <Button x:Name="btn_volver" Content="Volver a menú" HorizontalAlignment="Left" Margin="184,193,0,0" VerticalAlignment="Top" Width="90" Click="btn_volver_Click"/>
         <Label x:Name="lblNombre" Content="" HorizontalAlignment="Left" Margin="166,10,0,0" VerticalAlignment="Top" Width="200"/>
+        <Button x:Name="btn_Anterior" Content="Volver" HorizontalAlignment="Left" Margin="78,193,0,0" VerticalAlignment="Top" Width="90" Click="btn_Anterior_Click"/>
 
     </Grid>
 </Window>

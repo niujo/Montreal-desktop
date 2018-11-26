@@ -103,20 +103,31 @@ namespace biMontreal
                 return null;
             }
 
-            /* uniendo familia con  alumno*/
-            for (int i = 0; i < lstFamilias.Count; i++)
+            /* uniendo familia y  alumno con postulacion*/
+            for (int i = 0; i < lstPostulaciones.Count; i++)
             {
                 for (int j = 0; j < lstAlu.Count; j++)
                 {
                     Alumno a = (Alumno)lstAlu[j];
-                    Familia fa = (Familia)lstFamilias[i];
-                    if (fa.id_familia.Equals(a.id_usuario))
+                    Postulaciones po= (Postulaciones)lstPostulaciones[i];
+                    if (po.id_familia.Equals(a.id_usuario))
+                    
+                        po.id_alumno = a.id_Alumno;
+                        lstPostulaciones[i] = po;
+                        break;                    
+                }
+
+                for (int k = 0; k < lstFamilias.Count; i++)
+                {
+                    Familia fa = (Familia)lstFamilias[k];
+                    Postulaciones po = (Postulaciones)lstPostulaciones[i];
+                    if (po.id_familia.Equals(fa.id_familia))
                     {
-                        fa.id_usuario = a.id_usuario;
-                        lstFamilias[i] = fa;
-                        break;
+                        po.id_familia = fa.id_familia;
+                        lstPostulaciones[i] = fa;
                     }
                 }
+                
             }
             /* llamando a seguro y asegurar que no sea nul o 0*/
             Seguro se = new Seguro();
@@ -126,6 +137,7 @@ namespace biMontreal
                 return null;
             }
             /*
+             * 
              */
 
 
@@ -133,3 +145,4 @@ namespace biMontreal
         }
     }
 }
+

@@ -37,5 +37,12 @@ namespace EscritorioMontreal
         {
             Application.Current.Shutdown();
         }
+
+        private void btn_Anterior_Click(object sender, RoutedEventArgs e)
+        {
+            Programas_estudio prog = new Programas_estudio();
+            prog.Show();
+            this.Close();
+        }
     }
 }

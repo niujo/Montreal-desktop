@@ -83,6 +83,15 @@
     <Compile Include="CursoBorrar.xaml.cs">
       <DependentUpon>CursoBorrar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PostulacionActualizar.xaml.cs">
+      <DependentUpon>PostulacionActualizar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostulacionAgregar.xaml.cs">
+      <DependentUpon>PostulacionAgregar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostulacionBorrar.xaml.cs">
+      <DependentUpon>PostulacionBorrar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ProgramasActualizar.xaml.cs">
       <DependentUpon>ProgramasActualizar.xaml</DependentUpon>
     </Compile>
@@ -144,6 +153,18 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PostulacionActualizar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PostulacionAgregar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PostulacionBorrar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

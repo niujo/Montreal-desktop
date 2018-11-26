@@ -40,17 +40,23 @@ namespace EscritorioMontreal
 
         private void btn_actualizar_Click(object sender, RoutedEventArgs e)
         {
-
+            PostulacionActualizar menu = new PostulacionActualizar();
+            menu.Show();
+            this.Close();
         }
 
         private void btn_borrar_Click(object sender, RoutedEventArgs e)
         {
-
+            PostulacionBorrar menu = new PostulacionBorrar();
+            menu.Show();
+            this.Close();
         }
 
         private void btn_Agregar_Click(object sender, RoutedEventArgs e)
         {
-
+            PostulacionAgregar menu = new PostulacionAgregar();
+            menu.Show();
+            this.Close();
         }
     }
 }

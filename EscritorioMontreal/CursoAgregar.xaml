@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:EscritorioMontreal"
         mc:Ignorable="d"
         Title="CursoAgregar" Height="434" Width="590.4">
-    <Grid>
+    <Grid Background="#FFA6C3C5">
         <Label Content="Id del Curso" HorizontalAlignment="Left" Margin="40,90,0,0" VerticalAlignment="Top"/>
         <Label Content="Id del Programa" HorizontalAlignment="Left" Margin="40,131,0,0" VerticalAlignment="Top"/>
         <Label Content="Descripcion del Curso" HorizontalAlignment="Left" Margin="40,171,0,0" VerticalAlignment="Top"/>
@@ -20,6 +20,7 @@
         <Button x:Name="btn_volver" Content="Volver a menú" HorizontalAlignment="Left" Margin="245,270,0,0" VerticalAlignment="Top" Width="90" Click="btn_volver_Click"/>
         <Label x:Name="lblNombre" Content="" HorizontalAlignment="Left" Margin="275,10,0,0" VerticalAlignment="Top" Width="200"/>
         <Image HorizontalAlignment="Left" Height="26" Margin="10,0,0,0" VerticalAlignment="Top" Width="114" Source="Img/Logo Montreal.png"/>
+        <Button x:Name="btn_Anterior" Content="Volver" HorizontalAlignment="Left" Margin="245,334,0,0" VerticalAlignment="Top" Width="90" Click="btn_Anterior_Click"/>
 
     </Grid>
 </Window>

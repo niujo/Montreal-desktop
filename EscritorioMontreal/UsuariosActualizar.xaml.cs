@@ -37,5 +37,12 @@ namespace EscritorioMontreal
         {
             Application.Current.Shutdown();
         }
+
+        private void btn_Anterior_Click(object sender, RoutedEventArgs e)
+        {
+            VerUsuarios menu = new VerUsuarios();
+            menu.Show();
+            this.Close();
+        }
     }
 }

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:EscritorioMontreal"
         mc:Ignorable="d"
         Title="MainWindow" Height="336.4" Width="438.05" WindowStyle="ToolWindow">
-    <Grid Margin="0,0,4,5.2">
+    <Grid Margin="0,0,4,5.2" Background="#FFA6C3C5">
         <Image HorizontalAlignment="Left" Height="143" Margin="111,38,0,0" VerticalAlignment="Top" Width="200" Source="Img/Logo Montreal.png"/>
 
         <TextBox x:Name="txtUser" HorizontalAlignment="Left" Height="23" Margin="140,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>

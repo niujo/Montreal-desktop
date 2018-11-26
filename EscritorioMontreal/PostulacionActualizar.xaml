@@ -1,0 +1,17 @@
+﻿<Window x:Class="EscritorioMontreal.PostulacionActualizar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EscritorioMontreal"
+        mc:Ignorable="d"
+        Title="PostulacionActualizar" Height="450" Width="800">
+    <Grid Background="#FFA6C3C5">
+        <Button x:Name="btn_salir" Content="Salir" HorizontalAlignment="Left" Margin="669,376,0,0" VerticalAlignment="Top" Width="75" Click="btn_salir_Click"/>
+        <Button x:Name="btn_volver" Content="Volver a menú" HorizontalAlignment="Left" Margin="30,376,0,0" VerticalAlignment="Top" Width="90" Click="btn_volver_Click"/>
+        <Label x:Name="lblNombre" Content="" HorizontalAlignment="Left" Margin="275,10,0,0" VerticalAlignment="Top" Width="200"/>
+        <Image HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="140" Source="Img/Logo Montreal.png" Margin="10,4,0,0"/>
+        <Button x:Name="btn_Anterior" Content="Volver" HorizontalAlignment="Left" Margin="350,376,0,0" VerticalAlignment="Top" Width="90" Click="btn_Anterior_Click"/>
+
+    </Grid>
+</Window>
