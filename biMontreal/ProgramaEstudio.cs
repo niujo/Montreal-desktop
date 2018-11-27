@@ -85,7 +85,9 @@ namespace biMontreal
                 }
             }
 
-            return lstProgramas;
+            List<Object> arr = filtrarProgramas(lstProgramas);
+
+            return arr;
         }
 
         public List<object> GetProgramasEstudios()
@@ -98,6 +100,43 @@ namespace biMontreal
                 return null;
             }
             return lstProgramas;
+        }
+
+        public List<Object> filtrarProgramas(List<Object> programas)
+        {
+            try
+            {
+                DateTime fecha = DateTime.UtcNow.Date;
+                List<Object> vigentes = new List<Object>();
+                List<Object> finalizados = new List<Object>();
+
+                if (programas != null && programas.Count > 0)
+                {
+                    ProgramaEstudio pg;
+                    for (int i = 0; i < programas.Count; i++)
+                    {
+                        pg = (ProgramaEstudio)programas[i];
+                        DateTime fechaTermino = pg.fech_termino;
+                        if (fechaTermino.Date < fecha)
+                        {
+                            finalizados.Add(pg);
+                        }
+                        else
+                        {
+                            vigentes.Add(pg);
+                        }
+                    }
+                }
+
+                List<Object> arr = new List<Object>();
+                arr.Add(vigentes);
+                arr.Add(finalizados);
+
+                return arr;
+            } catch(Exception e)
+            {
+                return null;
+            }
         }
     }
 }

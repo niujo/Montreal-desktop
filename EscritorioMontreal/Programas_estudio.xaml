@@ -8,16 +8,16 @@
         Title="Programas_estudio" Height="450" Width="800">
     <Grid Background="#FFA6C3C5">
         <Label x:Name="lblNombre" Content="" HorizontalAlignment="Left" Margin="275,10,0,0" VerticalAlignment="Top" Width="200"/>
-        <ListBox x:Name="lstPendientes" HorizontalAlignment="Left" Height="100" Margin="60,80,0,0" VerticalAlignment="Top" Width="684"/>
-        <ListBox HorizontalAlignment="Left" Height="100" Margin="60,240,0,0" VerticalAlignment="Top" Width="684"/>
-        <Label Content="Pendientes" HorizontalAlignment="Left" Margin="60,49,0,0" VerticalAlignment="Top"/>
-        <Label Content="Respondidas" HorizontalAlignment="Left" Margin="60,209,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="lstVigentes" HorizontalAlignment="Left" Height="100" Margin="60,80,0,0" VerticalAlignment="Top" Width="684"/>
+        <ListBox x:Name="lstFinalizados" HorizontalAlignment="Left" Height="100" Margin="60,240,0,0" VerticalAlignment="Top" Width="684"/>
+        <Label Content="Programas Vigentes" HorizontalAlignment="Left" Margin="60,54,0,0" VerticalAlignment="Top"/>
+        <Label Content="Programas Finalizados" HorizontalAlignment="Left" Margin="60,214,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btn_Agregar" Content="Agregar" HorizontalAlignment="Left" Margin="62,185,0,0" VerticalAlignment="Top" Width="75" Click="btn_Agregar_Click"/>
         <Button x:Name="btn_borrar" Content="Borrar" HorizontalAlignment="Left" Margin="298,185,0,0" VerticalAlignment="Top" Width="75" Click="btn_borrar_Click"/>
         <Button x:Name="btn_actualizar" Content="Editar" HorizontalAlignment="Left" Margin="526,185,0,0" VerticalAlignment="Top" Width="75" Click="btn_actualizar_Click"/>
         <Button x:Name="btn_salir" Content="Salir" HorizontalAlignment="Left" Margin="669,376,0,0" VerticalAlignment="Top" Width="75" Click="btn_salir_Click"/>
         <Button x:Name="btn_volver" Content="Volver a menú" HorizontalAlignment="Left" Margin="30,376,0,0" VerticalAlignment="Top" Width="90" Click="btn_volver_Click"/>
-        <Label Content="Estado de postulaciones" HorizontalAlignment="Left" Margin="60,31,0,0" VerticalAlignment="Top"/>
+        <Label Content="Programas de Estudio" HorizontalAlignment="Left" Margin="60,28,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Image HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="140" Source="Img/Logo Montreal.png" Margin="10,0,0,0"/>
 
     </Grid>

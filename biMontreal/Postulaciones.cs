@@ -170,19 +170,41 @@ namespace biMontreal
             {
                 return null;
             }
+            List<Object> arr = prog.filtrarProgramas(lstProgramas);
+            List<Object> vigentes = (List<Object>)arr[0];
+            List<Object> finalizados = (List<Object>)arr[1];
 
+            bool vigente;
+            Postulaciones p;
+            ProgramaEstudio pe;
             for(int i = 0; i < lstPostulaciones.Count; i++)
             {
-                for(int j = 0; j < lstProgramas.Count; j++)
+                vigente = false;
+                p = (Postulaciones)lstPostulaciones[i];
+                p.seguro = se;
+                for (int j = 0; j < vigentes.Count; j++)
                 {
-                    Postulaciones p = (Postulaciones)lstPostulaciones[i];
-                    ProgramaEstudio pe = (ProgramaEstudio)lstProgramas[j];
+                    pe = (ProgramaEstudio)vigentes[j];
                     if (p.id_programa.Equals(pe.id_programa))
                     {
-                        p.seguro = se;
                         p.programaEstudio = pe;
                         lstPostulaciones[i] = p;
+                        vigente = true;
                         break;
+                    }
+                }
+
+                if (!vigente)
+                {
+                    for(int j = 0; j < finalizados.Count; j++)
+                    {
+                        pe = (ProgramaEstudio)finalizados[i];
+                        if (p.id_programa.Equals(pe.id_programa))
+                        {
+                            p.programaEstudio = pe;
+                            lstPostulaciones[i] = p;
+                            break;
+                        }
                     }
                 }
             }

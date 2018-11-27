@@ -31,12 +31,22 @@ namespace EscritorioMontreal
             if (lstProgramas == null)
             {
                 lstProgramas = new List<Object>();
+                lstProgramas.Add(new List<Object>());
+                lstProgramas.Add(new List<Object>());
+            }
+            List<Object> vigentes = (List<Object>)lstProgramas[0];
+            List<Object> finalizados = (List<Object>)lstProgramas[1];
+
+            foreach (ProgramaEstudio v in vigentes)
+            {
+                lstVigentes.Items.Add(v);
             }
 
-            foreach (ProgramaEstudio pe in lstProgramas)
+            foreach (ProgramaEstudio f in finalizados)
             {
-                lstPendientes.Items.Add(pe);
+                lstFinalizados.Items.Add(f);
             }
+
         }
 
         private void btn_volver_Click(object sender, RoutedEventArgs e)
