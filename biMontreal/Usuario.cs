@@ -112,5 +112,20 @@ namespace biMontreal
 
             return lstUsuarios;
         }
+
+        public Boolean usuarioExists(string usuario)
+        {
+            try
+            {
+                Usuario u = new Usuario();
+                List<Object> usuarios = UTILS.GET("private/usuario?usuario=" + usuario, "usuario", AuthUser.token, u.GetType());
+
+                return usuarios != null && usuarios.Count > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }

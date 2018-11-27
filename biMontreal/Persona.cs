@@ -67,5 +67,20 @@ namespace biMontreal
             return lstPersona;
         }
 
+        public Boolean rutExists(string rut)
+        {
+            try
+            {
+                Persona per = new Persona();
+                List<Object> persona = UTILS.GET("private/persona?rut=" + rut, "persona", AuthUser.token, per.GetType()):
+
+                return persona != null && persona.Count > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
     }
 }
