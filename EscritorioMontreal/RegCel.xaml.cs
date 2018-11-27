@@ -98,8 +98,35 @@ namespace EscritorioMontreal
                         dir.calle = txtCalle.Text;
                         dir.numeracion = txtNumeracion.Text;
                         dir.departamento = txtDepartamento.Text;
+                        dir = dir.guardarDireccion(dir);
 
+                        if (dir != null)
+                        {
+                            per.id_direccion = dir.id_direccion;
+                            per.id_usuario = usuario.id_usuario;
+                            per.rut = txtRut.Text;
+                            per.nombre = txtNombreAdm.Text;
+                            per.app_paterno = txtApePa.Text;
+                            per.app_materno = txtApeMa.Text;
+                            per.fech_nacimiento = (DateTime)fechNac.SelectedDate;
+                            per = per.guardarPersona(per);
+
+                            if (per!= null)
+                            {
+                                cont.id_persona = per.id_persona;
+                                cont.tipo_contacto = "Correo";
+                                cont.desc_contacto = txtCorreo.Text;
+
+                                cont = cont.guardarContacto(cont);
+
+                                if (cont==null)
+                                {
+                                    
+                                }
+                            }
+                        }
                     }
+
                 }
             }
             
