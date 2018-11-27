@@ -20,6 +20,9 @@ namespace EscritorioMontreal
     /// </summary>
     public partial class VerUsuarios : Window
     {
+
+        private Usuario usuario = null;
+
         public VerUsuarios()
         {
             InitializeComponent();
@@ -46,16 +49,16 @@ namespace EscritorioMontreal
             Application.Current.Shutdown();
         }
 
-        private void btn_agregar_Click(object sender, RoutedEventArgs e)
-        {
-            UsuariosAgregar Agr = new UsuariosAgregar();
-            Agr.Show();
-            this.Close();
-        }
-
+        
         private void brn_borrar_Click(object sender, RoutedEventArgs e)
         {
-           
+            if (usuario != null)
+            {
+                string id = usuario.id_usuario.ToString();
+                UTILS.DELETE("private/usuario/" + id, "usuario", AuthUser.token, usuario.GetType());
+                lstUsuario.Items.Remove(usuario);
+                lstUsuario.Items.Refresh();
+            }
         }
 
         private void btn_actualizar_Click(object sender, RoutedEventArgs e)
@@ -72,6 +75,18 @@ namespace EscritorioMontreal
             this.Close();
         }
 
-        
+        private void lstUsuario_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                usuario = (Usuario)lstUsuario.SelectedItem;
+
+            }
+            catch (Exception)
+            {
+
+                usuario = null;
+            }
+        }
     }
 }

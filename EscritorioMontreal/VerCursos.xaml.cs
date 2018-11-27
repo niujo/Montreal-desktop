@@ -20,6 +20,8 @@ namespace EscritorioMontreal
     /// </summary>
     public partial class VerCursos : Window
     {
+        private Cursos curso= null;
+        
         public VerCursos()
         {
             InitializeComponent();
@@ -60,7 +62,13 @@ namespace EscritorioMontreal
 
         private void btn_borrar_Click(object sender, RoutedEventArgs e)
         {
-           
+            if (curso!=null)
+            {
+                string id = curso.id_curso.ToString();
+                UTILS.DELETE("private/curso/" + id, "curso", AuthUser.token, curso.GetType());
+                listCursos.Items.Remove(curso);
+                listCursos.Items.Refresh();
+            }
         }
 
         private void btn_actualizar_Click(object sender, RoutedEventArgs e)
@@ -72,7 +80,18 @@ namespace EscritorioMontreal
 
         private void listCursos_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Cursos listCursos = new Cursos();
+            try
+            {
+                curso = (Cursos)listCursos.SelectedItem;
+                
+            }
+            catch (Exception)
+            {
+
+                curso = null;
+            }
+
+            
         }
     }
 }

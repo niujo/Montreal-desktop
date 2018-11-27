@@ -70,13 +70,19 @@ namespace EscritorioMontreal
 
         private void btn_borrar_Click(object sender, RoutedEventArgs e)
         {
-                    }
+
+        }
 
         private void btn_actualizar_Click(object sender, RoutedEventArgs e)
         {
             ProgramasActualizar proAc = new ProgramasActualizar();
             proAc.Show();
             this.Close();
+        }
+
+        private void lstPendientes_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
