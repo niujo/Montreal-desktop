@@ -38,8 +38,10 @@
         <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="23" Margin="507,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txtCalle" HorizontalAlignment="Left" Height="23" Margin="507,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txtNumeracion" HorizontalAlignment="Left" Height="23" Margin="507,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btn_Agregar" Content="Agregar" HorizontalAlignment="Left" Margin="533,238,0,0" VerticalAlignment="Top" Width="75" Click="btn_Agregar_Click"/>
+        <Button x:Name="btn_Agregar" Content="Agregar" HorizontalAlignment="Left" Margin="534,273,0,0" VerticalAlignment="Top" Width="75" Click="btn_Agregar_Click"/>
         <Image HorizontalAlignment="Left" Height="29" Margin="8,0,0,0" VerticalAlignment="Top" Width="104" Source="Img/Logo Montreal.png"/>
+        <Label Content="Departamento" HorizontalAlignment="Left" Margin="398,215,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtDepartamento" HorizontalAlignment="Left" Height="23" Margin="507,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>
