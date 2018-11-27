@@ -30,5 +30,23 @@ namespace biMontreal
 
             return lstContactos;
         }
+
+        public Contacto guardarContacto(Contacto contacto)
+        {
+            try
+            {
+                List<Object> cont = UTILS.POST("private/contacto", "contacto", AuthUser.token, contacto.GetType(), contacto);
+
+                if (cont == null || cont.Count == 0)
+                {
+                    return null;
+                }
+                return (Contacto)cont[0];
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
     }
 }
