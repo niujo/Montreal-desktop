@@ -133,7 +133,7 @@ namespace biMontreal
                 arr.Add(finalizados);
 
                 return arr;
-            } catch(Exception e)
+            } catch(Exception)
             {
                 return null;
             }

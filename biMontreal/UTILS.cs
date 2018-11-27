@@ -14,8 +14,8 @@ namespace biMontreal
 {
     public static class UTILS
     {
-        //private static readonly String url = "http://localhost:3000";
-         private static readonly String url = "http://192.168.85.131:3000/";
+        private static readonly String url = "http://localhost:3000";
+        //private static readonly String url = "http://192.168.85.131:3000/";
         public static bool decodeToken(String token)
         {
             try
@@ -33,7 +33,7 @@ namespace biMontreal
 
                 return true;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return false;
             }
@@ -67,7 +67,7 @@ namespace biMontreal
 
                 return result;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return null;
             }
@@ -115,7 +115,7 @@ namespace biMontreal
                 }
 
                 return list;
-            } catch (Exception e)
+            } catch (Exception)
             {
                 return null;
             }
@@ -151,7 +151,7 @@ namespace biMontreal
 
                 return list;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return null;
             }
@@ -189,7 +189,7 @@ namespace biMontreal
 
                 return list;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return null;
             }
@@ -227,7 +227,7 @@ namespace biMontreal
 
                 return list;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return null;
             }

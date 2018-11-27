@@ -60,7 +60,7 @@ namespace ConsoleApp1
 
                 return true;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return false;
             }
@@ -94,7 +94,7 @@ namespace ConsoleApp1
             try
             {
                 result = content["data"]["token"].ToString();
-            } catch(Exception e)
+            } catch(Exception)
             {
                 
             }
