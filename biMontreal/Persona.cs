@@ -82,5 +82,23 @@ namespace biMontreal
             }
         }
 
+        public Persona guardarPersona(Persona persona)
+        {
+            try
+            {
+                List<Object> per = UTILS.POST("private/persona", "persona", AuthUser.token, persona.GetType(), persona);
+
+                if (per == null || per.Count == 0)
+                {
+                    return null;
+                }
+
+                return (Persona)per[0];
+            } catch (Exception)
+            {
+                return null;
+            }
+        }
+
     }
 }

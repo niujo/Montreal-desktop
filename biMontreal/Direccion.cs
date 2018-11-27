@@ -61,6 +61,25 @@ namespace biMontreal
 
             return lstDireccion;
         }
+
+        public Direccion guardarDireccion(Direccion direccion)
+        {
+            try
+            {
+                List<Object> dir = UTILS.POST("private/direccion", "direccion", AuthUser.token, direccion.GetType(), direccion);
+
+                if (dir == null || dir.Count == 0)
+                {
+                    return null;
+                }
+
+                return (Direccion)dir[0];
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
     }
 }
 
