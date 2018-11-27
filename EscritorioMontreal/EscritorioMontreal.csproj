@@ -98,9 +98,6 @@
     <Compile Include="UsuariosActualizar.xaml.cs">
       <DependentUpon>UsuariosActualizar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UsuariosAgregar.xaml.cs">
-      <DependentUpon>UsuariosAgregar.xaml</DependentUpon>
-    </Compile>
     <Compile Include="VerCursos.xaml.cs">
       <DependentUpon>VerCursos.xaml</DependentUpon>
     </Compile>
@@ -155,10 +152,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UsuariosActualizar.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UsuariosAgregar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

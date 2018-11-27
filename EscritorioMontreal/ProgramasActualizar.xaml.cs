@@ -44,5 +44,10 @@ namespace EscritorioMontreal
             prog.Show();
             this.Close();
         }
+
+        private void btn_Agregar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

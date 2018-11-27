@@ -5,20 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EscritorioMontreal"
         mc:Ignorable="d"
-        Title="UsuariosActualizar" Height="392.927" Width="411.464">
+        Title="UsuariosActualizar" Height="609.591" Width="438.399">
     <Grid Background="#FFA6C3C5">
-        <Button x:Name="btn_salir" Content="Salir" HorizontalAlignment="Left" Margin="275,321,0,0" VerticalAlignment="Top" Width="90" Click="btn_salir_Click"/>
-        <Button x:Name="btn_volver" Content="Volver a menú" HorizontalAlignment="Left" Margin="30,321,0,0" VerticalAlignment="Top" Width="90" Click="btn_volver_Click"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="321*"/>
+            <RowDefinition Height="259*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btn_salir" Content="Salir" HorizontalAlignment="Left" Margin="275,206.4,0,0" VerticalAlignment="Top" Width="90" Click="btn_salir_Click" Grid.Row="1"/>
+        <Button x:Name="btn_volver" Content="Volver a menú" HorizontalAlignment="Left" Margin="30,206.4,0,0" VerticalAlignment="Top" Width="90" Click="btn_volver_Click" Grid.Row="1"/>
         <Label x:Name="lblNombre" Content="" HorizontalAlignment="Left" Margin="184,10,0,0" VerticalAlignment="Top" Width="200"/>
         <Image HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="140" Source="Img/Logo Montreal.png" Margin="10,4,0,0"/>
-        <Button x:Name="btn_Anterior" Content="Volver" HorizontalAlignment="Left" Margin="147,321,0,0" VerticalAlignment="Top" Width="90" Click="btn_Anterior_Click"/>
-        <Label Content="Nombre" HorizontalAlignment="Left" Margin="45,78,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Content="RUT" HorizontalAlignment="Left" Margin="45,128,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Content="Rol" HorizontalAlignment="Left" Margin="45,180,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="23" Margin="117,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtRut" HorizontalAlignment="Left" Height="23" Margin="117,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtRol" HorizontalAlignment="Left" Height="23" Margin="117,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btn_actualizar" Content="Actualizar usuario" HorizontalAlignment="Left" Margin="117,247,0,0" VerticalAlignment="Top" Width="120" Click="btn_actualizar_Click"/>
+        <Button x:Name="btn_Anterior" Content="Volver" HorizontalAlignment="Left" Margin="147,206.4,0,0" VerticalAlignment="Top" Width="90" Click="btn_Anterior_Click" Grid.Row="1"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="45,52,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="RUT" HorizontalAlignment="Left" Margin="45,153,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Correo" HorizontalAlignment="Left" Margin="45,234,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="23" Margin="197,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
+        <TextBox x:Name="txtRut" HorizontalAlignment="Left" Height="23" Margin="197,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
+        <TextBox x:Name="txtRol" HorizontalAlignment="Left" Height="23" Margin="197,234,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
+        <Button x:Name="btn_actualizar" Content="Actualizar usuario" HorizontalAlignment="Left" Margin="133,164.4,0,0" VerticalAlignment="Top" Width="120" Click="btn_actualizar_Click" Grid.Row="1"/>
+        <Label Content="Apellido paterno" HorizontalAlignment="Left" Margin="44,83,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="txtApp" HorizontalAlignment="Left" Height="23" Margin="197,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
+        <Label Content="Apellido paterno" HorizontalAlignment="Left" Margin="45,123,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="txtApm" HorizontalAlignment="Left" Height="23" Margin="197,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
+        <Label Content="Fecha de nacimiento" HorizontalAlignment="Left" Margin="45,184,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <DatePicker x:Name="fchNac" HorizontalAlignment="Left" Margin="197,193,0,0" VerticalAlignment="Top"/>
+        <Label Content="Dirección" HorizontalAlignment="Left" Margin="44,274,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="94"/>
+        <Label Content="Ciudad" HorizontalAlignment="Left" Margin="44,295,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.RowSpan="2"/>
+        <Label Content="Calle" HorizontalAlignment="Left" Margin="45,15.2,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Row="1"/>
+        <Label Content="Numeración" HorizontalAlignment="Left" Margin="45,53.2,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Row="1"/>
+        <Label Content="Departamento" HorizontalAlignment="Left" Margin="45,100.4,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Row="1"/>
+        <TextBox x:Name="txtCalle" HorizontalAlignment="Left" Height="23" Margin="197,19.2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Grid.Row="1"/>
+        <ComboBox x:Name="cbCiudad" HorizontalAlignment="Left" Margin="197,298,0,0" VerticalAlignment="Top" Width="144" Grid.RowSpan="2"/>
+        <TextBox x:Name="txtNum" HorizontalAlignment="Left" Height="23" Margin="197,57.2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Grid.Row="1"/>
+        <TextBox x:Name="txtDpto" HorizontalAlignment="Left" Height="23" Margin="197,104.4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Grid.Row="1"/>
 
     </Grid>
 </Window>
