@@ -20,6 +20,8 @@ namespace EscritorioMontreal
     /// </summary>
     public partial class VerPostulaciones : Window
     {
+        Postulaciones postulacion = null;
+
         public VerPostulaciones()
         {
             InitializeComponent();
@@ -60,9 +62,83 @@ namespace EscritorioMontreal
             this.Close();
         }
 
-        
-        
+        private void PostulacionesPendientes_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                postulacion = (Postulaciones)postulacionesPendientes.SelectedItem;
+            }
+            catch (Exception)
+            {
+                postulacion = null;
+            }
+        }
 
-       
+        private void Btn_Aceptar_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (postulacion != null)
+                {
+                    postulacion.estado = "A";
+                    postulacion.fech_respuesta = DateTime.UtcNow.Date;
+                    string id_postulacion = postulacion.id_postulacion.ToString();
+                    Postulaciones post_aux = postulacion;
+                    List<Object> post = UTILS.PUT("private/postulacion/" + id_postulacion, "postulacion", AuthUser.token, postulacion.GetType(), postulacion);
+                    if (post != null && post.Count > 0)
+                    {
+                        Postulaciones p = (Postulaciones)post[0];
+
+                        postulacionesPendientes.Items.Remove(postulacion);
+                        postulacionesPendientes.Items.Refresh();
+                        postulacionesRespondidas.Items.Add(post_aux);
+                        postulacionesRespondidas.Items.Refresh();
+
+                        Inscripcion ins = new Inscripcion();
+                        ins.id_alumno = p.id_alumno;
+                        ins.id_programa = p.id_programa;
+                        UTILS.POST("private/inscripcion", "inscripcion", AuthUser.token, ins.GetType(), ins);
+                        Mail correo = new Mail();
+
+                        correo.envioCorreo(p.id_alumno.ToString(), p.estado, post_aux.programaEstudio.nomb_programa, p.fech_respuesta);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                // do nothing
+            }
+        }
+
+        private void Btn_rechazar_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (postulacion != null)
+                {
+                    postulacion.estado = "R";
+                    postulacion.fech_respuesta = DateTime.UtcNow.Date;
+                    string id_postulacion = postulacion.id_postulacion.ToString();
+                    Postulaciones post_aux = postulacion;
+                    List<Object> post = UTILS.PUT("private/postulacion/" + id_postulacion, "postulacion", AuthUser.token, postulacion.GetType(), postulacion);
+                    if (post != null && post.Count > 0)
+                    {
+                        Postulaciones p = (Postulaciones)post[0];
+
+                        postulacionesPendientes.Items.Remove(postulacion);
+                        postulacionesPendientes.Items.Refresh();
+                        postulacionesRespondidas.Items.Add(post_aux);
+                        postulacionesRespondidas.Items.Refresh();
+                        Mail correo = new Mail();
+
+                        correo.envioCorreo(p.id_alumno.ToString(), p.estado, post_aux.programaEstudio.nomb_programa, p.fech_respuesta);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                // do nothing
+            }
+        }
     }
 }
