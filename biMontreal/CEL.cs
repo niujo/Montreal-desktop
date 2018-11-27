@@ -40,6 +40,23 @@ namespace biMontreal
             return lstCEL;
         }
 
+        public CEL guardarCEL(CEL cel)
+        {
+            try
+            {
+                List<Object> c = UTILS.POST("private/cel", "cel", AuthUser.token, cel.GetType(), cel);
+
+                if (c == null || c.Count == 0)
+                {
+                    return null;
+                }
+
+                return (CEL)c[0];
+            } catch (Exception)
+            {
+                return null;
+            }
+        }
 
     }
 }

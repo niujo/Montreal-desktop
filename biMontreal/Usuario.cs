@@ -138,5 +138,18 @@ namespace biMontreal
 
             return (Usuario)usr[0];
         }
+
+        public void deleteUsuario(string id_usuario)
+        {
+            try
+            {
+                Usuario usr = new Usuario();
+                UTILS.DELETE("private/usuario/" + id_usuario, "usuario", AuthUser.token, usr.GetType());
+
+            } catch (Exception)
+            {
+                // do nothing
+            }
+        }
     }
 }
