@@ -62,12 +62,7 @@ namespace EscritorioMontreal
             Application.Current.Shutdown();
         }
 
-        private void btn_Agregar_Click(object sender, RoutedEventArgs e)
-        {
-            ProgramasAgregar proAgr = new ProgramasAgregar();
-            proAgr.Show();
-            this.Close();
-        }
+       
 
         private void btn_borrar_Click(object sender, RoutedEventArgs e)
         {

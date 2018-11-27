@@ -83,9 +83,6 @@
     <Compile Include="ProgramasActualizar.xaml.cs">
       <DependentUpon>ProgramasActualizar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ProgramasAgregar.xaml.cs">
-      <DependentUpon>ProgramasAgregar.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Programas_estudio.xaml.cs">
       <DependentUpon>Programas_estudio.xaml</DependentUpon>
     </Compile>
@@ -132,10 +129,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ProgramasActualizar.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ProgramasAgregar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
