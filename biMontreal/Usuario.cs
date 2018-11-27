@@ -127,5 +127,16 @@ namespace biMontreal
                 return false;
             }
         }
+
+        public Usuario guardarUsuario(Usuario usuario)
+        {
+            List<Object> usr = UTILS.POST("private/usuario", "usuario", AuthUser.token, usuario.GetType(), usuario);
+            if (usr == null || usr.Count == 0)
+            {
+                return null;
+            }
+
+            return (Usuario)usr[0];
+        }
     }
 }
