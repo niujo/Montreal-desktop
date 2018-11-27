@@ -34,7 +34,7 @@
         <Label Content="Ciudad" HorizontalAlignment="Left" Margin="391,107,0,0" VerticalAlignment="Top"/>
         <Label Content="Calle" HorizontalAlignment="Left" Margin="391,137,0,0" VerticalAlignment="Top"/>
         <Label Content="Numeración" HorizontalAlignment="Left" Margin="391,172,0,0" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="500,111,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cbCiudad" HorizontalAlignment="Left" Margin="500,111,0,0" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txtUsuario_Copy" HorizontalAlignment="Left" Height="23" Margin="501,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txtUsuario_Copy1" HorizontalAlignment="Left" Height="23" Margin="501,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txtPsw_Copy" HorizontalAlignment="Left" Height="23" Margin="501,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>

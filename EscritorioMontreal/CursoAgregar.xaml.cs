@@ -59,6 +59,29 @@ namespace EscritorioMontreal
 
         private void btn_Agregar_Click(object sender, RoutedEventArgs e)
         {
+            Cursos curso = new Cursos();
+            try
+            {
+                curso.id_programa = (int)cbPrograma.SelectedValue;
+                curso.desc_curso = txtDesc.Text;
+                curso.cupos = int.Parse(txtCupos.Text);
+
+                List<Object> c = UTILS.POST("private/curso", "curso", AuthUser.token, curso.GetType(),curso);
+                if (c != null && c.Count > 0)
+                {
+                    VerCursos cursos = new VerCursos();
+                    cursos.Show();
+                    this.Close();
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
+
+           
 
         }
 
