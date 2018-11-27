@@ -198,7 +198,7 @@ namespace biMontreal
                 {
                     for(int j = 0; j < finalizados.Count; j++)
                     {
-                        pe = (ProgramaEstudio)finalizados[i];
+                        pe = (ProgramaEstudio)finalizados[j];
                         if (p.id_programa.Equals(pe.id_programa))
                         {
                             p.programaEstudio = pe;
@@ -209,7 +209,84 @@ namespace biMontreal
                 }
             }
 
-            return lstPostulaciones;
+            List<Object> filtradas = filtrarPostulaciones(lstPostulaciones, arr);
+
+            return filtradas;
+        }
+
+        public List<Object> filtrarPostulaciones(List<Object> postulaciones, List<Object> programas)
+        {
+            List<Object> arr = new List<Object>();
+            try
+            {
+                List<Object> vigentes = (List<Object>)programas[0];
+                List<Object> finalizados = (List<Object>)programas[1];
+
+                List<Object> post_vigentes = new List<Object>();
+                List<Object> post_finalizadas = new List<Object>();
+
+                if (postulaciones != null && postulaciones.Count > 0)
+                {
+                    bool vigente;
+                    Postulaciones p;
+                    ProgramaEstudio pe;
+                    for (int i = 0; i < postulaciones.Count; i++)
+                    {
+                        vigente = false;
+                        p = (Postulaciones)postulaciones[i];
+                        for(int j = 0; j < vigentes.Count; j++)
+                        {
+                            pe = (ProgramaEstudio)vigentes[j];
+                            if(p.estado.Equals("P") && p.id_programa.Equals(pe.id_programa))
+                            {
+                                post_vigentes.Add(p);
+                                vigente = true;
+                                break;
+                            }
+                        }
+
+                        if (!vigente)
+                        {
+                            for(int j = 0; j < finalizados.Count; j++)
+                            {
+                                if (p.estado.Equals("R") || p.estado.Equals("A"))
+                                {
+                                    post_finalizadas.Add(p);
+                                    break;
+                                }
+                                pe = (ProgramaEstudio)finalizados[j];
+                                if (p.id_programa.Equals(pe.id_programa))
+                                {
+                                    if (p.estado.Equals("P"))
+                                    {
+                                        p.estado = "R";
+                                        if (p.fech_respuesta == null)
+                                        {
+                                            p.fech_respuesta = DateTime.UtcNow.Date;
+                                        }
+                                        string id = p.id_postulacion.ToString();
+                                        UTILS.PUT("private/postulacion/" + id, "postulacion", AuthUser.token, p.GetType(), p);
+                                    }
+                                    post_finalizadas.Add(p);
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                arr.Add(post_vigentes);
+                arr.Add(post_finalizadas);
+
+                return arr;
+            }
+            catch (Exception)
+            {
+                arr.Clear();
+                arr.Add(new List<Object>());
+                arr.Add(new List<Object>());
+                return arr;
+            }
         }
     }
 }

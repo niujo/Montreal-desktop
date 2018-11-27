@@ -31,11 +31,20 @@ namespace EscritorioMontreal
             if (lstPostulaciones == null)
             {
                 lstPostulaciones = new List<Object>();
+                lstPostulaciones.Add(new List<Object>());
+                lstPostulaciones.Add(new List<Object>());
+            }
+            List<Object> vigentes = (List<Object>)lstPostulaciones[0];
+            List<Object> finalizados = (List<Object>)lstPostulaciones[1];
+
+            foreach (Postulaciones v in vigentes)
+            {
+                postulacionesPendientes.Items.Add(v);
             }
 
-            foreach (Postulaciones po in lstPostulaciones)
+            foreach (Postulaciones f in finalizados)
             {
-                postulacionesPendientes.Items.Add(po);
+                postulacionesRespondidas.Items.Add(f);
             }
         }
 
