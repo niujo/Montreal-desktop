@@ -41,39 +41,36 @@ namespace biMontreal
 
         public static String Autenticar(Usuario usr)
         {
-            var client = new RestClient(url);
-            var request = new RestRequest("auth", Method.POST);
-            request.RequestFormat = RestSharp.DataFormat.Json;
-
-            request.AddBody(new { USUARIO = usr.usuario, CONTRASENA = usr.contrasena });
-            
-            // HTTP Headers
-            request.AddHeader("Content-Type", "application/json; charset=utf-8");
-
-            request.OnBeforeDeserialization = resp => { resp.ContentType = "application/json; charset=utf-8"; };
-
-            // Se ejecuta el request
-            IRestResponse response = client.Execute(request);
-            // Se consigue el json del request
-            var jsonString = response.Content;
-
-            IList<Direccion> lstDireccion = new List<Direccion>();
-
-            // Se convierte el string json a un objeto json
-            JObject content = JObject.Parse(jsonString);
-
-            // Del objeto JSON navegamoso al objeto data y luego al array direccion
-            String result = null;
             try
             {
-                result = content["data"]["token"].ToString();
+                var client = new RestClient(url);
+                var request = new RestRequest("auth", Method.POST);
+                request.RequestFormat = RestSharp.DataFormat.Json;
+
+                request.AddBody(new { USUARIO = usr.usuario, CONTRASENA = usr.contrasena });
+            
+                // HTTP Headers
+                request.AddHeader("Content-Type", "application/json; charset=utf-8");
+
+                request.OnBeforeDeserialization = resp => { resp.ContentType = "application/json; charset=utf-8"; };
+
+                // Se ejecuta el request
+                IRestResponse response = client.Execute(request);
+                // Se consigue el json del request
+                var jsonString = response.Content;
+
+                IList<Direccion> lstDireccion = new List<Direccion>();
+
+                // Se convierte el string json a un objeto json
+                JObject content = JObject.Parse(jsonString);
+                String result = content["data"]["token"].ToString();
+
+                return result;
             }
             catch (Exception e)
             {
-                //
+                return null;
             }
-
-            return result;
         }
 
         /**
@@ -106,8 +103,7 @@ namespace biMontreal
 
                 // Se convierte el string json a un objeto json
                 JObject content = JObject.Parse(jsonString);
-
-                // Del objeto JSON navegamoso al objeto data y luego al array direccion
+                
                 IList<JToken> results = content["data"][objeto].ToList();
                 Object obj = Activator.CreateInstance(objType);
                 // Se crea una lista del objeto
@@ -147,8 +143,7 @@ namespace biMontreal
 
                 // Se convierte el string json a un objeto json
                 JObject content = JObject.Parse(jsonString);
-
-                // Del objeto JSON navegamoso al objeto data y luego al array direccion
+                
                 JToken results = content["data"][objeto];
                 Object obj = Activator.CreateInstance(objType);
                 obj = results.ToObject(objType);
@@ -186,8 +181,7 @@ namespace biMontreal
 
                 // Se convierte el string json a un objeto json
                 JObject content = JObject.Parse(jsonString);
-
-                // Del objeto JSON navegamoso al objeto data y luego al array direccion
+                
                 JToken results = content["data"][objeto];
                 Object obj = Activator.CreateInstance(objType);
                 obj = results.ToObject(objType);
@@ -225,8 +219,7 @@ namespace biMontreal
 
                 // Se convierte el string json a un objeto json
                 JObject content = JObject.Parse(jsonString);
-
-                // Del objeto JSON navegamoso al objeto data y luego al array direccion
+                
                 JToken results = content["data"][objeto];
                 Object obj = Activator.CreateInstance(objType);
                 obj = results.ToObject(objType);
