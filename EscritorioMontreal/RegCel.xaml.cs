@@ -50,5 +50,23 @@ namespace EscritorioMontreal
             menu.Show();
             this.Close();
         }
+
+        private void btn_Agregar_Click(object sender, RoutedEventArgs e)
+        {
+            if (txtPsw.Text.Equals(txtRepPsw.Text))
+            {
+                Usuario usuario = new Usuario();
+                CEL cel = new CEL();
+                Direccion dir = new Direccion();
+                Contacto cont = new Contacto();
+                Persona per = new Persona();
+                Rol rol = new Rol();
+
+                usuario.usuario = txtUsuario.Text;
+                usuario.contrasena = txtPsw.Text;
+            }
+            
+
+        }
     }
 }
