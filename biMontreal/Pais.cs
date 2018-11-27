@@ -12,5 +12,16 @@ namespace biMontreal
 
         [JsonProperty("NOMBRE")]
         public String nombre { get; set; }
+
+        public List<object> getPais()
+        {
+            Pais pais = new Pais();
+            List<object> lstPais = UTILS.GET("private/pais", "pais", AuthUser.token, pais.GetType());
+            if (lstPais == null || lstPais.Count == 0)
+            {
+                return null;
+            }
+            return lstPais;
+        }
     }
 }

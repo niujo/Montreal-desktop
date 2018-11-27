@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using biMontreal;
 
 namespace EscritorioMontreal
 {
@@ -22,6 +23,20 @@ namespace EscritorioMontreal
         public RegCem()
         {
             InitializeComponent();
+
+            Ciudad p = new Ciudad();
+            List<Object> lstCiudad = p.GetCiudades();
+            if (lstCiudad == null)
+            {
+                lstCiudad = new List<Object>();
+            }
+
+            cbCiudad.SelectedValuePath = "Key";
+            cbCiudad.DisplayMemberPath = "Value";
+            foreach (Ciudad pe in lstCiudad)
+            {
+                cbCiudad.Items.Add(new KeyValuePair<int?, string>(pe.id_ciudad, pe.nombre));
+            }
         }
 
         private void btn_salir_Click(object sender, RoutedEventArgs e)
