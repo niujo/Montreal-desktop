@@ -72,7 +72,7 @@ namespace EscritorioMontreal
                 /*
                  * 
                  */
-                if (usr && rut)
+                if (!usr && !rut)
                 {                    
                     List<object> lstRoles = rol.getRoles();
                     if (lstRoles == null)
@@ -94,7 +94,8 @@ namespace EscritorioMontreal
                     usuario = usuario.guardarUsuario(usuario);
                     if (usuario != null)
                     {
-                        dir.id_ciudad = (int)cbCiudad.SelectedItem;
+                        string id_usuario = usuario.id_usuario.ToString();
+                        dir.id_ciudad = (int)cbCiudad.SelectedValue;
                         dir.calle = txtCalle.Text;
                         dir.numeracion = txtNumeracion.Text;
                         dir.departamento = txtDepartamento.Text;
@@ -121,9 +122,28 @@ namespace EscritorioMontreal
 
                                 if (cont==null)
                                 {
-                                    
+                                    usuario.deleteUsuario(id_usuario);
                                 }
+                                else
+                                {
+                                    cel.id_usuario = usuario.id_usuario;
+                                    cel.nom_centro = txtNombre.Text;
+
+                                    cel = cel.guardarCEL(cel);
+
+                                    if (cel == null)
+                                    {
+                                        usuario.deleteUsuario(id_usuario);
+                                    }
+                                }
+
+                                
+                            } else
+                            {
+                                usuario.deleteUsuario(id_usuario);
                             }
+
+
                         }
                     }
 
