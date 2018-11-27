@@ -31,15 +31,15 @@ namespace biMontreal
             set { _usuario = value; }
         }
 
-        public List<object> getCELS()
+        public List<object> getCEM()
         {
-            CEL cem = new CEL();
-            List<object> lstCEL = UTILS.GET("private/cem", "cem", AuthUser.token, cem.GetType());
-            if (lstCEL == null || lstCEL.Count == 0)
+            CEM cem = new CEM();
+            List<object> lstCEM = UTILS.GET("private/cem", "cem", AuthUser.token, cem.GetType());
+            if (lstCEM == null || lstCEM.Count == 0)
             {
                 return null;
             }
-            return lstCEL;
+            return lstCEM;
         }
 
     }

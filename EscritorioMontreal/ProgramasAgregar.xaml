@@ -18,7 +18,7 @@
         <Label Content="Fecha de inicio" HorizontalAlignment="Left" Margin="30,181,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="Fecha de fin" HorizontalAlignment="Left" Margin="30,222,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <TextBox x:Name="txtDesc" HorizontalAlignment="Left" Height="23" Margin="215,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
-        <ComboBox HorizontalAlignment="Left" Margin="215,138,0,0" VerticalAlignment="Top" Width="144"/>
+        <ComboBox x:Name="cbCentro" HorizontalAlignment="Left" Margin="215,138,0,0" VerticalAlignment="Top" Width="144"/>
         <DatePicker HorizontalAlignment="Left" Margin="215,182,0,0" VerticalAlignment="Top"/>
         <DatePicker HorizontalAlignment="Left" Margin="215,223,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="23" Margin="215,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>

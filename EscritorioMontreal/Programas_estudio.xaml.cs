@@ -20,6 +20,7 @@ namespace EscritorioMontreal
     /// </summary>
     public partial class Programas_estudio : Window
     {
+        private ProgramaEstudio programa = null;
         public Programas_estudio()
         {
             InitializeComponent();
@@ -70,7 +71,13 @@ namespace EscritorioMontreal
 
         private void btn_borrar_Click(object sender, RoutedEventArgs e)
         {
-
+            if (programa != null)
+            {
+                string id = programa.id_programa.ToString();
+                UTILS.DELETE("private/programa/" + id, "programa", AuthUser.token, programa.GetType());
+                lstVigentes.Items.Remove(programa);
+                lstVigentes.Items.Refresh();
+            }
         }
 
         private void btn_actualizar_Click(object sender, RoutedEventArgs e)
@@ -83,6 +90,20 @@ namespace EscritorioMontreal
         private void lstPendientes_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void lstVigentes_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                programa = (ProgramaEstudio)lstVigentes.SelectedItem;
+
+            }
+            catch (Exception)
+            {
+
+                programa = null;
+            }
         }
     }
 }

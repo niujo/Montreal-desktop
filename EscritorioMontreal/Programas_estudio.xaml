@@ -8,7 +8,7 @@
         Title="Programas_estudio" Height="450" Width="800">
     <Grid Background="#FFA6C3C5">
         <Label x:Name="lblNombre" Content="" HorizontalAlignment="Left" Margin="275,10,0,0" VerticalAlignment="Top" Width="200"/>
-        <ListBox x:Name="lstVigentes" HorizontalAlignment="Left" Height="100" Margin="60,80,0,0" VerticalAlignment="Top" Width="684"/>
+        <ListBox x:Name="lstVigentes" HorizontalAlignment="Left" Height="100" Margin="60,80,0,0" VerticalAlignment="Top" Width="684" SelectionChanged="lstVigentes_SelectionChanged"/>
         <ListBox x:Name="lstFinalizados" HorizontalAlignment="Left" Height="100" Margin="60,240,0,0" VerticalAlignment="Top" Width="684"/>
         <Label Content="Programas Vigentes" HorizontalAlignment="Left" Margin="60,54,0,0" VerticalAlignment="Top"/>
         <Label Content="Programas Finalizados" HorizontalAlignment="Left" Margin="60,214,0,0" VerticalAlignment="Top"/>

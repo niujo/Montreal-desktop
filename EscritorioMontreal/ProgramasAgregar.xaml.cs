@@ -24,6 +24,21 @@ namespace EscritorioMontreal
         {
             InitializeComponent();
             lblNombre.Content = AuthUser.nombre;
+
+
+            CEM p = new CEM();
+            List<Object> lstCentro = p.getCEM();
+            if (lstCentro == null)
+            {
+                lstCentro = new List<Object>();
+            }
+
+            cbCentro.SelectedValuePath = "Key";
+            cbCentro.DisplayMemberPath = "Value";
+            foreach (CEM pe in lstCentro)
+            {
+                cbCentro.Items.Add(new KeyValuePair<int?, string>(pe.id_cem, pe.nom_centro));
+            }
         }
 
         private void btn_volver_Click(object sender, RoutedEventArgs e)

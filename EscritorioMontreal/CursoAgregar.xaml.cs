@@ -20,10 +20,29 @@ namespace EscritorioMontreal
     /// </summary>
     public partial class CursoAgregar : Window
     {
+        
         public CursoAgregar()
         {
             InitializeComponent();
             lblNombre.Content = AuthUser.nombre;
+
+            ProgramaEstudio p = new ProgramaEstudio();
+            List<Object> lstProgramas = p.GetProgramasEstudiosCEL();
+            if (lstProgramas == null)
+            {
+                lstProgramas = new List<Object>();
+                lstProgramas.Add(new List<Object>());
+                lstProgramas.Add(new List<Object>());
+            }
+            List<Object> vigentes = (List<Object>)lstProgramas[0];
+
+            cbPrograma.SelectedValuePath = "Key";
+            cbPrograma.DisplayMemberPath = "Value";
+            foreach (ProgramaEstudio pe in vigentes)
+            {
+                cbPrograma.Items.Add(new KeyValuePair<int?, string>(pe.id_programa, pe.nomb_programa));
+            }
+
         }
 
         private void btn_volver_Click(object sender, RoutedEventArgs e)
