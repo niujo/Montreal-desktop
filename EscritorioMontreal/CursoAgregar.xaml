@@ -9,7 +9,7 @@
     <Grid Background="#FFA6C3C5">
         <Label Content="Descripcion del Curso" HorizontalAlignment="Left" Margin="27,117,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="Cupos" HorizontalAlignment="Left" Margin="27,168,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox x:Name="txtDesc" HorizontalAlignment="Left" Height="23" Margin="202,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtDesc"  HorizontalAlignment="Left" Height="23" Margin="202,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txtCupos" HorizontalAlignment="Left" Height="23" Margin="202,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btn_Agregar" Content="Agregar curso" HorizontalAlignment="Left" Margin="27,216,0,0" VerticalAlignment="Top" Width="86" Click="btn_Agregar_Click"/>
         <Button x:Name="btn_salir" Content="Salir" HorizontalAlignment="Left" Margin="272,335,0,0" VerticalAlignment="Top" Width="90" Click="btn_salir_Click"/>

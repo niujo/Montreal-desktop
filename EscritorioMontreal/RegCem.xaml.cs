@@ -55,7 +55,7 @@ namespace EscritorioMontreal
         {
             try
             {
-                if (txtPsw.Text.Equals(txtRepPsw.Text))
+                if (txtPsw.Password.Equals(txtRepPsw.Password))
                 {
 
                     /*
@@ -92,7 +92,7 @@ namespace EscritorioMontreal
                         }
                         usuario.id_rol = rol.id_rol;
                         usuario.usuario = txtUsuario.Text;
-                        usuario.contrasena = txtPsw.Text;
+                        usuario.contrasena = txtPsw.Password;
 
                         usuario = usuario.guardarUsuario(usuario);
                         if (usuario != null)
