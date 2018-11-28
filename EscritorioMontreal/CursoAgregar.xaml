@@ -5,20 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EscritorioMontreal"
         mc:Ignorable="d"
-        Title="CursoAgregar" Height="421.298" Width="395.629">
-    <Grid Background="#FFA6C3C5">
+        Title="CursoAgregar" Height="421.298" Width="477.903">
+    <Grid Background="#FFA6C3C5" Margin="0,0,2,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="88*"/>
+            <ColumnDefinition Width="57*"/>
+        </Grid.ColumnDefinitions>
         <Label Content="Descripcion del Curso" HorizontalAlignment="Left" Margin="27,117,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="Cupos" HorizontalAlignment="Left" Margin="27,168,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox x:Name="txtDesc"  HorizontalAlignment="Left" Height="23" Margin="202,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtCupos" HorizontalAlignment="Left" Height="23" Margin="202,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtDesc"  HorizontalAlignment="Left" Height="23" Margin="202,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtCupos" HorizontalAlignment="Left" Height="23" Margin="202,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
         <Button x:Name="btn_Agregar" Content="Agregar curso" HorizontalAlignment="Left" Margin="27,216,0,0" VerticalAlignment="Top" Width="86" Click="btn_Agregar_Click"/>
-        <Button x:Name="btn_salir" Content="Salir" HorizontalAlignment="Left" Margin="272,335,0,0" VerticalAlignment="Top" Width="90" Click="btn_salir_Click"/>
+        <Button x:Name="btn_salir" Content="Salir" HorizontalAlignment="Left" Margin="7.901,335,0,0" VerticalAlignment="Top" Width="90" Click="btn_salir_Click" Grid.Column="1"/>
         <Button x:Name="btn_volver" Content="Volver a menú" HorizontalAlignment="Left" Margin="40,334,0,0" VerticalAlignment="Top" Width="90" Click="btn_volver_Click"/>
-        <Label x:Name="lblNombre" Content="" HorizontalAlignment="Left" Margin="162,10,0,0" VerticalAlignment="Top" Width="200"/>
+        <Label x:Name="lblNombre" Content="" HorizontalAlignment="Left" Margin="162,10,0,0" VerticalAlignment="Top" Width="200" Grid.ColumnSpan="2"/>
         <Image HorizontalAlignment="Left" Height="26" Margin="10,0,0,0" VerticalAlignment="Top" Width="114" Source="Img/Logo Montreal.png"/>
         <Button x:Name="btn_Anterior" Content="Volver" HorizontalAlignment="Left" Margin="162,335,0,0" VerticalAlignment="Top" Width="90" Click="btn_Anterior_Click"/>
-        <ComboBox x:Name="cbPrograma" HorizontalAlignment="Left" Margin="202,69,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cbPrograma" HorizontalAlignment="Left" Margin="202,69,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
         <Label Content="Programa asociado" HorizontalAlignment="Left" Margin="27,74,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="lblDesc" Content="" HorizontalAlignment="Left" Margin="162,144,0,0" VerticalAlignment="Top" Width="220" RenderTransformOrigin="0.544,0.609" Grid.ColumnSpan="2" Foreground="Red"/>
+        <Label x:Name="lblCupos" Content="" HorizontalAlignment="Left" Margin="162,197,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.422,-0.18" Width="220" Grid.ColumnSpan="2" Height="28" Foreground="Red"/>
 
     </Grid>
 </Window>

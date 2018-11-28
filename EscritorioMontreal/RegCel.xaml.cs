@@ -162,11 +162,8 @@ namespace EscritorioMontreal
             }
             catch (Exception)
             {
-
-                throw;
+                // nada
             }
-            
-            
         }
     }
 }

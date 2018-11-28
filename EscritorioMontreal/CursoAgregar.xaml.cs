@@ -42,6 +42,7 @@ namespace EscritorioMontreal
             {
                 cbPrograma.Items.Add(new KeyValuePair<int?, string>(pe.id_programa, pe.nomb_programa));
             }
+            cbPrograma.SelectedIndex = 0;
 
         }
 
@@ -59,30 +60,29 @@ namespace EscritorioMontreal
 
         private void btn_Agregar_Click(object sender, RoutedEventArgs e)
         {
-            Cursos curso = new Cursos();
-            try
+            bool val = validaciones();
+            if (val)
             {
-                curso.id_programa = (int)cbPrograma.SelectedValue;
-                curso.desc_curso = txtDesc.Text;
-                curso.cupos = int.Parse(txtCupos.Text);
-
-                List<Object> c = UTILS.POST("private/curso", "curso", AuthUser.token, curso.GetType(),curso);
-                if (c != null && c.Count > 0)
+                Cursos curso = new Cursos();
+                try
                 {
-                    VerCursos cursos = new VerCursos();
-                    cursos.Show();
-                    this.Close();
+                    curso.id_programa = (int)cbPrograma.SelectedValue;
+                    curso.desc_curso = txtDesc.Text;
+                    curso.cupos = int.Parse(txtCupos.Text);
+
+                    List<Object> c = UTILS.POST("private/curso", "curso", AuthUser.token, curso.GetType(), curso);
+                    if (c != null && c.Count > 0)
+                    {
+                        VerCursos cursos = new VerCursos();
+                        cursos.Show();
+                        this.Close();
+                    }
+                }
+                catch (Exception)
+                {
+                    // nada
                 }
             }
-            catch (Exception)
-            {
-
-                throw;
-            }
-            
-
-           
-
         }
 
         private void btn_Anterior_Click(object sender, RoutedEventArgs e)
@@ -92,6 +92,25 @@ namespace EscritorioMontreal
             this.Close();
         }
 
+        private bool validaciones()
+        {
+            try
+            {
+                int value;
+                bool desc = !(txtDesc.Text == null || txtDesc.Text.Equals(String.Empty));
+                bool cupos = !(txtCupos.Text == null || txtCupos.Text.Equals(String.Empty) || !int.TryParse(txtCupos.Text, out value));
+
+                lblDesc.Content = desc ? "" : "Este campo es obligatorio";
+                lblCupos.Content = cupos ? "" : "Este campo debe ser numerico";
+                
+                bool valido = true && desc && cupos;
+                return valido;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
         
     }
 }
