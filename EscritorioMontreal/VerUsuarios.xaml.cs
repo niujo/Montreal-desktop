@@ -63,9 +63,12 @@ namespace EscritorioMontreal
 
         private void btn_actualizar_Click(object sender, RoutedEventArgs e)
         {
-            UsuariosActualizar uaC = new UsuariosActualizar();
-            uaC.Show();
-            this.Close();
+            if (usuario != null)
+            {
+                UsuariosActualizar uaC = new UsuariosActualizar(usuario);
+                uaC.Show();
+                this.Close();
+            }
         }
 
         private void btn_volver_Click(object sender, RoutedEventArgs e)

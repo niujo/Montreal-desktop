@@ -77,9 +77,12 @@ namespace EscritorioMontreal
 
         private void btn_actualizar_Click(object sender, RoutedEventArgs e)
         {
-            ProgramasActualizar proAc = new ProgramasActualizar(programa);
-            proAc.Show();
-            this.Close();
+            if (programa != null)
+            {
+                ProgramasActualizar proAc = new ProgramasActualizar(programa);
+                proAc.Show();
+                this.Close();
+            }
         }
 
         private void lstPendientes_SelectionChanged(object sender, SelectionChangedEventArgs e)

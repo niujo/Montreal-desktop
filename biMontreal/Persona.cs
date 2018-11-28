@@ -48,16 +48,32 @@ namespace biMontreal
             {
                 return null;
             }
+            Direccion dir = new Direccion();
+            List<Object> direcciones = dir.GetDireccion();
 
+            Persona per;
+            Contacto con;
             for(int i = 0; i < lstPersona.Count; i++)
             {
                 for(int j = 0; j < lstContactos.Count; j++)
                 {
-                    Contacto con = (Contacto)lstContactos[j];
-                    Persona per = (Persona)lstPersona[i];
+                    con = (Contacto)lstContactos[j];
+                    per = (Persona)lstPersona[i];
                     if (per.id_persona.Equals(con.id_persona))
                     {
                         per.contacto = con;
+                        lstPersona[i] = per;
+                        break;
+                    }
+                }
+
+                for (int j = 0; j < direcciones.Count; j++)
+                {
+                    dir = (Direccion)direcciones[j];
+                    per = (Persona)lstPersona[i];
+                    if (per.id_direccion.Equals(dir.id_direccion))
+                    {
+                        per.direccion = dir;
                         lstPersona[i] = per;
                         break;
                     }

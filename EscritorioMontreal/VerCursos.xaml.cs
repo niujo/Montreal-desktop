@@ -73,9 +73,12 @@ namespace EscritorioMontreal
 
         private void btn_actualizar_Click(object sender, RoutedEventArgs e)
         {
-            CursoActualizar act = new CursoActualizar(curso);
-            act.Show();
-            this.Close();
+            if (curso != null)
+            {
+                CursoActualizar act = new CursoActualizar(curso);
+                act.Show();
+                this.Close();
+            }
         }
 
         private void listCursos_SelectionChanged(object sender, SelectionChangedEventArgs e)
