@@ -138,5 +138,20 @@ namespace biMontreal
                 return null;
             }
         }
+
+        public bool actualizarPrograma(ProgramaEstudio programa)
+        {
+            try
+            {
+                string id = programa.id_programa.ToString();
+                List<Object> prog = UTILS.PUT("private/programa/" + id, "programa", AuthUser.token, programa.GetType(), programa);
+
+                return (prog != null && prog.Count != 0);
+            }
+            catch(Exception)
+            {
+                return false;
+            }
+        }
     }
 }

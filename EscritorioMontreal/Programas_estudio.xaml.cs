@@ -77,7 +77,7 @@ namespace EscritorioMontreal
 
         private void btn_actualizar_Click(object sender, RoutedEventArgs e)
         {
-            ProgramasActualizar proAc = new ProgramasActualizar();
+            ProgramasActualizar proAc = new ProgramasActualizar(programa);
             proAc.Show();
             this.Close();
         }
