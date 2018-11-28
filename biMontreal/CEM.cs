@@ -42,5 +42,24 @@ namespace biMontreal
             return lstCEM;
         }
 
+        public CEM guardarCEM(CEM cem)
+        {
+            try
+            {
+                List<Object> c = UTILS.POST("private/cem", "cem", AuthUser.token, cem.GetType(), cem);
+
+                if (c == null || c.Count == 0)
+                {
+                    return null;
+                }
+
+                return (CEM)c[0];
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
     }
 }

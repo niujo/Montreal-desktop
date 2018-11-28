@@ -7,39 +7,41 @@
         mc:Ignorable="d"
         Title="RegCem" Height="450" Width="800">
     <Grid Background="#FFA6C3C5">
-        <Button x:Name="btn_salir" Content="Salir" HorizontalAlignment="Left" Margin="622,352,0,0" VerticalAlignment="Top" Width="75" Click="btn_salir_Click"/>
-        <Button x:Name="btn_volver" Content="Volver a menú" HorizontalAlignment="Left" Margin="501,352,0,0" VerticalAlignment="Top" Width="90" Click="btn_volver_Click"/>
-        <Label Content="Refistrar  CEM" HorizontalAlignment="Left" Margin="25,44,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Content="Usuario" HorizontalAlignment="Left" Margin="35,75,0,0" VerticalAlignment="Top"/>
-        <Label Content="Contraseña" HorizontalAlignment="Left" Margin="35,106,0,0" VerticalAlignment="Top"/>
-        <Label Content="Confirmar contraseña" HorizontalAlignment="Left" Margin="35,137,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtUsuario" HorizontalAlignment="Left" Height="23" Margin="175,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtPsw" HorizontalAlignment="Left" Height="23" Margin="175,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Administrador del Centro" HorizontalAlignment="Left" Margin="25,172,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.526,0.398" FontWeight="Bold"/>
-        <Label Content="Nombre(s)" HorizontalAlignment="Left" Margin="35,198,0,0" VerticalAlignment="Top"/>
-        <Label Content="Apellido paterno" HorizontalAlignment="Left" Margin="35,229,0,0" VerticalAlignment="Top"/>
-        <Label Content="Apellido Materno" HorizontalAlignment="Left" Margin="35,259,0,0" VerticalAlignment="Top"/>
-        <Label Content="Rut" HorizontalAlignment="Left" Margin="35,285,0,0" VerticalAlignment="Top"/>
-        <Label Content="Fecha de Nacimiento" HorizontalAlignment="Left" Margin="35,315,0,0" VerticalAlignment="Top"/>
-        <Label Content="Correo electronico" HorizontalAlignment="Left" Margin="35,348,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="23" Margin="175,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtApePa" HorizontalAlignment="Left" Height="23" Margin="175,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtApeMa" HorizontalAlignment="Left" Height="23" Margin="175,261,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
-        <TextBox x:Name="txtRut" HorizontalAlignment="Left" Height="23" Margin="175,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtCorreo" HorizontalAlignment="Left" Height="23" Margin="175,349,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
-        <TextBox x:Name="txtRepPsw" HorizontalAlignment="Left" Height="23" Margin="175,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <DatePicker x:Name="FecNac" HorizontalAlignment="Left" Margin="175,320,0,0" VerticalAlignment="Top"/>
-        <Label Content="Datos  del Centro" HorizontalAlignment="Left" Margin="391,45,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.526,0.398" FontWeight="Bold"/>
-        <Label Content="Nombre" HorizontalAlignment="Left" Margin="391,79,0,0" VerticalAlignment="Top"/>
-        <Label Content="Ciudad" HorizontalAlignment="Left" Margin="391,107,0,0" VerticalAlignment="Top"/>
-        <Label Content="Calle" HorizontalAlignment="Left" Margin="391,137,0,0" VerticalAlignment="Top"/>
-        <Label Content="Numeración" HorizontalAlignment="Left" Margin="391,172,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cbCiudad" HorizontalAlignment="Left" Margin="500,111,0,0" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtNombre1" HorizontalAlignment="Left" Height="23" Margin="501,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtCalle" HorizontalAlignment="Left" Height="23" Margin="501,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtNumero" HorizontalAlignment="Left" Height="23" Margin="501,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btn_Agregar" Content="Agregar" HorizontalAlignment="Left" Margin="501,240,0,0" VerticalAlignment="Top" Width="75"/>
         <Image HorizontalAlignment="Left" Height="29" Margin="8,0,0,0" VerticalAlignment="Top" Width="104" Source="Img/Logo Montreal.png"/>
+        <Button x:Name="btn_salir" Content="Salir" HorizontalAlignment="Left" Margin="585,368,0,0" VerticalAlignment="Top" Width="75" Click="btn_salir_Click"/>
+        <Button x:Name="btn_volver" Content="Volver a menú" HorizontalAlignment="Left" Margin="468,368,0,0" VerticalAlignment="Top" Width="90" Click="btn_volver_Click"/>
+        <Label Content="Refistrar  CEL" HorizontalAlignment="Left" Margin="32,53,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Usuario" HorizontalAlignment="Left" Margin="42,84,0,0" VerticalAlignment="Top"/>
+        <Label Content="Contraseña" HorizontalAlignment="Left" Margin="42,115,0,0" VerticalAlignment="Top"/>
+        <Label Content="Confirmar contraseña" HorizontalAlignment="Left" Margin="42,146,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtUsuario" HorizontalAlignment="Left" Height="23" Margin="182,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtPsw" HorizontalAlignment="Left" Height="23" Margin="182,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtRepPsw" HorizontalAlignment="Left" Height="23" Margin="182,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Administrador del Centro" HorizontalAlignment="Left" Margin="32,181,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.526,0.398" FontWeight="Bold"/>
+        <Label Content="Nombre(s)" HorizontalAlignment="Left" Margin="42,207,0,0" VerticalAlignment="Top"/>
+        <Label Content="Apellido paterno" HorizontalAlignment="Left" Margin="42,238,0,0" VerticalAlignment="Top"/>
+        <Label Content="Apellido Materno" HorizontalAlignment="Left" Margin="42,268,0,0" VerticalAlignment="Top"/>
+        <Label Content="Rut" HorizontalAlignment="Left" Margin="42,294,0,0" VerticalAlignment="Top"/>
+        <Label Content="Fecha de Nacimiento" HorizontalAlignment="Left" Margin="42,324,0,0" VerticalAlignment="Top"/>
+        <Label Content="Correo electronico" HorizontalAlignment="Left" Margin="42,357,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtNombreAdm" HorizontalAlignment="Left" Height="23" Margin="182,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtApePa" HorizontalAlignment="Left" Height="23" Margin="182,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtApeMa" HorizontalAlignment="Left" Height="23" Margin="182,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="txtRut" HorizontalAlignment="Left" Height="23" Margin="182,298,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtCorreo" HorizontalAlignment="Left" Height="23" Margin="182,358,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <DatePicker x:Name="fechNac" HorizontalAlignment="Left" Margin="182,329,0,0" VerticalAlignment="Top"/>
+        <Label Content="Datos  del Centro" HorizontalAlignment="Left" Margin="398,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.526,0.398" FontWeight="Bold"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="398,88,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ciudad" HorizontalAlignment="Left" Margin="398,116,0,0" VerticalAlignment="Top"/>
+        <Label Content="Calle" HorizontalAlignment="Left" Margin="398,146,0,0" VerticalAlignment="Top"/>
+        <Label Content="Numeración" HorizontalAlignment="Left" Margin="398,181,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbCiudad" HorizontalAlignment="Left" Margin="507,120,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="23" Margin="507,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtCalle" HorizontalAlignment="Left" Height="23" Margin="507,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtNumeracion" HorizontalAlignment="Left" Height="23" Margin="507,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btn_Agregar" Content="Agregar" HorizontalAlignment="Left" Margin="534,273,0,0" VerticalAlignment="Top" Width="75" Click="btn_Agregar_Click"/>
+        <Label Content="Departamento" HorizontalAlignment="Left" Margin="398,215,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtDepartamento" HorizontalAlignment="Left" Height="23" Margin="507,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>
