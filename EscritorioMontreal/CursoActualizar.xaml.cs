@@ -75,7 +75,8 @@ namespace EscritorioMontreal
         {
             try
             {
-                if (cur != null)
+                bool valido = validaciones();
+                if (cur != null && valido)
                 {
                     cur.desc_curso = txtDesc.Text;
                     cur.cupos = int.Parse(txtCupo.Text);
@@ -99,6 +100,26 @@ namespace EscritorioMontreal
             }
         }
 
-        
+        private bool validaciones()
+        {
+            try
+            {
+                int value;
+                bool desc = !(txtDesc.Text == null || txtDesc.Text.Equals(String.Empty));
+                bool cupos = !(txtCupo.Text == null || txtCupo.Text.Equals(String.Empty) || !int.TryParse(txtCupo.Text, out value));
+
+                lblDesc.Content = desc ? "" : "Este campo es obligatorio";
+                lblCupos.Content = cupos ? "" : "Este campo debe ser numerico";
+
+                bool valido = true && desc && cupos;
+                return valido;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+
     }
 }
