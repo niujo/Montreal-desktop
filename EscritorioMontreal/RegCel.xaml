@@ -42,6 +42,19 @@
         <Image HorizontalAlignment="Left" Height="29" Margin="8,0,0,0" VerticalAlignment="Top" Width="104" Source="Img/Logo Montreal.png"/>
         <Label Content="Departamento" HorizontalAlignment="Left" Margin="398,215,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtDepartamento" HorizontalAlignment="Left" Height="23" Margin="507,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblUsuario" Content="" HorizontalAlignment="Left" Margin="307,88,0,0" VerticalAlignment="Top" Foreground="#FFFD0707"/>
+        <Label x:Name="lblPASS" Content="" HorizontalAlignment="Left" Margin="307,123,0,0" VerticalAlignment="Top" Foreground="#FFF70A0A"/>
+        <Label x:Name="lblRePAS" Content="" HorizontalAlignment="Left" Margin="307,146,0,0" VerticalAlignment="Top" Foreground="#FFFC0A0A"/>
+        <Label x:Name="lblNom" Content="" HorizontalAlignment="Left" Margin="307,210,0,0" VerticalAlignment="Top" Foreground="#FFF90303"/>
+        <Label x:Name="lblApP" Content="" HorizontalAlignment="Left" Margin="307,240,0,0" VerticalAlignment="Top" Foreground="#FFF90707"/>
+        <Label x:Name="lblApM" Content="" HorizontalAlignment="Left" Margin="307,268,0,0" VerticalAlignment="Top" Foreground="#FFFA0C0C"/>
+        <Label x:Name="lblRut" Content="" HorizontalAlignment="Left" Margin="307,296,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.05,0.555" Foreground="#FFFA0909"/>
+        <Label x:Name="lblFecNac" Content="" HorizontalAlignment="Left" Margin="331,329,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblCorreo" Content="" HorizontalAlignment="Left" Margin="307,362,0,0" VerticalAlignment="Top" Foreground="#FFF90707"/>
+        <Label x:Name="lblNombCen" Content="" HorizontalAlignment="Left" Margin="632,88,0,0" VerticalAlignment="Top" Foreground="#FFF30303"/>
+        <Label x:Name="lblCalle" Content="" HorizontalAlignment="Left" Margin="632,149,0,0" VerticalAlignment="Top" Foreground="#FFFA0C0C"/>
+        <Label x:Name="lblNumeracion" Content="" HorizontalAlignment="Left" Margin="632,181,0,0" VerticalAlignment="Top" Foreground="#FFF60303"/>
+        <Label x:Name="lblDpto" Content="" HorizontalAlignment="Left" Margin="632,217,0,0" VerticalAlignment="Top" Foreground="#FFF70C0C"/>
 
     </Grid>
 </Window>
