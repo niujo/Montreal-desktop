@@ -62,7 +62,8 @@ namespace EscritorioMontreal
         {
             try
             {
-                if (prog != null)
+                bool value = validaciones();
+                if (value && prog != null)
                 {
                     prog.nomb_programa = txtNombre.Text;
                     prog.desc_programa = txtDesc.Text;
