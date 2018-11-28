@@ -23,8 +23,8 @@
         <Button x:Name="btn_Anterior" Content="Volver" HorizontalAlignment="Left" Margin="162,335,0,0" VerticalAlignment="Top" Width="90" Click="btn_Anterior_Click"/>
         <ComboBox x:Name="cbPrograma" HorizontalAlignment="Left" Margin="202,69,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
         <Label Content="Programa asociado" HorizontalAlignment="Left" Margin="27,74,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label x:Name="lblDesc" Content="" HorizontalAlignment="Left" Margin="162,144,0,0" VerticalAlignment="Top" Width="220" RenderTransformOrigin="0.544,0.609" Grid.ColumnSpan="2" Foreground="Red"/>
-        <Label x:Name="lblCupos" Content="" HorizontalAlignment="Left" Margin="162,197,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.422,-0.18" Width="220" Grid.ColumnSpan="2" Height="28" Foreground="Red"/>
+        <Label x:Name="lblDesc" Content="" HorizontalAlignment="Left" Margin="202,144,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.544,0.609" Foreground="Red"/>
+        <Label x:Name="lblCupos" Content="" HorizontalAlignment="Left" Margin="202,197,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.422,-0.18" Foreground="Red"/>
 
     </Grid>
 </Window>

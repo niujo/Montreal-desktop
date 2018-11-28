@@ -19,6 +19,9 @@
         <TextBox x:Name="txtCupo" HorizontalAlignment="Left" Height="23" Margin="181,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Content="Actualizar datos" HorizontalAlignment="Left" Margin="181,226,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click"/>
         <ComboBox x:Name="cbPrograma" HorizontalAlignment="Left" Margin="181,71,0,0" VerticalAlignment="Top" Width="120" />
+        <Label x:Name="lblValid" Content="" HorizontalAlignment="Left" Margin="181,246,0,0" VerticalAlignment="Top" Width="Auto" Foreground="Red" Height="33"/>
+        <Label x:Name="lblDesc" Content="" HorizontalAlignment="Left" Margin="181,143,0,0" VerticalAlignment="Top" Width="Auto" Foreground="Red"/>
+        <Label x:Name="lblCupos" Content="" HorizontalAlignment="Left" Margin="181,194,0,0" VerticalAlignment="Top" Width="Auto" Foreground="Red" Height="32"/>
 
     </Grid>
 </Window>

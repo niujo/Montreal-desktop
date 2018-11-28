@@ -71,5 +71,18 @@ namespace biMontreal
             return lstCursos;
         }
         
+        public bool actualizarCurso(Cursos curso)
+        {
+            try
+            {
+                string id_curso = curso.id_curso.ToString();
+                List<Object> c = UTILS.PUT("private/curso/" + id_curso, "curso", AuthUser.token, curso.GetType(), curso);
+
+                return (c != null && c.Count != 0);
+            } catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }

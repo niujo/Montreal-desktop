@@ -28,7 +28,7 @@
         <TextBox x:Name="txtApeMa" HorizontalAlignment="Left" Height="23" Margin="182,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
         <TextBox x:Name="txtRut" HorizontalAlignment="Left" Height="23" Margin="182,298,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txtCorreo" HorizontalAlignment="Left" Height="23" Margin="182,358,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
-        <DatePicker x:Name="fechNac" HorizontalAlignment="Left" Margin="182,329,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="fechNac" HorizontalAlignment="Left" Margin="182,329,0,0" VerticalAlignment="Top" Width="120"/>
         <Label Content="Datos  del Centro" HorizontalAlignment="Left" Margin="398,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.526,0.398" FontWeight="Bold"/>
         <Label Content="Nombre" HorizontalAlignment="Left" Margin="398,88,0,0" VerticalAlignment="Top"/>
         <Label Content="Ciudad" HorizontalAlignment="Left" Margin="398,116,0,0" VerticalAlignment="Top"/>
