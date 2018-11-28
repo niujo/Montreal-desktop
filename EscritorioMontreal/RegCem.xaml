@@ -55,6 +55,7 @@
         <Label x:Name="lblCalle" Content="" HorizontalAlignment="Left" Margin="632,149,0,0" VerticalAlignment="Top" Foreground="#FFFA0C0C"/>
         <Label x:Name="lblNumeracion" Content="" HorizontalAlignment="Left" Margin="632,181,0,0" VerticalAlignment="Top" Foreground="#FFF60303"/>
         <Label x:Name="lblDpto" Content="" HorizontalAlignment="Left" Margin="632,217,0,0" VerticalAlignment="Top" Foreground="#FFF70C0C"/>
+        <Label x:Name="lblFecNac" Content="" HorizontalAlignment="Left" Margin="307,329,0,0" VerticalAlignment="Top" Foreground="Red"/>
 
     </Grid>
 </Window>

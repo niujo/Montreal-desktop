@@ -51,5 +51,6 @@
         <Label x:Name="lblRut" Content="" HorizontalAlignment="Left" Margin="355,156,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.05,0.555" Foreground="#FFFA0909"/>
         <Label x:Name="lblCorreo" Content="" HorizontalAlignment="Left" Margin="355,234,0,0" VerticalAlignment="Top" Foreground="#FFF90707"/>
         <Label x:Name="lblError" Content="" HorizontalAlignment="Left" Margin="133,169,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label x:Name="lblFechNac" Content="" HorizontalAlignment="Left" Margin="355,193,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.368,0.077" Foreground="Red"/>
     </Grid>
 </Window>

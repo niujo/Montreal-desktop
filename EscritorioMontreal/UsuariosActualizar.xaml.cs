@@ -139,15 +139,12 @@ namespace EscritorioMontreal
         {
             try
             {
-                //int value;
+                Persona per = new Persona();
                 bool nombre = !(txtNombre.Text == null || txtNombre.Text.Equals(String.Empty));
                 bool apeP = !(txtApp.Text == null || txtApp.Text.Equals(String.Empty));
                 bool apeM = !(txtApm.Text == null || txtApm.Text.Equals(String.Empty));
                 bool rut = !(txtRut.Text == null || txtRut.Text.Equals(String.Empty));
-                //fecha
-                /*
-                 if (fecha. datetime. now < datetime.now)
-                 */
+                bool f_nac = (fchNac.SelectedDate != null && per.validaMayorEdad((DateTime)fchNac.SelectedDate));
                 bool correo = !(txtCorreo.Text == null || txtCorreo.Text.Equals(String.Empty));
                 bool calle = !(txtCalle.Text == null || txtCalle.Text.Equals(String.Empty));
                 bool numeracion = !(txtNum.Text == null || txtNum.Text.Equals(String.Empty));
@@ -159,10 +156,10 @@ namespace EscritorioMontreal
                 lblCorreo.Content = correo ? "" : "*";
                 lblCalle.Content = calle ? "" : "*";
                 lblNumeracion.Content = numeracion ? "" : "*";
+                lblFechNac.Content = f_nac ? "" : "*";
 
 
-
-                bool valido = true && nombre && apeP && apeM && rut && correo && calle && numeracion;
+                bool valido = true && nombre && apeP && apeM && rut && correo && calle && numeracion && f_nac;
                 return valido;
             }
             catch (Exception)

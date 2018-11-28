@@ -50,7 +50,7 @@
         <Label x:Name="lblApP" Content="" HorizontalAlignment="Left" Margin="307,240,0,0" VerticalAlignment="Top" Foreground="#FFF90707"/>
         <Label x:Name="lblApM" Content="" HorizontalAlignment="Left" Margin="307,268,0,0" VerticalAlignment="Top" Foreground="#FFFA0C0C"/>
         <Label x:Name="lblRut" Content="" HorizontalAlignment="Left" Margin="307,296,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.05,0.555" Foreground="#FFFA0909"/>
-        <Label x:Name="lblFecNac" Content="" HorizontalAlignment="Left" Margin="331,329,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblFecNac" Content="" HorizontalAlignment="Left" Margin="307,329,0,0" VerticalAlignment="Top" Foreground="Red"/>
         <Label x:Name="lblCorreo" Content="" HorizontalAlignment="Left" Margin="307,362,0,0" VerticalAlignment="Top" Foreground="#FFF90707"/>
         <Label x:Name="lblNombCen" Content="" HorizontalAlignment="Left" Margin="632,88,0,0" VerticalAlignment="Top" Foreground="#FFF30303"/>
         <Label x:Name="lblCalle" Content="" HorizontalAlignment="Left" Margin="632,149,0,0" VerticalAlignment="Top" Foreground="#FFFA0C0C"/>

@@ -137,5 +137,46 @@ namespace biMontreal
             }
         }
 
+        public bool validaMayorEdad(DateTime fech_nac)
+        {
+            try
+            {
+                DateTime hoy = DateTime.UtcNow.Date;
+                if (hoy.Date.Year - fech_nac.Date.Year < 18)
+                {
+                    return false;
+                } else if (hoy.Date.Year - fech_nac.Date.Year == 18 && hoy.Date.Month < fech_nac.Date.Month)
+                {
+                    return false;
+                } else if (hoy.Date.Year - fech_nac.Date.Year == 18 && hoy.Date.Month == fech_nac.Date.Month && hoy.Date.Day < fech_nac.Date.Day)
+                {
+                    return false;
+                } else
+                {
+                    return true;
+                }
+            } catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        /* 
+         if (isDate(date)) {
+            var fechaActual = new Date();
+            var fecha = new Date(date.replace(/-/g, '\/'));
+            if (fechaActual.getFullYear() - fecha.getFullYear() < 18) {
+                return true;
+            } else if (fechaActual.getFullYear() - fecha.getFullYear() === 18 && fechaActual.getMonth() < fecha.getMonth()) {
+                return true;
+            } else if (fechaActual.getFullYear() - fecha.getFullYear() === 18 && fechaActual.getMonth() === fecha.getMonth() && fechaActual.getDate() < fecha.getDate()) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return true;
+        }
+         */
     }
 }

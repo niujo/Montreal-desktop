@@ -177,7 +177,7 @@ namespace EscritorioMontreal
         {
             try
             {
-                //int value;
+                Persona per = new Persona();
                 bool usuario = !(txtUsuario.Text == null || txtUsuario.Text.Equals(String.Empty));
                 bool Pass = !(txtPsw.Password == null || txtPsw.Password.Equals(String.Empty));
                 bool rePass = !(txtRepPsw.Password == null || txtRepPsw.Password.Equals(String.Empty) || !txtPsw.Password.Equals(txtRepPsw));
@@ -185,10 +185,7 @@ namespace EscritorioMontreal
                 bool apeP = !(txtApePa.Text == null || txtApePa.Text.Equals(String.Empty));
                 bool apeM = !(txtApeMa.Text == null || txtApeMa.Text.Equals(String.Empty));
                 bool rut = !(txtRut.Text == null || txtRut.Text.Equals(String.Empty));
-                //fecha
-                /*
-                 if (fecha. datetime. now < datetime.now)
-                 */
+                bool f_nac = (fechNac.SelectedDate != null && per.validaMayorEdad((DateTime)fechNac.SelectedDate));
                 bool correo = !(txtCorreo.Text == null || txtCorreo.Text.Equals(String.Empty));
                 bool nombre = !(txtNombre.Text == null || txtNombre.Text.Equals(String.Empty));
                 bool calle = !(txtCalle.Text == null || txtCalle.Text.Equals(String.Empty));
@@ -205,10 +202,9 @@ namespace EscritorioMontreal
                 lblNombCen.Content = nombre ? "" : "*";
                 lblCalle.Content = calle ? "" : "*";
                 lblNumeracion.Content = numeracion ? "" : "*";
+                lblFecNac.Content = f_nac ? "" : "*";
 
-
-
-                bool valido = true && usuario && Pass && rePass && nomAD && apeP && apeM && rut && correo && nombre && calle && numeracion;
+                bool valido = true && usuario && Pass && rePass && nomAD && apeP && apeM && rut && correo && nombre && calle && numeracion && f_nac;
                 return valido;
             }
             catch (Exception)
