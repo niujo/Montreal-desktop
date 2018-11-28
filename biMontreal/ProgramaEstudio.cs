@@ -92,14 +92,20 @@ namespace biMontreal
 
         public List<object> GetProgramasEstudios()
         {
-
-            ProgramaEstudio progEst = new ProgramaEstudio();
-            List<object> lstProgramas = UTILS.GET("private/programa", "programa", AuthUser.token, progEst.GetType());
-            if (lstProgramas == null || lstProgramas.Count == 0)
+            try
+            {
+                ProgramaEstudio progEst = new ProgramaEstudio();
+                List<object> lstProgramas = UTILS.GET("private/programa", "programa", AuthUser.token, progEst.GetType());
+                if (lstProgramas == null || lstProgramas.Count == 0)
+                {
+                    return null;
+                }
+                return lstProgramas;
+            }
+            catch (Exception)
             {
                 return null;
             }
-            return lstProgramas;
         }
 
         public List<Object> filtrarProgramas(List<Object> programas)

@@ -41,34 +41,40 @@ namespace biMontreal
         }
 
         public List<object> getCursos() {
-            Cursos crs = new Cursos();
-            List<object> lstCursos = UTILS.GET("private/curso","curso",AuthUser.token,crs.GetType());
-            if (lstCursos==null||lstCursos.Count==0)
+            try
+            {
+                Cursos crs = new Cursos();
+                List<object> lstCursos = UTILS.GET("private/curso", "curso", AuthUser.token, crs.GetType());
+                if (lstCursos == null || lstCursos.Count == 0)
+                {
+                    return null;
+                }
+                ProgramaEstudio prg = new ProgramaEstudio();
+                List<object> lstPrograma = prg.GetProgramasEstudios();
+                if (lstPrograma == null)
+                {
+                    lstPrograma = new List<object>();
+                }
+
+                for (int i = 0; i < lstCursos.Count; i++)
+                {
+                    for (int j = 0; j < lstPrograma.Count; j++)
+                    {
+                        Cursos c = (Cursos)lstCursos[i];
+                        ProgramaEstudio p = (ProgramaEstudio)lstPrograma[j];
+                        if (c.id_programa.Equals(p.id_programa))
+                        {
+                            c.programaEstudio = p;
+                            lstCursos[i] = c;
+                            break;
+                        }
+                    }
+                }
+                return lstCursos;
+            } catch (Exception)
             {
                 return null;
             }
-            ProgramaEstudio prg = new ProgramaEstudio();
-            List<object> lstPrograma = prg.GetProgramasEstudios();
-            if (lstPrograma==null)
-            {
-                lstPrograma = new List<object>();
-            }
-
-            for (int i = 0; i < lstCursos.Count; i++)
-            {
-                for (int j = 0; j < lstPrograma.Count; j++)
-                {
-                    Cursos c = (Cursos)lstCursos[i];
-                    ProgramaEstudio p = (ProgramaEstudio)lstPrograma[j];
-                    if (c.id_programa.Equals(p.id_programa))
-                    {
-                        c.programaEstudio = p;
-                        lstCursos[i] = c;
-                        break;
-                    }
-                }
-            }
-            return lstCursos;
         }
         
         public bool actualizarCurso(Cursos curso)

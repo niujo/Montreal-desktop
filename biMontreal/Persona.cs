@@ -36,51 +36,57 @@ namespace biMontreal
 
         public List<Object> GetPersonas()
         {
-            Persona u = new Persona();
-            List<Object> lstPersona = UTILS.GET("private/persona", "persona", AuthUser.token, u.GetType());
-            if (lstPersona == null || lstPersona.Count == 0)
+            try
             {
-                return null;
-            }
-            Contacto c = new Contacto();
-            List<Object> lstContactos = c.getContactos();
-            if (lstContactos == null)
-            {
-                return null;
-            }
-            Direccion dir = new Direccion();
-            List<Object> direcciones = dir.GetDireccion();
-
-            Persona per;
-            Contacto con;
-            for(int i = 0; i < lstPersona.Count; i++)
-            {
-                for(int j = 0; j < lstContactos.Count; j++)
+                Persona u = new Persona();
+                List<Object> lstPersona = UTILS.GET("private/persona", "persona", AuthUser.token, u.GetType());
+                if (lstPersona == null || lstPersona.Count == 0)
                 {
-                    con = (Contacto)lstContactos[j];
-                    per = (Persona)lstPersona[i];
-                    if (per.id_persona.Equals(con.id_persona))
+                    return null;
+                }
+                Contacto c = new Contacto();
+                List<Object> lstContactos = c.getContactos();
+                if (lstContactos == null)
+                {
+                    return null;
+                }
+                Direccion dir = new Direccion();
+                List<Object> direcciones = dir.GetDireccion();
+
+                Persona per;
+                Contacto con;
+                for (int i = 0; i < lstPersona.Count; i++)
+                {
+                    for (int j = 0; j < lstContactos.Count; j++)
                     {
-                        per.contacto = con;
-                        lstPersona[i] = per;
-                        break;
+                        con = (Contacto)lstContactos[j];
+                        per = (Persona)lstPersona[i];
+                        if (per.id_persona.Equals(con.id_persona))
+                        {
+                            per.contacto = con;
+                            lstPersona[i] = per;
+                            break;
+                        }
+                    }
+
+                    for (int j = 0; j < direcciones.Count; j++)
+                    {
+                        dir = (Direccion)direcciones[j];
+                        per = (Persona)lstPersona[i];
+                        if (per.id_direccion.Equals(dir.id_direccion))
+                        {
+                            per.direccion = dir;
+                            lstPersona[i] = per;
+                            break;
+                        }
                     }
                 }
 
-                for (int j = 0; j < direcciones.Count; j++)
-                {
-                    dir = (Direccion)direcciones[j];
-                    per = (Persona)lstPersona[i];
-                    if (per.id_direccion.Equals(dir.id_direccion))
-                    {
-                        per.direccion = dir;
-                        lstPersona[i] = per;
-                        break;
-                    }
-                }
+                return lstPersona;
+            } catch (Exception)
+            {
+                return null;
             }
-
-            return lstPersona;
         }
 
         public Boolean rutExists(string rut)

@@ -19,14 +19,21 @@ namespace biMontreal
 
         public List<Object> getSeguros()
         {
-            Seguro se = new Seguro();
-            List<Object> lstSeguros = UTILS.GET("private/seguro", "seguro", AuthUser.token, se.GetType());
-            if (lstSeguros == null || lstSeguros.Count == 0)
+            try
+            {
+                Seguro se = new Seguro();
+                List<Object> lstSeguros = UTILS.GET("private/seguro", "seguro", AuthUser.token, se.GetType());
+                if (lstSeguros == null || lstSeguros.Count == 0)
+                {
+                    return null;
+                }
+
+                return lstSeguros;
+            }
+            catch (Exception)
             {
                 return null;
             }
-
-            return lstSeguros;
         }
 
     }

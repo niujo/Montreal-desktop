@@ -21,14 +21,21 @@ namespace biMontreal
 
         public List<Object> getContactos()
         {
-            Contacto c = new Contacto();
-            List<Object> lstContactos = UTILS.GET("private/contacto", "contacto", AuthUser.token, c.GetType());
-            if (lstContactos == null || lstContactos.Count == 0)
+            try
+            {
+                Contacto c = new Contacto();
+                List<Object> lstContactos = UTILS.GET("private/contacto", "contacto", AuthUser.token, c.GetType());
+                if (lstContactos == null || lstContactos.Count == 0)
+                {
+                    return null;
+                }
+
+                return lstContactos;
+            }
+            catch (Exception)
             {
                 return null;
             }
-
-            return lstContactos;
         }
 
         public Contacto guardarContacto(Contacto contacto)

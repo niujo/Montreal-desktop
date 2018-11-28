@@ -15,14 +15,20 @@ namespace biMontreal
 
         public List<Object> getRoles()
         {
-            Rol r = new Rol();
-            List<Object> lstRol = UTILS.GET("private/rol", "rol", AuthUser.token, r.GetType());
-            if (lstRol == null || lstRol.Count == 0)
+            try
+            {
+                Rol r = new Rol();
+                List<Object> lstRol = UTILS.GET("private/rol", "rol", AuthUser.token, r.GetType());
+                if (lstRol == null || lstRol.Count == 0)
+                {
+                    return null;
+                }
+
+                return lstRol;
+            } catch (Exception)
             {
                 return null;
             }
-
-            return lstRol;
         }
     }
 }

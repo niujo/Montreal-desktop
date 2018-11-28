@@ -30,36 +30,41 @@ namespace biMontreal
 
         public List<Object> GetDireccion()
         {
-
-            Direccion d = new Direccion();
-            Ciudad ci = new Ciudad();
-            List<Object> lstDireccion = UTILS.GET("private/direccion", "direccion", AuthUser.token, d.GetType());
-            if (lstDireccion == null || lstDireccion.Count == 0)
+            try
             {
-                return null;
-            }
-            List<Object> lstCiudades = ci.GetCiudades();
-            if (lstCiudades == null)
-            {
-                return null;
-            }
-
-            for(int i = 0; i < lstDireccion.Count; i++)
-            {
-                for(int j = 0; j < lstCiudades.Count; j++)
+                Direccion d = new Direccion();
+                Ciudad ci = new Ciudad();
+                List<Object> lstDireccion = UTILS.GET("private/direccion", "direccion", AuthUser.token, d.GetType());
+                if (lstDireccion == null || lstDireccion.Count == 0)
                 {
-                    Direccion dir = (Direccion)lstDireccion[i];
-                    Ciudad ciu = (Ciudad)lstCiudades[j];
-                    if (dir.id_ciudad.Equals(ciu.id_ciudad))
+                    return null;
+                }
+                List<Object> lstCiudades = ci.GetCiudades();
+                if (lstCiudades == null)
+                {
+                    return null;
+                }
+
+                for (int i = 0; i < lstDireccion.Count; i++)
+                {
+                    for (int j = 0; j < lstCiudades.Count; j++)
                     {
-                        dir.ciudad = ciu;
-                        lstDireccion[i] = dir;
-                        break;
+                        Direccion dir = (Direccion)lstDireccion[i];
+                        Ciudad ciu = (Ciudad)lstCiudades[j];
+                        if (dir.id_ciudad.Equals(ciu.id_ciudad))
+                        {
+                            dir.ciudad = ciu;
+                            lstDireccion[i] = dir;
+                            break;
+                        }
                     }
                 }
-            }
 
-            return lstDireccion;
+                return lstDireccion;
+            } catch (Exception)
+            {
+                return null;
+            }
         }
 
         public Direccion guardarDireccion(Direccion direccion)

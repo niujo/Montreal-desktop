@@ -24,34 +24,40 @@ namespace biMontreal
 
         public List<Object> GetCiudades()
         {
-            Ciudad cu = new Ciudad();
-            Pais pa = new Pais();
-            List<Object> lstCiudades = UTILS.GET("private/ciudad", "ciudad", AuthUser.token, cu.GetType());
-            if (lstCiudades==null   ||  lstCiudades.Count == 0)
+            try
             {
-                return null;
-            }
-            List<Object> lstPaises = UTILS.GET("private/pais", "pais", AuthUser.token, pa.GetType());
-            if (lstPaises==null ||  lstPaises.Count==0)
-            {
-                return null;
-            }
-            for(int i = 0; i < lstCiudades.Count; i++)
-            {
-                for(int j = 0; j < lstPaises.Count; j++)
+                Ciudad cu = new Ciudad();
+                Pais pa = new Pais();
+                List<Object> lstCiudades = UTILS.GET("private/ciudad", "ciudad", AuthUser.token, cu.GetType());
+                if (lstCiudades == null || lstCiudades.Count == 0)
                 {
-                    Ciudad c = (Ciudad)lstCiudades[i];
-                    Pais p = (Pais)lstPaises[j];
-                    if (c.id_pais.Equals(p.id_pais))
+                    return null;
+                }
+                List<Object> lstPaises = UTILS.GET("private/pais", "pais", AuthUser.token, pa.GetType());
+                if (lstPaises == null || lstPaises.Count == 0)
+                {
+                    return null;
+                }
+                for (int i = 0; i < lstCiudades.Count; i++)
+                {
+                    for (int j = 0; j < lstPaises.Count; j++)
                     {
-                        c.pais = p;
-                        lstCiudades[i] = c;
-                        break;
+                        Ciudad c = (Ciudad)lstCiudades[i];
+                        Pais p = (Pais)lstPaises[j];
+                        if (c.id_pais.Equals(p.id_pais))
+                        {
+                            c.pais = p;
+                            lstCiudades[i] = c;
+                            break;
+                        }
                     }
                 }
-            }
 
-            return lstCiudades;
+                return lstCiudades;
+            } catch (Exception)
+            {
+                return null;
+            }
         }
 
     }

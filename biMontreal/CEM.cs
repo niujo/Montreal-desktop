@@ -33,13 +33,19 @@ namespace biMontreal
 
         public List<object> getCEM()
         {
-            CEM cem = new CEM();
-            List<object> lstCEM = UTILS.GET("private/cem", "cem", AuthUser.token, cem.GetType());
-            if (lstCEM == null || lstCEM.Count == 0)
+            try
+            {
+                CEM cem = new CEM();
+                List<object> lstCEM = UTILS.GET("private/cem", "cem", AuthUser.token, cem.GetType());
+                if (lstCEM == null || lstCEM.Count == 0)
+                {
+                    return null;
+                }
+                return lstCEM;
+            } catch (Exception)
             {
                 return null;
             }
-            return lstCEM;
         }
 
         public CEM guardarCEM(CEM cem)

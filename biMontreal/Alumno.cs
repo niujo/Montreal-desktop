@@ -35,36 +35,42 @@ namespace biMontreal
 
         public List<Object> GetAlumnos()
         {
-            Alumno alu = new Alumno();
+            try
+            {
+                Alumno alu = new Alumno();
 
-            List<Object> lstAlumnos = UTILS.GET("private/alumno", "alumno", AuthUser.token, alu.GetType());
-            if (lstAlumnos == null || lstAlumnos.Count == 0)
-            {
-                return null;
-            }
-            Persona per = new Persona();
-            List<Object> lstPersonas = per.GetPersonas();
-            if (lstPersonas == null || lstPersonas.Count == 0)
-            {
-                return null;
-            }
-
-            for(int i = 0; i < lstAlumnos.Count; i++)
-            {
-                for(int j = 0; j < lstPersonas.Count; j++)
+                List<Object> lstAlumnos = UTILS.GET("private/alumno", "alumno", AuthUser.token, alu.GetType());
+                if (lstAlumnos == null || lstAlumnos.Count == 0)
                 {
-                    Persona p = (Persona)lstPersonas[j];
-                    Alumno a = (Alumno)lstAlumnos[i];
-                    if (p.id_usuario.Equals(a.id_usuario))
+                    return null;
+                }
+                Persona per = new Persona();
+                List<Object> lstPersonas = per.GetPersonas();
+                if (lstPersonas == null || lstPersonas.Count == 0)
+                {
+                    return null;
+                }
+
+                for (int i = 0; i < lstAlumnos.Count; i++)
+                {
+                    for (int j = 0; j < lstPersonas.Count; j++)
                     {
-                        a.persona = p;
-                        lstAlumnos[i] = a;
-                        break;
+                        Persona p = (Persona)lstPersonas[j];
+                        Alumno a = (Alumno)lstAlumnos[i];
+                        if (p.id_usuario.Equals(a.id_usuario))
+                        {
+                            a.persona = p;
+                            lstAlumnos[i] = a;
+                            break;
+                        }
                     }
                 }
-            }
 
-            return lstAlumnos;
+                return lstAlumnos;
+            } catch (Exception)
+            {
+                return null;
+            }
         }
     }
 }

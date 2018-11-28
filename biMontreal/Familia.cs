@@ -46,34 +46,40 @@ namespace biMontreal
 
         public List<Object> GetFamilias()
         {
-            Familia f = new Familia();
-            Persona p = new Persona();
-            List<Object> lstFamilias = UTILS.GET("private/familia", "familia", AuthUser.token, f.GetType());
-            if (lstFamilias == null || lstFamilias.Count == 0)
+            try
             {
-                return null;
-            }
-            List<Object> lstPersonas = p.GetPersonas();
-            if (lstPersonas == null)
-            {
-                return null;
-            }
-
-            for (int i = 0; i < lstFamilias.Count; i++)
-            {
-                for (int j = 0; j < lstPersonas.Count; j++)
+                Familia f = new Familia();
+                Persona p = new Persona();
+                List<Object> lstFamilias = UTILS.GET("private/familia", "familia", AuthUser.token, f.GetType());
+                if (lstFamilias == null || lstFamilias.Count == 0)
                 {
-                    Familia fa = (Familia)lstFamilias[i];
-                    Persona per = (Persona)lstPersonas[j];
-                    if (fa.id_usuario.Equals(per.id_usuario))
+                    return null;
+                }
+                List<Object> lstPersonas = p.GetPersonas();
+                if (lstPersonas == null)
+                {
+                    return null;
+                }
+
+                for (int i = 0; i < lstFamilias.Count; i++)
+                {
+                    for (int j = 0; j < lstPersonas.Count; j++)
                     {
-                        fa.persona = per;
-                        lstFamilias[i] = fa;
-                        break;
+                        Familia fa = (Familia)lstFamilias[i];
+                        Persona per = (Persona)lstPersonas[j];
+                        if (fa.id_usuario.Equals(per.id_usuario))
+                        {
+                            fa.persona = per;
+                            lstFamilias[i] = fa;
+                            break;
+                        }
                     }
                 }
+                return lstFamilias;
+            } catch (Exception)
+            {
+                return null;
             }
-            return lstFamilias;
         }
 
     }

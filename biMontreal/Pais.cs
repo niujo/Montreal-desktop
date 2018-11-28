@@ -15,13 +15,19 @@ namespace biMontreal
 
         public List<object> getPais()
         {
-            Pais pais = new Pais();
-            List<object> lstPais = UTILS.GET("private/pais", "pais", AuthUser.token, pais.GetType());
-            if (lstPais == null || lstPais.Count == 0)
+            try
+            {
+                Pais pais = new Pais();
+                List<object> lstPais = UTILS.GET("private/pais", "pais", AuthUser.token, pais.GetType());
+                if (lstPais == null || lstPais.Count == 0)
+                {
+                    return null;
+                }
+                return lstPais;
+            } catch (Exception)
             {
                 return null;
             }
-            return lstPais;
         }
     }
 }

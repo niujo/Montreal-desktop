@@ -31,13 +31,19 @@ namespace biMontreal
 
         public List<object> getCELS()
         {
-            CEL cel = new CEL();
-            List<object> lstCEL = UTILS.GET("private/cel", "cel",AuthUser.token, cel.GetType());
-            if (lstCEL==null|| lstCEL.Count==0)
+            try
+            {
+                CEL cel = new CEL();
+                List<object> lstCEL = UTILS.GET("private/cel", "cel", AuthUser.token, cel.GetType());
+                if (lstCEL == null || lstCEL.Count == 0)
+                {
+                    return null;
+                }
+                return lstCEL;
+            } catch (Exception)
             {
                 return null;
             }
-            return lstCEL;
         }
 
         public CEL guardarCEL(CEL cel)

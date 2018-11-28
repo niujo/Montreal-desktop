@@ -60,57 +60,64 @@ namespace biMontreal
         
         public List<Object> getUsuarios()
         {
-            Usuario u = new Usuario();
-            List<Object> lstUsuarios = UTILS.GET("private/usuario", "usuario", AuthUser.token, u.GetType());
-            if (lstUsuarios == null || lstUsuarios.Count == 0)
+            try
             {
-                return null;
-            }
-            Persona p = new Persona();
-            List<Object> lstPersonas = p.GetPersonas();
-            if (lstPersonas == null)
-            {
-                return null;
-            }
-            for(int i = 0; i < lstUsuarios.Count; i++)
-            {
-                for(int j = 0; j < lstPersonas.Count; j++)
+                Usuario u = new Usuario();
+                List<Object> lstUsuarios = UTILS.GET("private/usuario", "usuario", AuthUser.token, u.GetType());
+                if (lstUsuarios == null || lstUsuarios.Count == 0)
                 {
-                    Usuario usr = (Usuario)lstUsuarios[i];
-                    Persona per = (Persona)lstPersonas[j];
-                    if (usr.id_usuario.Equals(per.id_usuario))
+                    return null;
+                }
+                Persona p = new Persona();
+                List<Object> lstPersonas = p.GetPersonas();
+                if (lstPersonas == null)
+                {
+                    return null;
+                }
+                for (int i = 0; i < lstUsuarios.Count; i++)
+                {
+                    for (int j = 0; j < lstPersonas.Count; j++)
                     {
-                        usr.persona = per;
-                        lstUsuarios[i] = usr;
-                        break;
+                        Usuario usr = (Usuario)lstUsuarios[i];
+                        Persona per = (Persona)lstPersonas[j];
+                        if (usr.id_usuario.Equals(per.id_usuario))
+                        {
+                            usr.persona = per;
+                            lstUsuarios[i] = usr;
+                            break;
+                        }
                     }
                 }
+
+
+                Rol r = new Rol();
+                List<Object> lstRol = r.getRoles();
+                if (lstRol == null)
+                {
+                    return null;
+                }
+
+                for (int i = 0; i < lstUsuarios.Count; i++)
+                {
+                    for (int j = 0; j < lstRol.Count; j++)
+                    {
+                        Usuario usr = (Usuario)lstUsuarios[i];
+                        Rol rl = (Rol)lstRol[j];
+                        if (usr.id_rol.Equals(rl.id_rol))
+                        {
+                            usr.rol = rl;
+                            lstUsuarios[i] = usr;
+                            break;
+                        }
+                    }
+                }
+
+                return lstUsuarios;
             }
-
-
-            Rol r = new Rol();
-            List<Object> lstRol = r.getRoles();
-            if (lstRol == null)
+            catch (Exception)
             {
                 return null;
             }
-
-            for(int i = 0; i < lstUsuarios.Count; i++)
-            {
-                for(int j = 0; j < lstRol.Count; j++)
-                {
-                    Usuario usr = (Usuario)lstUsuarios[i];
-                    Rol rl = (Rol)lstRol[j];
-                    if (usr.id_rol.Equals(rl.id_rol))
-                    {
-                        usr.rol = rl;
-                        lstUsuarios[i] = usr;
-                        break;
-                    }
-                }
-            }
-
-            return lstUsuarios;
         }
 
         public Boolean usuarioExists(string usuario)
@@ -130,13 +137,20 @@ namespace biMontreal
 
         public Usuario guardarUsuario(Usuario usuario)
         {
-            List<Object> usr = UTILS.POST("private/usuario", "usuario", AuthUser.token, usuario.GetType(), usuario);
-            if (usr == null || usr.Count == 0)
+            try
+            {
+                List<Object> usr = UTILS.POST("private/usuario", "usuario", AuthUser.token, usuario.GetType(), usuario);
+                if (usr == null || usr.Count == 0)
+                {
+                    return null;
+                }
+
+                return (Usuario)usr[0];
+            }
+            catch (Exception)
             {
                 return null;
             }
-
-            return (Usuario)usr[0];
         }
 
         public void deleteUsuario(string id_usuario)
