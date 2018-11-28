@@ -20,7 +20,8 @@ namespace EscritorioMontreal
     /// </summary>
     public partial class CursoActualizar : Window
     {
-        public CursoActualizar()
+        private Cursos cur = null;
+        public CursoActualizar(Cursos curso)
         {
             InitializeComponent();
             lblNombre.Content = AuthUser.nombre;
@@ -42,7 +43,13 @@ namespace EscritorioMontreal
                 cbPrograma.Items.Add(new KeyValuePair<int?, string>(pe.id_programa, pe.nomb_programa));
             }
 
-              
+            if (curso != null)
+            {
+                txtCupo.Text = curso.cupos.ToString();
+                txtDesc.Text = curso.desc_curso;
+                cbPrograma.SelectedValue = curso.id_programa;
+                cur = curso;
+            }
         }
 
         private void btn_volver_Click(object sender, RoutedEventArgs e)
@@ -66,7 +73,30 @@ namespace EscritorioMontreal
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                if (cur != null)
+                {
+                    cur.desc_curso = txtDesc.Text;
+                    cur.cupos = int.Parse(txtCupo.Text);
+                    cur.id_programa = (int)cbPrograma.SelectedValue;
+                    bool valid = cur.actualizarCurso(cur);
 
+                    if (valid)
+                    {
+                        VerCursos cursos = new VerCursos();
+                        cursos.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        lblValid.Content = "Ha ocurrido un error";
+                    }
+                }
+            } catch (Exception)
+            {
+                // nada
+            }
         }
 
         
