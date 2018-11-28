@@ -85,6 +85,21 @@ namespace biMontreal
                 return null;
             }
         }
+
+        public bool actualizarDireccion(Direccion direccion)
+        {
+            try
+            {
+                string id = direccion.id_direccion.ToString();
+
+                List<Object> dir = UTILS.PUT("private/direccion/" + id, "direccion", AuthUser.token, direccion.GetType(), direccion);
+
+                return (dir != null && dir.Count != 0);
+            } catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }
 

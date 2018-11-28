@@ -149,26 +149,20 @@ namespace EscritorioMontreal
                                         if (cel == null)
                                         {
                                             usuario.deleteUsuario(id_usuario);
+                                        } else
+                                        {
+                                            RegCel regcel = new RegCel();
+                                            regcel.Show();
+                                            this.Close();
                                         }
                                     }
-
-
-
                                 }
                                 else
                                 {
                                     usuario.deleteUsuario(id_usuario);
                                 }
-
-                                if (usuario != null && lstRoles.Count > 0)
-                                {
-                                    RegCel regcel = new RegCel();
-                                    regcel.Show();
-                                    this.Close();
-                                }
                             }
                         }
-
                     }
                 }
             }
@@ -177,7 +171,6 @@ namespace EscritorioMontreal
                 // nada
             }
         }
-        //
 
         private bool validaciones()
         {
@@ -199,7 +192,6 @@ namespace EscritorioMontreal
                 bool nombre = !(txtNombre.Text == null || txtNombre.Text.Equals(String.Empty));
                 bool calle = !(txtCalle.Text == null || txtCalle.Text.Equals(String.Empty));
                 bool numeracion = !(txtNumeracion.Text == null || txtNumeracion.Text.Equals(String.Empty));
-                bool dpto = !(txtDepartamento.Text == null || txtDepartamento.Text.Equals(String.Empty));
 
                 lblUsuario.Content = usuario ? "" : "*";
                 lblPASS.Content = Pass ? "" : "*";
@@ -212,11 +204,10 @@ namespace EscritorioMontreal
                 lblNombCen.Content = nombre ? "" : "*";
                 lblCalle.Content = calle ? "" : "*";
                 lblNumeracion.Content = numeracion ? "" : "*";
-                lblDpto.Content = dpto ? "" : "*";
 
 
 
-                bool valido = true && usuario && Pass && rePass && nomAD && apeP && apeM && rut && correo && nombre && calle && numeracion && dpto ;
+                bool valido = true && usuario && Pass && rePass && nomAD && apeP && apeM && rut && correo && nombre && calle && numeracion;
                 return valido;
             }
             catch (Exception)

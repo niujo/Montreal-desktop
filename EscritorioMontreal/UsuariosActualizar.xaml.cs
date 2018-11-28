@@ -89,7 +89,46 @@ namespace EscritorioMontreal
         {
             try
             {
+                bool valido = validaciones();
+                if (usr != null && valido)
+                {
+                    Persona persona = new Persona();
+                    Direccion direccion = new Direccion();
+                    Contacto contacto = new Contacto();
 
+                    persona.id_persona = usr.persona.id_persona;
+                    persona.nombre = txtNombre.Text;
+                    persona.app_paterno = txtApp.Text;
+                    persona.app_materno = txtApm.Text;
+                    persona.rut = txtRut.Text;
+                    persona.fech_nacimiento = (DateTime)fchNac.SelectedDate;
+
+                    contacto.id_contacto = usr.persona.contacto.id_contacto;
+                    contacto.desc_contacto = txtCorreo.Text;
+                    contacto.tipo_contacto = usr.persona.contacto.tipo_contacto;
+
+                    direccion.id_direccion = usr.persona.id_direccion;
+                    direccion.id_ciudad = (int)cbCiudad.SelectedValue;
+                    direccion.calle = txtCalle.Text;
+                    direccion.numeracion = txtNum.Text;
+                    direccion.departamento = txtDpto.Text;
+
+                    bool updtPersona = persona.actualizarPersona(persona);
+                    bool updtDireccion = direccion.actualizarDireccion(direccion);
+                    bool updtContacto = contacto.actualizarContacto(contacto);
+
+                    if (updtPersona && updtDireccion && updtContacto)
+                    {
+                        VerUsuarios vu = new VerUsuarios();
+                        vu.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        lblError.Content = "Ha ocurrido un error";
+                    }
+
+                }
             } catch (Exception)
             {
                 // nada
@@ -112,7 +151,6 @@ namespace EscritorioMontreal
                 bool correo = !(txtCorreo.Text == null || txtCorreo.Text.Equals(String.Empty));
                 bool calle = !(txtCalle.Text == null || txtCalle.Text.Equals(String.Empty));
                 bool numeracion = !(txtNum.Text == null || txtNum.Text.Equals(String.Empty));
-                bool dpto = !(txtDpto.Text == null || txtDpto.Text.Equals(String.Empty));
 
                 lblNomb.Content = nombre ? "" : "*";
                 lblApP.Content = apeP ? "" : "*";
@@ -121,11 +159,10 @@ namespace EscritorioMontreal
                 lblCorreo.Content = correo ? "" : "*";
                 lblCalle.Content = calle ? "" : "*";
                 lblNumeracion.Content = numeracion ? "" : "*";
-                lblDpto.Content = dpto ? "" : "*";
 
 
 
-                bool valido = true && nombre && apeP && apeM && rut && correo && calle && numeracion && dpto;
+                bool valido = true && nombre && apeP && apeM && rut && correo && calle && numeracion;
                 return valido;
             }
             catch (Exception)

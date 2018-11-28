@@ -122,5 +122,20 @@ namespace biMontreal
             }
         }
 
+        public bool actualizarPersona(Persona persona)
+        {
+            try
+            {
+                string id = persona.id_persona.ToString();
+
+                List<Object> per = UTILS.PUT("private/persona/" + id, "persona", AuthUser.token, persona.GetType(), persona);
+
+                return (per != null && per.Count != 0);
+            } catch (Exception)
+            {
+                return false;
+            }
+        }
+
     }
 }

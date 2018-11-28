@@ -17,9 +17,9 @@
         <Label x:Name="lblNombre" Content="" HorizontalAlignment="Left" Margin="184,10,0,0" VerticalAlignment="Top" Width="200"/>
         <Image HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="140" Source="Img/Logo Montreal.png" Margin="10,4,0,0"/>
 
-        <Label Content="Nombre" HorizontalAlignment="Left" Margin="45,52,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Content="RUT" HorizontalAlignment="Left" Margin="45,153,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Content="Correo" HorizontalAlignment="Left" Margin="45,234,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="43,52,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="RUT" HorizontalAlignment="Left" Margin="43,153,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Correo" HorizontalAlignment="Left" Margin="43,234,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="23" Margin="197,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
         <TextBox x:Name="txtApp" HorizontalAlignment="Left" Height="23" Margin="197,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
         <TextBox x:Name="txtApm" HorizontalAlignment="Left" Height="23" Margin="197,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
@@ -30,18 +30,18 @@
         <TextBox x:Name="txtCalle" HorizontalAlignment="Left" Height="23" Margin="197,19.2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Grid.Row="1"/>
         <TextBox x:Name="txtNum" HorizontalAlignment="Left" Height="23" Margin="197,57.2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Grid.Row="1"/>
         <TextBox x:Name="txtDpto" HorizontalAlignment="Left" Height="23" Margin="197,104.4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Grid.Row="1"/>
-        <Button x:Name="btn_actualizar" Content="Actualizar usuario" HorizontalAlignment="Left" Margin="133,164.4,0,0" VerticalAlignment="Top" Width="120" Click="btn_actualizar_Click" Grid.Row="1"/>
+        <Button x:Name="btn_actualizar" Content="Actualizar usuario" HorizontalAlignment="Left" Margin="133,149,0,0" VerticalAlignment="Top" Width="120" Click="btn_actualizar_Click" Grid.Row="1"/>
         <Button x:Name="btn_volver" Content="Volver a menú" HorizontalAlignment="Left" Margin="30,206.4,0,0" VerticalAlignment="Top" Width="90" Click="btn_volver_Click" Grid.Row="1"/>
         <Button x:Name="btn_Anterior" Content="Volver" HorizontalAlignment="Left" Margin="147,206.4,0,0" VerticalAlignment="Top" Width="90" Click="btn_Anterior_Click" Grid.Row="1"/>
         <Button x:Name="btn_salir" Content="Salir" HorizontalAlignment="Left" Margin="275,206.4,0,0" VerticalAlignment="Top" Width="90" Click="btn_salir_Click" Grid.Row="1"/>
-        <Label Content="Apellido paterno" HorizontalAlignment="Left" Margin="44,83,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Content="Apellido paterno" HorizontalAlignment="Left" Margin="45,123,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Content="Fecha de nacimiento" HorizontalAlignment="Left" Margin="45,184,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Content="Dirección" HorizontalAlignment="Left" Margin="44,274,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="94"/>
-        <Label Content="Ciudad" HorizontalAlignment="Left" Margin="44,295,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.RowSpan="2"/>
-        <Label Content="Calle" HorizontalAlignment="Left" Margin="45,15.2,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Row="1"/>
-        <Label Content="Numeración" HorizontalAlignment="Left" Margin="45,53.2,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Row="1"/>
-        <Label Content="Departamento" HorizontalAlignment="Left" Margin="45,100.4,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Row="1"/>
+        <Label Content="Apellido paterno" HorizontalAlignment="Left" Margin="43,83,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Apellido paterno" HorizontalAlignment="Left" Margin="43,123,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Fecha de nacimiento" HorizontalAlignment="Left" Margin="43,184,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Dirección" HorizontalAlignment="Left" Margin="43,261,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="94" FontSize="18"/>
+        <Label Content="Ciudad" HorizontalAlignment="Left" Margin="43,295,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.RowSpan="2"/>
+        <Label Content="Calle" HorizontalAlignment="Left" Margin="43,10,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Row="1"/>
+        <Label Content="Numeración" HorizontalAlignment="Left" Margin="43,54,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Row="1"/>
+        <Label Content="Departamento" HorizontalAlignment="Left" Margin="43,101,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Row="1"/>
         <Label x:Name="lblCalle" Content="" HorizontalAlignment="Left" Margin="355,19.2,0,0" VerticalAlignment="Top" Foreground="#FFFA0C0C" Grid.Row="1"/>
         <Label x:Name="lblNumeracion" Content="" HorizontalAlignment="Left" Margin="355,57.2,0,0" VerticalAlignment="Top" Foreground="#FFF60303" Grid.Row="1"/>
         <Label x:Name="lblDpto" Content="" HorizontalAlignment="Left" Margin="355,104.2,0,0" VerticalAlignment="Top" Foreground="#FFF70C0C" Grid.Row="1"/>
@@ -50,5 +50,6 @@
         <Label x:Name="lblApM" Content="" HorizontalAlignment="Left" Margin="355,126,0,0" VerticalAlignment="Top" Foreground="#FFFA0C0C"/>
         <Label x:Name="lblRut" Content="" HorizontalAlignment="Left" Margin="355,156,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.05,0.555" Foreground="#FFFA0909"/>
         <Label x:Name="lblCorreo" Content="" HorizontalAlignment="Left" Margin="355,234,0,0" VerticalAlignment="Top" Foreground="#FFF90707"/>
+        <Label x:Name="lblError" Content="" HorizontalAlignment="Left" Margin="133,169,0,0" Grid.Row="1" VerticalAlignment="Top"/>
     </Grid>
 </Window>

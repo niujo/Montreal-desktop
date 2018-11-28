@@ -55,5 +55,20 @@ namespace biMontreal
                 return null;
             }
         }
+
+        public bool actualizarContacto(Contacto contacto)
+        {
+            try
+            {
+                string id = contacto.id_contacto.ToString();
+
+                List<Object> cont = UTILS.PUT("private/contacto/" + id, "contacto", AuthUser.token, contacto.GetType(), contacto);
+
+                return (cont != null && cont.Count != 0);
+            } catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }
