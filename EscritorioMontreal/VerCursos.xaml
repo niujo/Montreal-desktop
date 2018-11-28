@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EscritorioMontreal"
         mc:Ignorable="d"
-        Title="VerCursos" Height="426.4" Width="648.1">
+        Title="VerCursos" Height="426.4" Width="648.1"
+        WindowStartupLocation="CenterScreen">
     <Grid Background="#FFA6C3C5">
         <ListBox x:Name="listCursos" HorizontalAlignment="Left" Height="80" Margin="65,70,0,0" VerticalAlignment="Top" Width="529" SelectionChanged="listCursos_SelectionChanged"/>
         <Button x:Name="btn_Agregar" Content="Agregar" HorizontalAlignment="Left" Margin="65,185,0,0" VerticalAlignment="Top" Width="75" Click="btn_Agregar_Click"/>

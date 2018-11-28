@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EscritorioMontreal"
         mc:Ignorable="d"
-        Title="MainWindow" Height="354.77" Width="455.272" WindowStyle="ToolWindow">
+        Title="MainWindow" Height="354.77" Width="455.272" WindowStyle="ToolWindow"
+        WindowStartupLocation="CenterScreen">
     <Grid Margin="0,0,-8,-1" Background="#FFA6C3C5">
         <Image HorizontalAlignment="Left" Height="143" Margin="124,43,0,0" VerticalAlignment="Top" Width="200" Source="Img/Logo Montreal.png"/>
 

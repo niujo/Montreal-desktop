@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EscritorioMontreal"
         mc:Ignorable="d"
-        Title="VerPostulaciones" Height="448.465" Width="749.317">
+        Title="VerPostulaciones" Height="448.465" Width="749.317"
+        WindowStartupLocation="CenterScreen">
     <Grid Background="#FFA6C3C5" Margin="0,0,-8,-8">
         <Label x:Name="lblNombre" Content="" HorizontalAlignment="Left" Margin="254,40,0,0" VerticalAlignment="Top" Width="200"/>
         <ListBox x:Name="postulacionesPendientes" HorizontalAlignment="Left" Height="114" Margin="39,95,0,0" VerticalAlignment="Top" Width="670" SelectionChanged="PostulacionesPendientes_SelectionChanged"/>

@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EscritorioMontreal"
         mc:Ignorable="d"
-        Title="CursoAgregar" Height="421.298" Width="477.903">
+        Title="CursoAgregar" Height="421.298" Width="477.903"
+        WindowStartupLocation="CenterScreen">
     <Grid Background="#FFA6C3C5" Margin="0,0,2,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="88*"/>

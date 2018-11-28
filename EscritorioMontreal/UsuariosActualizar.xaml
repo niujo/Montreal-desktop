@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EscritorioMontreal"
         mc:Ignorable="d"
-        Title="UsuariosActualizar" Height="609.591" Width="438.399">
+        Title="UsuariosActualizar" Height="609.591" Width="438.399"
+        WindowStartupLocation="CenterScreen">
     <Grid Background="#FFA6C3C5">
         <Grid.RowDefinitions>
             <RowDefinition Height="321*"/>

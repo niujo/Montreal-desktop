@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EscritorioMontreal"
         mc:Ignorable="d"
-        Title="Menu" Height="396.4" Width="618.1">
+        Title="Menu" Height="396.4" Width="618.1"
+        WindowStartupLocation="CenterScreen">
     <Grid Background="#FFA6C3C5">
         <Button x:Name="btn_usuarios" Content="Ver Usuarios" HorizontalAlignment="Left" Margin="39,112,0,0" VerticalAlignment="Top" Width="115" Click="btn_usuarios_Click"/>
         <Button x:Name="btn_cursos" Content="Ver Cursos" HorizontalAlignment="Left" Margin="39,143,0,0" VerticalAlignment="Top" Width="115" Click="btn_cursos_Click"/>

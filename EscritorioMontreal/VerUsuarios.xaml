@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EscritorioMontreal"
         mc:Ignorable="d"
-        Title="VerUsuarios" Height="324.062" Width="627.987">
+        Title="VerUsuarios" Height="324.062" Width="627.987"
+        WindowStartupLocation="CenterScreen">
     <Grid Background="#FFA6C3C5" Margin="0,0,-6.4,-4.6">
         <Button x:Name="brn_borrar" Content="Borrar" HorizontalAlignment="Left" Margin="45,197,0,0" VerticalAlignment="Top" Width="75" Click="brn_borrar_Click"/>
         <Label Content="Lista de usuarios" HorizontalAlignment="Left" Margin="45,44,0,0" VerticalAlignment="Top"/>
