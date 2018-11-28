@@ -105,17 +105,23 @@ namespace EscritorioMontreal
             try
             {
                 int value;
+                ProgramaEstudio p = new ProgramaEstudio();
                 bool nombre = !(txtNombre.Text == null || txtNombre.Text.Equals(String.Empty));
                 bool descripcion = !(txtDesc.Text == null || txtDesc.Text.Equals(String.Empty));
                 bool numMin = !(txtMinA.Text == null || txtMinA.Text.Equals(String.Empty) || !int.TryParse(txtMinA.Text, out value));
                 bool numMax = !(txtMaxA.Text == null || txtMaxA.Text.Equals(String.Empty) || !int.TryParse(txtMaxA.Text, out value));
+                bool fechInicio = (dpFechInicio.SelectedDate != null && p.validaFechaInicio((DateTime)dpFechInicio.SelectedDate));
+                bool fechTermino = (dpFechInicio.SelectedDate != null && dpFechTermino.SelectedDate != null
+                    && p.validaFechaTermino((DateTime)dpFechInicio.SelectedDate, (DateTime)dpFechTermino.SelectedDate));
 
                 lblNombrePost.Content = nombre ? "" : "*";
                 lblDescripcion.Content = descripcion ? "" : "*";
                 lblMinNum.Content = numMin ? "" : "*";
                 lblMaxNum.Content = numMax ? "" : "*";
+                lblFechInicio.Content = fechInicio ? "" : "*";
+                lblFechTermino.Content = fechTermino ? "" : "*";
 
-                bool valido = true && nombre && descripcion && numMin && numMax ;
+                bool valido = true && nombre && descripcion && numMin && numMax && fechInicio && fechTermino;
                 return valido;
             }
             catch (Exception)

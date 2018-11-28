@@ -33,5 +33,7 @@
         <Label x:Name="lblDescripcion" Content="" HorizontalAlignment="Left" Margin="364,97,0,0" VerticalAlignment="Top" Foreground="#FFFC0A0A"/>
         <Label x:Name="lblMinNum" Content="" HorizontalAlignment="Left" Margin="364,254,0,0" VerticalAlignment="Top" Foreground="#FFFA1111"/>
         <Label x:Name="lblMaxNum" Content="" HorizontalAlignment="Left" Margin="364,286,0,0" VerticalAlignment="Top" Foreground="#FFFA0505"/>
+        <Label x:Name="lblFechInicio" Content="" HorizontalAlignment="Left" Margin="364,182,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,-0.038" Foreground="Red"/>
+        <Label x:Name="lblFechTermino" Content="" HorizontalAlignment="Left" Margin="364,223,0,0" VerticalAlignment="Top" Foreground="Red"/>
     </Grid>
 </Window>

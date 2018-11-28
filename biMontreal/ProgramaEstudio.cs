@@ -159,5 +159,40 @@ namespace biMontreal
                 return false;
             }
         }
+
+        public bool validaFechaInicio(DateTime fech_inicio)
+        {
+            try
+            {
+                DateTime hoy = DateTime.UtcNow.Date;
+                fech_inicio = fech_inicio.Date;
+                if (hoy.CompareTo(fech_inicio) >= 0)
+                {
+                    return false;
+                }
+
+                return true;
+            } catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool validaFechaTermino(DateTime inicio, DateTime termino)
+        {
+            try
+            {
+                inicio = inicio.Date;
+                termino = termino.Date;
+                if (inicio.CompareTo(termino) >= 0)
+                {
+                    return false;
+                }
+                return true;
+            } catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }
