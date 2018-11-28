@@ -18,15 +18,19 @@
         <Label Content="Fecha de inicio" HorizontalAlignment="Left" Margin="30,181,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="Fecha de fin" HorizontalAlignment="Left" Margin="30,222,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <TextBox x:Name="txtDesc" HorizontalAlignment="Left" Height="23" Margin="215,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
-        <ComboBox HorizontalAlignment="Left" Margin="215,138,0,0" VerticalAlignment="Top" Width="144"/>
-        <DatePicker HorizontalAlignment="Left" Margin="215,182,0,0" VerticalAlignment="Top"/>
-        <DatePicker HorizontalAlignment="Left" Margin="215,223,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbCentro" HorizontalAlignment="Left" Margin="215,138,0,0" VerticalAlignment="Top" Width="144"/>
+        <DatePicker x:Name="dateIni" HorizontalAlignment="Left" Margin="215,182,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="dateFIN" HorizontalAlignment="Left" Margin="215,223,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="23" Margin="215,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
         <Button x:Name="btn_Agregar" Content="Editar Postulaciones" HorizontalAlignment="Left" Margin="215,337,0,0" VerticalAlignment="Top" Width="144" Click="btn_Agregar_Click"/>
         <Label Content="Cantidad mínima de alumnos" HorizontalAlignment="Left" Margin="30,253,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="Cantidad máxima de alumnos" HorizontalAlignment="Left" Margin="30,289,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <TextBox x:Name="txtMinA" HorizontalAlignment="Left" Height="23" Margin="215,257,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
         <TextBox x:Name="txtMaxA" HorizontalAlignment="Left" Height="23" Margin="215,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
+        <Label x:Name="lblNombrePost" Content="" HorizontalAlignment="Left" Margin="364,65,0,0" VerticalAlignment="Top" Foreground="#FFFA0909"/>
+        <Label x:Name="lblDescripcion" Content="" HorizontalAlignment="Left" Margin="364,97,0,0" VerticalAlignment="Top" Foreground="#FFFC0A0A"/>
+        <Label x:Name="lblMinNum" Content="" HorizontalAlignment="Left" Margin="364,254,0,0" VerticalAlignment="Top" Foreground="#FFFA1111"/>
+        <Label x:Name="lblMaxNum" Content="" HorizontalAlignment="Left" Margin="364,286,0,0" VerticalAlignment="Top" Foreground="#FFFA0505"/>
 
     </Grid>
 </Window>
