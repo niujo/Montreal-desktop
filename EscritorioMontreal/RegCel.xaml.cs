@@ -37,6 +37,8 @@ namespace EscritorioMontreal
             {
                 cbCiudad.Items.Add(new KeyValuePair<int?, string>(pe.id_ciudad, pe.nombre));
             }
+
+            cbCiudad.SelectedIndex = 0;
         }
 
         private void btn_salir_Click(object sender, RoutedEventArgs e)
@@ -53,10 +55,11 @@ namespace EscritorioMontreal
 
         private void btn_Agregar_Click(object sender, RoutedEventArgs e)
         {
+            bool validar = validaciones();
 
             try
             {
-                if (txtPsw.Password.Equals(txtRepPsw.Password))
+                if (validar && txtPsw.Password.Equals(txtRepPsw.Password))
                 {
                     /*
                      * declarando
@@ -163,6 +166,53 @@ namespace EscritorioMontreal
             catch (Exception)
             {
                 // nada
+            }
+        }
+        //
+
+        private bool validaciones()
+        {
+            try
+            {
+                //int value;
+                bool usuario = !(txtUsuario.Text == null || txtUsuario.Text.Equals(String.Empty));
+                bool Pass = !(txtPsw.Password == null || txtPsw.Password.Equals(String.Empty));
+                bool rePass = !(txtRepPsw.Password == null || txtRepPsw.Password.Equals(String.Empty) ||!txtPsw.Password.Equals(txtRepPsw));
+                bool nomAD = !(txtNombreAdm.Text == null || txtNombreAdm.Text.Equals(String.Empty));
+                bool apeP = !(txtApePa.Text == null || txtApePa.Text.Equals(String.Empty));
+                bool apeM = !(txtApeMa.Text == null || txtApeMa.Text.Equals(String.Empty));
+                bool rut = !(txtRut.Text == null || txtRut.Text.Equals(String.Empty));
+                //fecha
+                /*
+                 if (fecha. datetime. now < datetime.now)
+                 */
+                bool correo = !(txtCorreo.Text == null || txtCorreo.Text.Equals(String.Empty));
+                bool nombre = !(txtNombre.Text == null || txtNombre.Text.Equals(String.Empty));
+                bool calle = !(txtCalle.Text == null || txtCalle.Text.Equals(String.Empty));
+                bool numeracion = !(txtNumeracion.Text == null || txtNumeracion.Text.Equals(String.Empty));
+                bool dpto = !(txtDepartamento.Text == null || txtDepartamento.Text.Equals(String.Empty));
+
+                lblUsuario.Content = usuario ? "" : "*";
+                lblPASS.Content = Pass ? "" : "*";
+                lblRePAS.Content = rePass ? "" : "*";
+                lblNom.Content = nomAD ? "" : "*";
+                lblApP.Content = apeP ? "" : "*";
+                lblApM.Content = apeM ? "" : "*";
+                lblRut.Content = rut ? "" : "*";
+                lblCorreo.Content = correo ? "" : "*";
+                lblNombCen.Content = nombre ? "" : "*";
+                lblCalle.Content = calle ? "" : "*";
+                lblNumeracion.Content = numeracion ? "" : "*";
+                lblDpto.Content = dpto ? "" : "*";
+
+
+
+                bool valido = true && usuario && Pass && rePass && nomAD && apeP && apeM && rut && correo && nombre && calle && numeracion && dpto ;
+                return valido;
+            }
+            catch (Exception)
+            {
+                return false;
             }
         }
     }

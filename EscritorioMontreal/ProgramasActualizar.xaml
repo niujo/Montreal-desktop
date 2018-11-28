@@ -28,5 +28,9 @@
         <TextBox x:Name="txtMaxA" HorizontalAlignment="Left" Height="23" Margin="215,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
         <Button x:Name="btn_Agregar" Content="Editar Programa" HorizontalAlignment="Left" Margin="215,337,0,0" VerticalAlignment="Top" Width="144" Click="btn_Agregar_Click"/>
         <Label x:Name="lblError" Content="" HorizontalAlignment="Left" Margin="215,362,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblNombrePost" Content="" HorizontalAlignment="Left" Margin="364,65,0,0" VerticalAlignment="Top" Foreground="#FFFA0909"/>
+        <Label x:Name="lblDescripcion" Content="" HorizontalAlignment="Left" Margin="364,97,0,0" VerticalAlignment="Top" Foreground="#FFFC0A0A"/>
+        <Label x:Name="lblMinNum" Content="" HorizontalAlignment="Left" Margin="364,254,0,0" VerticalAlignment="Top" Foreground="#FFFA1111"/>
+        <Label x:Name="lblMaxNum" Content="" HorizontalAlignment="Left" Margin="364,286,0,0" VerticalAlignment="Top" Foreground="#FFFA0505"/>
     </Grid>
 </Window>
