@@ -23,27 +23,35 @@ namespace EscritorioMontreal
         
         public CursoAgregar()
         {
-            InitializeComponent();
-            lblNombre.Content = AuthUser.nombre;
-
-            ProgramaEstudio p = new ProgramaEstudio();
-            List<Object> lstProgramas = p.GetProgramasEstudiosCEL();
-            if (lstProgramas == null)
+            try
             {
-                lstProgramas = new List<Object>();
-                lstProgramas.Add(new List<Object>());
-                lstProgramas.Add(new List<Object>());
-            }
-            List<Object> vigentes = (List<Object>)lstProgramas[0];
+                InitializeComponent();
+                lblNombre.Content = AuthUser.nombre;
 
-            cbPrograma.SelectedValuePath = "Key";
-            cbPrograma.DisplayMemberPath = "Value";
-            foreach (ProgramaEstudio pe in vigentes)
+                ProgramaEstudio p = new ProgramaEstudio();
+                List<Object> lstProgramas = p.GetProgramasEstudiosCEL();
+                if (lstProgramas == null)
+                {
+                    lstProgramas = new List<Object>();
+                    lstProgramas.Add(new List<Object>());
+                    lstProgramas.Add(new List<Object>());
+                }
+                List<Object> vigentes = (List<Object>)lstProgramas[0];
+
+                cbPrograma.SelectedValuePath = "Key";
+                cbPrograma.DisplayMemberPath = "Value";
+                foreach (ProgramaEstudio pe in vigentes)
+                {
+                    cbPrograma.Items.Add(new KeyValuePair<int?, string>(pe.id_programa, pe.nomb_programa));
+                }
+                cbPrograma.SelectedIndex = 0;
+            }
+            catch (Exception)
             {
-                cbPrograma.Items.Add(new KeyValuePair<int?, string>(pe.id_programa, pe.nomb_programa));
+                Menu menu = new Menu();
+                menu.Show();
+                this.Close();
             }
-            cbPrograma.SelectedIndex = 0;
-
         }
 
         private void btn_volver_Click(object sender, RoutedEventArgs e)

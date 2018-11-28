@@ -24,29 +24,38 @@ namespace EscritorioMontreal
 
         public VerPostulaciones()
         {
-            InitializeComponent();
-            lblNombre.Content = AuthUser.nombre;
-
-            Postulaciones p = new Postulaciones();
-            List<Object> lstPostulaciones = p.GetPostulaciones();
-            // aca se  recibe
-            if (lstPostulaciones == null)
+            try
             {
-                lstPostulaciones = new List<Object>();
-                lstPostulaciones.Add(new List<Object>());
-                lstPostulaciones.Add(new List<Object>());
+                InitializeComponent();
+                lblNombre.Content = AuthUser.nombre;
+
+                Postulaciones p = new Postulaciones();
+                List<Object> lstPostulaciones = p.GetPostulaciones();
+                // aca se  recibe
+                if (lstPostulaciones == null)
+                {
+                    lstPostulaciones = new List<Object>();
+                    lstPostulaciones.Add(new List<Object>());
+                    lstPostulaciones.Add(new List<Object>());
+                }
+                List<Object> vigentes = (List<Object>)lstPostulaciones[0];
+                List<Object> finalizados = (List<Object>)lstPostulaciones[1];
+
+                foreach (Postulaciones v in vigentes)
+                {
+                    postulacionesPendientes.Items.Add(v);
+                }
+
+                foreach (Postulaciones f in finalizados)
+                {
+                    postulacionesRespondidas.Items.Add(f);
+                }
             }
-            List<Object> vigentes = (List<Object>)lstPostulaciones[0];
-            List<Object> finalizados = (List<Object>)lstPostulaciones[1];
-
-            foreach (Postulaciones v in vigentes)
+            catch (Exception)
             {
-                postulacionesPendientes.Items.Add(v);
-            }
-
-            foreach (Postulaciones f in finalizados)
-            {
-                postulacionesRespondidas.Items.Add(f);
+                Menu menu = new Menu();
+                menu.Show();
+                this.Close();
             }
         }
 

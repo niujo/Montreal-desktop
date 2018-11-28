@@ -31,38 +31,41 @@ namespace EscritorioMontreal
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
-
-             Usuario usuario = new Usuario();
-
-            usuario.usuario = txtUser.Text;
-            usuario.contrasena = txtPASS.Password;
-
-            //UTILS uti = new UTILS();
-            string token = UTILS.Autenticar(usuario);
-            if (token == null)
+            try
             {
-                lblError.Content = " Usuario y/o contraseña incorrecta";
-            }
-            else
-            {
-                bool success = UTILS.decodeToken(token);
-                
-                if (success && AuthUser.rol.Equals("Administrador"))
+                Usuario usuario = new Usuario();
+                usuario.usuario = txtUser.Text;
+                usuario.contrasena = txtPASS.Password;
+
+                //UTILS uti = new UTILS();
+                string token = UTILS.Autenticar(usuario);
+                if (token == null)
                 {
-                    AuthUser.token = token;
-                    Menu menu = new Menu();
-                    menu.Show();
-                    this.Close();
+                    lblError.Content = " Usuario y/o contraseña incorrecta";
                 }
                 else
                 {
-                    lblError.Content = "Acceso denegado.";
-                    AuthUser.id = null;
-                    AuthUser.nombre = null;
-                    AuthUser.rol = null;
-                    AuthUser.token = null;
+                    bool success = UTILS.decodeToken(token);
+
+                    if (success && AuthUser.rol.Equals("Administrador"))
+                    {
+                        AuthUser.token = token;
+                        Menu menu = new Menu();
+                        menu.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        lblError.Content = "Acceso denegado.";
+                        AuthUser.id = null;
+                        AuthUser.nombre = null;
+                        AuthUser.rol = null;
+                        AuthUser.token = null;
+                    }
                 }
+            } catch (Exception)
+            {
+                // do nothing
             }
         }
 

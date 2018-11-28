@@ -23,32 +23,41 @@ namespace EscritorioMontreal
         private Cursos cur = null;
         public CursoActualizar(Cursos curso)
         {
-            InitializeComponent();
-            lblNombre.Content = AuthUser.nombre;
-
-            ProgramaEstudio p = new ProgramaEstudio();
-            List<Object> lstProgramas = p.GetProgramasEstudiosCEL();
-            if (lstProgramas == null)
+            try
             {
-                lstProgramas = new List<Object>();
-                lstProgramas.Add(new List<Object>());
-                lstProgramas.Add(new List<Object>());
+                InitializeComponent();
+                lblNombre.Content = AuthUser.nombre;
+
+                ProgramaEstudio p = new ProgramaEstudio();
+                List<Object> lstProgramas = p.GetProgramasEstudiosCEL();
+                if (lstProgramas == null)
+                {
+                    lstProgramas = new List<Object>();
+                    lstProgramas.Add(new List<Object>());
+                    lstProgramas.Add(new List<Object>());
+                }
+                List<Object> vigentes = (List<Object>)lstProgramas[0];
+
+                cbPrograma.SelectedValuePath = "Key";
+                cbPrograma.DisplayMemberPath = "Value";
+                foreach (ProgramaEstudio pe in vigentes)
+                {
+                    cbPrograma.Items.Add(new KeyValuePair<int?, string>(pe.id_programa, pe.nomb_programa));
+                }
+
+                if (curso != null)
+                {
+                    txtCupo.Text = curso.cupos.ToString();
+                    txtDesc.Text = curso.desc_curso;
+                    cbPrograma.SelectedValue = curso.id_programa;
+                    cur = curso;
+                }
             }
-            List<Object> vigentes = (List<Object>)lstProgramas[0];
-
-            cbPrograma.SelectedValuePath = "Key";
-            cbPrograma.DisplayMemberPath = "Value";
-            foreach(ProgramaEstudio pe in vigentes)
+            catch (Exception)
             {
-                cbPrograma.Items.Add(new KeyValuePair<int?, string>(pe.id_programa, pe.nomb_programa));
-            }
-
-            if (curso != null)
-            {
-                txtCupo.Text = curso.cupos.ToString();
-                txtDesc.Text = curso.desc_curso;
-                cbPrograma.SelectedValue = curso.id_programa;
-                cur = curso;
+                Menu menu = new Menu();
+                menu.Show();
+                this.Close();
             }
         }
 

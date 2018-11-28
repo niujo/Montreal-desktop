@@ -23,31 +23,39 @@ namespace EscritorioMontreal
         private ProgramaEstudio programa = null;
         public Programas_estudio()
         {
-            InitializeComponent();
-            lblNombre.Content = AuthUser.nombre;
-
-            ProgramaEstudio p = new ProgramaEstudio();
-            List<Object> lstProgramas = p.GetProgramasEstudiosCEL();
-            // aca se  recibe
-            if (lstProgramas == null)
+            try
             {
-                lstProgramas = new List<Object>();
-                lstProgramas.Add(new List<Object>());
-                lstProgramas.Add(new List<Object>());
-            }
-            List<Object> vigentes = (List<Object>)lstProgramas[0];
-            List<Object> finalizados = (List<Object>)lstProgramas[1];
+                InitializeComponent();
+                lblNombre.Content = AuthUser.nombre;
 
-            foreach (ProgramaEstudio v in vigentes)
+                ProgramaEstudio p = new ProgramaEstudio();
+                List<Object> lstProgramas = p.GetProgramasEstudiosCEL();
+                // aca se  recibe
+                if (lstProgramas == null)
+                {
+                    lstProgramas = new List<Object>();
+                    lstProgramas.Add(new List<Object>());
+                    lstProgramas.Add(new List<Object>());
+                }
+                List<Object> vigentes = (List<Object>)lstProgramas[0];
+                List<Object> finalizados = (List<Object>)lstProgramas[1];
+
+                foreach (ProgramaEstudio v in vigentes)
+                {
+                    lstVigentes.Items.Add(v);
+                }
+
+                foreach (ProgramaEstudio f in finalizados)
+                {
+                    lstFinalizados.Items.Add(f);
+                }
+            }
+            catch (Exception)
             {
-                lstVigentes.Items.Add(v);
+                Menu menu = new Menu();
+                menu.Show();
+                this.Close();
             }
-
-            foreach (ProgramaEstudio f in finalizados)
-            {
-                lstFinalizados.Items.Add(f);
-            }
-
         }
 
         private void btn_volver_Click(object sender, RoutedEventArgs e)
@@ -66,12 +74,18 @@ namespace EscritorioMontreal
 
         private void btn_borrar_Click(object sender, RoutedEventArgs e)
         {
-            if (programa != null)
+            try
             {
-                string id = programa.id_programa.ToString();
-                UTILS.DELETE("private/programa/" + id, "programa", AuthUser.token, programa.GetType());
-                lstVigentes.Items.Remove(programa);
-                lstVigentes.Items.Refresh();
+                if (programa != null)
+                {
+                    string id = programa.id_programa.ToString();
+                    UTILS.DELETE("private/programa/" + id, "programa", AuthUser.token, programa.GetType());
+                    lstVigentes.Items.Remove(programa);
+                    lstVigentes.Items.Refresh();
+                }
+            } catch (Exception)
+            {
+                // do nothing
             }
         }
 

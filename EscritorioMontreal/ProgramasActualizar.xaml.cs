@@ -23,19 +23,28 @@ namespace EscritorioMontreal
         private ProgramaEstudio prog = null;
         public ProgramasActualizar(ProgramaEstudio programa)
         {
-            InitializeComponent();
-            lblNombre.Content = AuthUser.nombre;
-            if (programa != null)
+            try
             {
-                txtNombre.Text = programa.nomb_programa;
-                txtDesc.Text = programa.desc_programa;
-                txtMaxA.Text = programa.cant_max_alumnos.ToString();
-                txtMinA.Text = programa.cant_min_alumnos.ToString();
-                txtCEL.Text = programa.cel.nom_centro;
-                dpFechInicio.SelectedDate = programa.fech_inicio;
-                dpFechTermino.SelectedDate = programa.fech_termino;
+                InitializeComponent();
+                lblNombre.Content = AuthUser.nombre;
+                if (programa != null)
+                {
+                    txtNombre.Text = programa.nomb_programa;
+                    txtDesc.Text = programa.desc_programa;
+                    txtMaxA.Text = programa.cant_max_alumnos.ToString();
+                    txtMinA.Text = programa.cant_min_alumnos.ToString();
+                    txtCEL.Text = programa.cel.nom_centro;
+                    dpFechInicio.SelectedDate = programa.fech_inicio;
+                    dpFechTermino.SelectedDate = programa.fech_termino;
 
-                prog = programa;
+                    prog = programa;
+                }
+            }
+            catch (Exception)
+            {
+                Menu menu = new Menu();
+                menu.Show();
+                this.Close();
             }
         }
 

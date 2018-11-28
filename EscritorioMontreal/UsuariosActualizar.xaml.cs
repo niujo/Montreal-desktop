@@ -23,37 +23,46 @@ namespace EscritorioMontreal
         private Usuario usr = null;
         public UsuariosActualizar(Usuario usuario)
         {
-            InitializeComponent();
-            lblNombre.Content = AuthUser.nombre;
-
-            Ciudad p = new Ciudad();
-            List<Object> lstCiudad = p.GetCiudades();
-            if (lstCiudad == null)
+            try
             {
-                lstCiudad = new List<Object>();
+                InitializeComponent();
+                lblNombre.Content = AuthUser.nombre;
+
+                Ciudad p = new Ciudad();
+                List<Object> lstCiudad = p.GetCiudades();
+                if (lstCiudad == null)
+                {
+                    lstCiudad = new List<Object>();
+                }
+
+                cbCiudad.SelectedValuePath = "Key";
+                cbCiudad.DisplayMemberPath = "Value";
+                foreach (Ciudad pe in lstCiudad)
+                {
+                    cbCiudad.Items.Add(new KeyValuePair<int?, string>(pe.id_ciudad, pe.nombre));
+                }
+
+                if (usuario != null)
+                {
+                    usr = usuario;
+                    txtNombre.Text = usuario.persona.nombre;
+                    txtApp.Text = usuario.persona.app_paterno;
+                    txtApm.Text = usuario.persona.app_materno;
+                    txtRut.Text = usuario.persona.rut;
+                    fchNac.SelectedDate = usuario.persona.fech_nacimiento;
+                    txtCorreo.Text = usuario.persona.contacto.desc_contacto;
+
+                    cbCiudad.SelectedValue = usuario.persona.direccion.id_ciudad;
+                    txtCalle.Text = usuario.persona.direccion.calle;
+                    txtNum.Text = usuario.persona.direccion.numeracion;
+                    txtDpto.Text = usuario.persona.direccion.departamento;
+                }
             }
-
-            cbCiudad.SelectedValuePath = "Key";
-            cbCiudad.DisplayMemberPath = "Value";
-            foreach (Ciudad pe in lstCiudad)
+            catch (Exception)
             {
-                cbCiudad.Items.Add(new KeyValuePair<int?, string>(pe.id_ciudad, pe.nombre));
-            }
-
-            if (usuario != null)
-            {
-                usr = usuario;
-                txtNombre.Text = usuario.persona.nombre;
-                txtApp.Text = usuario.persona.app_paterno;
-                txtApm.Text = usuario.persona.app_materno;
-                txtRut.Text = usuario.persona.rut;
-                fchNac.SelectedDate = usuario.persona.fech_nacimiento;
-                txtCorreo.Text = usuario.persona.contacto.desc_contacto;
-
-                cbCiudad.SelectedValue = usuario.persona.direccion.id_ciudad;
-                txtCalle.Text = usuario.persona.direccion.calle;
-                txtNum.Text = usuario.persona.direccion.numeracion;
-                txtDpto.Text = usuario.persona.direccion.departamento;
+                Menu menu = new Menu();
+                menu.Show();
+                this.Close();
             }
         }
 

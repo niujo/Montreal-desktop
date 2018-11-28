@@ -25,20 +25,30 @@ namespace EscritorioMontreal
 
         public VerUsuarios()
         {
-            InitializeComponent();
-
-            lblNombre.Content = AuthUser.nombre;
-
-            Usuario u = new Usuario();
-            List<Object> lstUsuarios = u.getUsuarios();
-            // aca se  recibe
-            if (lstUsuarios == null)
+            try
             {
-                lstUsuarios = new List<Object>();
-            }
+                InitializeComponent();
 
-            foreach(Usuario us in lstUsuarios) {
-                lstUsuario.Items.Add(us);
+                lblNombre.Content = AuthUser.nombre;
+
+                Usuario u = new Usuario();
+                List<Object> lstUsuarios = u.getUsuarios();
+                // aca se  recibe
+                if (lstUsuarios == null)
+                {
+                    lstUsuarios = new List<Object>();
+                }
+
+                foreach (Usuario us in lstUsuarios)
+                {
+                    lstUsuario.Items.Add(us);
+                }
+            }
+            catch (Exception)
+            {
+                Menu menu = new Menu();
+                menu.Show();
+                this.Close();
             }
         }
 
@@ -52,22 +62,36 @@ namespace EscritorioMontreal
         
         private void brn_borrar_Click(object sender, RoutedEventArgs e)
         {
-            if (usuario != null)
+            try
             {
-                string id = usuario.id_usuario.ToString();
-                UTILS.DELETE("private/usuario/" + id, "usuario", AuthUser.token, usuario.GetType());
-                lstUsuario.Items.Remove(usuario);
-                lstUsuario.Items.Refresh();
+                if (usuario != null)
+                {
+                    string id = usuario.id_usuario.ToString();
+                    UTILS.DELETE("private/usuario/" + id, "usuario", AuthUser.token, usuario.GetType());
+                    lstUsuario.Items.Remove(usuario);
+                    lstUsuario.Items.Refresh();
+                }
+            }
+            catch (Exception)
+            {
+                // do nothing
             }
         }
 
         private void btn_actualizar_Click(object sender, RoutedEventArgs e)
         {
-            if (usuario != null)
+            try
             {
-                UsuariosActualizar uaC = new UsuariosActualizar(usuario);
-                uaC.Show();
-                this.Close();
+                if (usuario != null)
+                {
+                    UsuariosActualizar uaC = new UsuariosActualizar(usuario);
+                    uaC.Show();
+                    this.Close();
+                }
+            }
+            catch (Exception)
+            {
+                // do nothing
             }
         }
 

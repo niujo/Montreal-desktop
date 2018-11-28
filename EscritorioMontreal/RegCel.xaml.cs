@@ -22,23 +22,32 @@ namespace EscritorioMontreal
     {
         public RegCel()
         {
-            InitializeComponent();
-
-            Ciudad p = new Ciudad();
-            List<Object> lstCiudad = p.GetCiudades();
-            if (lstCiudad == null)
+            try
             {
-                lstCiudad = new List<Object>();
-            }
+                InitializeComponent();
 
-            cbCiudad.SelectedValuePath = "Key";
-            cbCiudad.DisplayMemberPath = "Value";
-            foreach (Ciudad pe in lstCiudad)
+                Ciudad p = new Ciudad();
+                List<Object> lstCiudad = p.GetCiudades();
+                if (lstCiudad == null)
+                {
+                    lstCiudad = new List<Object>();
+                }
+
+                cbCiudad.SelectedValuePath = "Key";
+                cbCiudad.DisplayMemberPath = "Value";
+                foreach (Ciudad pe in lstCiudad)
+                {
+                    cbCiudad.Items.Add(new KeyValuePair<int?, string>(pe.id_ciudad, pe.nombre));
+                }
+
+                cbCiudad.SelectedIndex = 0;
+            }
+            catch (Exception)
             {
-                cbCiudad.Items.Add(new KeyValuePair<int?, string>(pe.id_ciudad, pe.nombre));
+                Menu menu = new Menu();
+                menu.Show();
+                this.Close();
             }
-
-            cbCiudad.SelectedIndex = 0;
         }
 
         private void btn_salir_Click(object sender, RoutedEventArgs e)

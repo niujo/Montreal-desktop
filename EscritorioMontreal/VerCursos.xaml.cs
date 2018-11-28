@@ -24,20 +24,29 @@ namespace EscritorioMontreal
         
         public VerCursos()
         {
-            InitializeComponent();
-            lblNombre.Content = AuthUser.nombre;
-
-            Cursos c = new Cursos();
-            List<Object> lstCursoss = c.getCursos();
-            // aca se  recibe
-            if (lstCursoss == null)
+            try
             {
-                lstCursoss = new List<Object>();
+                InitializeComponent();
+                lblNombre.Content = AuthUser.nombre;
+
+                Cursos c = new Cursos();
+                List<Object> lstCursoss = c.getCursos();
+                // aca se  recibe
+                if (lstCursoss == null)
+                {
+                    lstCursoss = new List<Object>();
+                }
+
+                foreach (Cursos pe in lstCursoss)
+                {
+                    listCursos.Items.Add(pe);
+                }
             }
-
-            foreach (Cursos pe in lstCursoss)
+            catch (Exception)
             {
-                listCursos.Items.Add(pe);
+                Menu menu = new Menu();
+                menu.Show();
+                this.Close();
             }
         }
         
@@ -62,22 +71,36 @@ namespace EscritorioMontreal
 
         private void btn_borrar_Click(object sender, RoutedEventArgs e)
         {
-            if (curso!=null)
+            try
             {
-                string id = curso.id_curso.ToString();
-                UTILS.DELETE("private/curso/" + id, "curso", AuthUser.token, curso.GetType());
-                listCursos.Items.Remove(curso);
-                listCursos.Items.Refresh();
+                if (curso != null)
+                {
+                    string id = curso.id_curso.ToString();
+                    UTILS.DELETE("private/curso/" + id, "curso", AuthUser.token, curso.GetType());
+                    listCursos.Items.Remove(curso);
+                    listCursos.Items.Refresh();
+                }
+            }
+            catch (Exception)
+            {
+                // do nothing
             }
         }
 
         private void btn_actualizar_Click(object sender, RoutedEventArgs e)
         {
-            if (curso != null)
+            try
             {
-                CursoActualizar act = new CursoActualizar(curso);
-                act.Show();
-                this.Close();
+                if (curso != null)
+                {
+                    CursoActualizar act = new CursoActualizar(curso);
+                    act.Show();
+                    this.Close();
+                }
+            }
+            catch (Exception)
+            {
+                // do nothing
             }
         }
 
